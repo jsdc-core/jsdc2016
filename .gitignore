@@ -1,3 +1,8 @@
+# 編譯的檔案不上傳
+dist/js/*.js
+dist/css/*.map
+dist/css/*.css
+
 # Logs
 logs
 *.log
