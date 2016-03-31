@@ -40,14 +40,14 @@ gulp.task('script:watch', function() {
 
 // 編譯 jade
 gulp.task('jade', function() {
-  return gulp.src('source/jade/*.jade')
+  return gulp.src('source/views/*.jade')
     .pipe(plugins.jade())
     .pipe(gulp.dest('.'));
 });
 
 // 監視 jade
 gulp.task('jade:watch', function() {
-  gulp.watch('source/jade/*.jade', ['jade']);
+  gulp.watch('source/views/*.jade', ['jade']);
 });
 
 // 開啟一個 web service

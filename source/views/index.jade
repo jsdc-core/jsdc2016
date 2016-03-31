@@ -1,0 +1,99 @@
+extends ./layout/_layout.jade
+
+block content
+  
+  //- Header
+  section#header
+    .container
+      .inner
+        h1 JSDC 2016
+        p Coming soon at October (10月)
+        p 中央研究院 人文社會科學館
+        ul.actions
+          li
+            a.button.scrolly(href='#') Discover
+  //- One
+  section#one.main.style1
+    .container
+      .row
+        .col-xs-12.col-md-8
+          header.major
+            h2 What's JSDC ?
+          p.text-center JavaScript 開發者年會 (JavaScript Developers Conference, 簡稱 JSDC) 是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。同時帶動各界廠商的合作與中高階技術⼈才的媒合，創造雙贏的正向循環。
+        .col-xs-12.col-md-4
+          img.img-responsive(src='./dist/images/pic02.jpg', alt='')
+        .col-xs-12.col-md-4
+          img.img-responsive(src='./dist/images/pic02.jpg', alt='')
+        .col-xs-12.col-md-8
+          header.major
+            h2 JavaScript 開發者年會
+          p.text-center 今年，JSDC 打破了壁壘，整合來自獨立開發者、企業、組織及機構的科技力量。我們致力於知識全球化，並讓參與者重新認識 JavaScript。
+          p.text-center JSDC 的新思維將更進一步改善架構、強化團隊及最佳化開發流程。
+
+  // Two
+  section#two.main.style2
+    .container
+      .row
+        .col.md-6
+          ul.major-icons
+            li
+              span.icon.style1.major.fa-code
+            li
+              span.icon.style2.major.fa-bolt
+            li
+              span.icon.style3.major.fa-camera-retro
+            li
+              span.icon.style4.major.fa-cog
+            li
+              span.icon.style5.major.fa-desktop
+            li
+              span.icon.style6.major.fa-calendar
+        .col.md-6
+          header.major
+            h2
+              | Lorem ipsum dolor adipiscing
+  // Three
+  section#three.main.style1.special
+    .container
+      header.major
+        h2 Adipiscing amet consequat
+      p Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.
+      .row
+        .col-md-6
+          span.image.fit
+            img(src='images/pic02.jpg', alt='')
+          h3 Magna feugiat lorem
+          p
+            | Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.
+          ul.actions
+            li
+              a.button(href='#') More
+        .col-md-6
+          span.image.fit
+            img(src='images/pic03.jpg', alt='')
+          h3 Magna feugiat lorem
+          p
+            | Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.
+          ul.actions
+            li
+              a.button(href='#') More
+  
+  // Four
+  section#four.main.style2.special
+    .container
+      header.major
+        h2 JSDC 2016 年度贊助已經開始！
+      p Sed lacus nascetur ac ante amet sapien.
+      ul.actions.uniform
+        li
+          a.button.special(href='#') 贊助我們
+
+  // Footer
+  section#footer
+    ul.copyright
+      li © Untitled
+      li
+        | Design: 
+        a(href='http://html5up.net') HTML5 UP
+
+  // include ./partials/_footer
