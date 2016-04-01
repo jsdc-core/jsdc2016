@@ -40,7 +40,7 @@ gulp.task('script:watch', function() {
 
 // 編譯 jade
 gulp.task('jade', function() {
-  return gulp.src('source/jade/*.jade')
+  return gulp.src('source/jade/**/*.jade')
     .pipe(plugins.jade())
     .pipe(gulp.dest('.'));
 });
