@@ -1,12 +1,14 @@
-var gulp = require('gulp');
+var gulp         = require('gulp'),
+    del          = require('del');
+    
 var plugins = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'gulp.*'],
   replaceString: /\bgulp[\-.]/
 });
 
-// 監視 scss
+// compile scss
 gulp.task('sass', function() {
-  return gulp.src('./source/scss/*.scss')
+  return gulp.src('./source/scss/**/*.{scss,sass}')
     .pipe(plugins.plumber())
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass({
@@ -19,12 +21,14 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./dist/css'));
 });
 
-// 監視 scss
-gulp.task('sass:watch', function() {
-    gulp.watch('./source/scss/**/*.scss', ['sass']);
+// compile jade
+gulp.task('jade', function() {
+  return gulp.src('source/views/*.jade')
+    .pipe(plugins.jade())
+    .pipe(gulp.dest('.'));
 });
 
-// 編譯 js
+// compile js
 gulp.task('script', function() {
   return gulp.src('./source/js/*.js')
     .pipe(plugins.plumber())
@@ -33,24 +37,12 @@ gulp.task('script', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
-// 監視 js
-gulp.task('script:watch', function() {
-  gulp.watch('./source/js/*.js', ['script']);
+// clean up
+gulp.task('clean', function() {  
+  return del(['./dist/css/*.css', './dist/js/*.js']);
 });
 
-// 編譯 jade
-gulp.task('jade', function() {
-  return gulp.src('source/views/*.jade')
-    .pipe(plugins.jade())
-    .pipe(gulp.dest('.'));
-});
-
-// 監視 jade
-gulp.task('jade:watch', function() {
-  gulp.watch('source/views/*.jade', ['jade']);
-});
-
-// 開啟一個 web service
+// web service
 gulp.task('webserver', function() {
   gulp.src('./')
     .pipe(plugins.webserver({
@@ -62,4 +54,12 @@ gulp.task('webserver', function() {
     }));
 });
 
-gulp.task('default', ['sass', 'script', 'jade', 'sass:watch', 'script:watch', 'jade:watch', 'webserver']);
+gulp.task('build', ['sass', 'script', 'jade']);
+
+gulp.task('serve', ['clean', 'build', 'webserver'], function () {
+  gulp.watch('./source/scss/**/*.scss', ['sass', reload]);
+  gulp.watch('./source/js/*.js', ['script', reload]);
+  gulp.watch('./source/views/*.jade', ['jade', reload]);
+});
+
+gulp.task('default', ['serve']);
