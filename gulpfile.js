@@ -45,17 +45,12 @@ gulp.task('clean', function() {
   return del(['./dist/css/*.css', './dist/js/*.js']);
 });
 
-// web service
-// gulp.task('webserver', function() {
-//   gulp.src('./')
-//     .pipe(plugins.webserver({
-//       port: 2016,
-//       livereload: true,
-//       directoryListing: false,
-//       open: true,
-//       fallback: 'index.html'
-//     }));
-// });
+// 編譯 jade
+gulp.task('jade', function() {
+  return gulp.src('source/jade/**/*.jade')
+    .pipe(plugins.jade())
+    .pipe(gulp.dest('.'));
+});
 
 gulp.task('browser-sync', function() {
   browserSync({
