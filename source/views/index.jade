@@ -1,0 +1,91 @@
+extends ./layout/_layout.jade
+
+block content
+  
+  //- Header
+  section#header
+    .container
+      .inner
+        h1 JSDC 2016
+        p.c-bold 今年 10 月，強勢登場
+        span
+          i.fa.fa-map-marker
+          | 中央研究院 人文社會科學館
+        ul.actions
+          li
+            a.button.c-font-white(href='#about') Discover
+
+  section#about
+    #about-line
+    .container
+      .row#about-jsdc
+        .col-xs-12.col-md-8.paragraph
+          header.major
+            h2 What's JSDC ?
+          p JavaScript 開發者年會 ( JavaScript Developers Conference，簡稱 JSDC ) 是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。
+        .col-xs-12.col-md-4
+          img.image.img-responsive.lazy(data-original="./dist/images/jsdc-spot.jpg", alt='JSDC 2015 現場')
+          
+      .row
+        .col-xs-12.paragraph
+          header.major.text-center
+            h2 JavaScript 開發者年會
+          p.text-center
+            | JSDC 打破了壁壘，整合來自獨立開發者、企業、組織及機構的科技力量。
+            br
+            | 我們致力於知識全球化，並讓參與者重新認識 JavaScript。
+        .col-xs-12
+          img.image.fit.lazy(data-original="./dist/images/jsdc-2015.jpg", alt='JSDC 2015 工作人員')
+
+  section#community
+    .container
+      // .row
+      //   .col.xs-12
+      //     header.major.text-center
+      //       h2 台灣 JavaScript 相關社群
+      .row
+        .col.xs-12
+          ul.actions.text-center
+            li
+              a.button(href="https://www.facebook.com/groups/javascript.tw/" target="_blank") JavaScript.tw
+            li
+              a.button(href="https://www.facebook.com/groups/augularjs.tw/" target="_blank") AngularJS.tw
+              
+            li
+              a.button(href="https://www.facebook.com/groups/node.js.tw/" target="_blank") node.js台灣
+        .col.xs-12
+          ul.actions.text-center
+            li
+              a.button(href="https://www.facebook.com/groups/f2e.tw/" target="_blank") Front-End Developers Taiwan
+            li
+              a.button(href="https://www.facebook.com/groups/htmlfive/" target="_blank") HTML5與CSS3在台灣                
+
+  section#last-year
+    .container-fluid
+      .row
+        .col-md-6.last-photo.lazy(data-original="./dist/images/jsdc-last-photo.jpg")
+          .last-content
+            h1.major.text-center.c-font-white JSDC 2015
+            a.button.c-font-white(href='https://www.flickr.com/photos/jsdc2014/sets/72157659891046216' target="_blank") Photo
+        .col-md-6.last-vedio.lazy(data-original="./dist/images/jsdc-last-vedio.jpg")
+          .last-content
+            h1.major.text-center.c-font-white 精彩回顧
+            a.button.c-font-white(href='https://www.youtube.com/user/JSDCTW' target="_blank") Vedio
+  
+  section#sponsor
+    .container
+      .row.text-center#sponsor-content
+        .col.xs-12
+          header.major
+            h2.c-font-white JSDC 2016 年度贊助
+          p.c-font-white 一些贊助宣傳用文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字
+          a.button.c-bold(href='#') 贊助我們
+
+  // Footer
+  section#footer
+    ul.copyright.text-center
+      li 
+        | © 2015 
+        a(href="http://jsdc.tw") JSDC.tw
+
+  // include ./partials/_footer
