@@ -8,42 +8,65 @@
 
 /* Main */
 
-.main {
-  padding: 80px;
+$jsdc-y: #FFD54F;
+$jsdc-r: #ce4d40;
+$jsdc-g: #b9cc54;
+$jsdc-b: #3096b2;
+
+.c-font-white{
+  color: white;
 }
 
-/* Header */
+.c-bold{
+  font-weight: 900;
+  letter-spacing: 3px;
+}
 
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Header */
 #header {
   @include padding(9em, 0, (0,0,_size(element-margin),0));
   overflow: hidden;
   position: relative;
   text-align: center;
   height: 100vh;
-  
-
+ 
   h1 {
     margin: 0;
     font-size: 7em;
     color: white;
+    text-shadow: 0px 2px 5px #777;
   }
 
   p {
     margin: (_size(element-margin) * 0.5) 0 0 0;
-    font-size: 1.5em;
-    line-height: 2em;
+    font-size: 1.6em;
+    line-height: 2.5em;
     color: white;
+    text-shadow: 0px 2px 5px #777;
   }
   span{
-    font-size: 1em;
+    font-size: 1.2em;
+    color: #F5F5F5;
     i{
-      margin-right: 5px;
+      margin-right: 10px;
     }
   }
 
   .actions {
     margin: (_size(element-margin) * 1.25) 0 0 0;
     position: relative;
+    .button{
+      box-shadow: inset 0 0 0 1px white;
+      &:hover{
+        color: #777;
+        text-decoration: none;
+      }
+    }
     
     &:after {
       background: _palette(dark, border);
@@ -105,420 +128,228 @@ body.is-loading {
 }
 
 /* About */
-
 #about{
   background-color: white;
   background-image:url('images/overlay3.svg');
-  background-position: right center;
+  background-position: right top;
   background-repeat: no-repeat;
   background-size: contain;
-
+  padding: 100px 40px 0px;
+  position: relative;
   h2{
     font-size: 1.6em;
+    color: _palette(fg-bold) + #111;
   }
   p{
+    margin: 0;
     font-size: 0.8em;
-  }
-  .row+.row{
-    padding-top: 60px;
-    
+    color: _palette(fg-bold);
   }
   .paragraph{
     padding: 20px;
   }
+  .image{
+    padding-top: 20px;
+  }
+  
+  .row+.row{
+    padding-top: 60px;
+    .major {
+      h2{
+        color: $jsdc-r;
+      }
+      &:after {
+        background: $jsdc-r;
+        height: 1px;
+      }
+    }
+    p{
+      color: $jsdc-r - #222;
+      font-size: 0.9em;
+      line-height: 2.5em;
+    }
+  }
+  
+  #about-line{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0 (_size(element-margin) * 0.5) 0 0;
+    &:after {
+      background: $jsdc-y;
+      content: '';
+      display: inline-block;
+      height: 100px;
+      width: 1px;
+    }
+  }
+  
+  #about-jsdc{
+    border: 1px solid $jsdc-y;
+    border-radius: _size(border-radius);
+    padding: 40px;
+  }
 }
 
 /* Community */
-
 #community{
   background-color: white;
   background-image:url('images/overlay4.svg');
-  background-position: left center;
+  background-position: left bottom;
   background-repeat: no-repeat;
   background-size: contain;
+  padding: 40px 40px 60px;
   
-  h2{
-    font-size: 1.2em;
+  .container{
+    padding: 50px 0 20px;
   }
+  
+  .major {
+    h2{
+      color: $jsdc-g - #111;
+      font-size: 1.4em;
+    }
+    &:after {
+      background: $jsdc-g;
+      height: 1px;
+    }
+  }
+ 
+  .actions{
+    .button{
+      box-shadow: inset 0 0 0 1px $jsdc-g;
+      color: $jsdc-g - #222;
+      &:hover {
+        background-color: rgba($jsdc-g, 0.3);
+        box-shadow: inset 0 0 0 0 $jsdc-g;
+        text-decoration: none;
+      }
+    }
+  }
+}
 
+/* Last JSDC */
+#last-year{
+
+  .last-content{
+    position: relative;
+    z-index: 1;
+    padding: 15vh 5vw 0;
+    .major{
+      font-size: 4vw;
+      text-shadow: 0px 2px 5px #888;
+      letter-spacing: 5px;
+    }
+    .button{
+      box-shadow: inset 0 0 0 1px white;
+      display: block;
+      &:hover{
+        background-color: rgba($jsdc-y, 1);
+        box-shadow: inset 0 0 0 0 $jsdc-g;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+    
+  .last-photo{
+    background-image:url('../images/jsdc-last-photo.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 50vw;
+    height: 50vh;
+    
+    &:after {
+      background-image: linear-gradient(90deg, #EDDE5D, #F09819);
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    
+  }
+  .last-vedio{
+    background-image:url('../images/jsdc-last-vedio.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 50vw;
+    height: 50vh;
+    float: right;
+    
+    &:after {
+      background-image: linear-gradient(90deg,#F09819,#EDDE5D);
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+/* Sponsor */
+#sponsor{
+  padding: 80px 40px 60px;
+  
+  #sponsor-content{
+    background-image: linear-gradient(135deg, #26D0CE, #3096b2);
+    border-radius: _size(border-radius);
+    padding: 60px 80px;
+  }
+  .major {  
+    h2{
+      font-size: 1.6em;
+    }
+    &:after {
+      background: $jsdc-y;
+      height: 1px;
+    }
+  }
+  p{
+    font-size: 0.8em;
+    padding: 10px 0 20px;
+  }
+  .button{
+    box-shadow: inset 0 0 0 1px $jsdc-y;
+    display: block;
+    color: $jsdc-y;
+    &:hover{
+      background-color: rgba($jsdc-y, 1);
+      box-shadow: inset 0 0 0 0 $jsdc-g;
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
 
 /* Footer */
-
-// #footer {
-//   @include padding(6em, 0, (0,0,_size(element-margin),0));
-//   // @include dark(#4686a0);
-//   background-attachment:	fixed,							fixed,							fixed;
-//   background-image:		url('images/overlay2.png'),		url('images/overlay4.svg'),		linear-gradient(45deg, _palette(accent6-alt), _palette(accent3-alt) 50%, _palette(accent1-alt) 95%);
-//   background-position:	top left,						center center,					center center;
-//   background-size:		auto,							cover,							cover;
-//   text-align: center;
-
-//   .icons {
-//     margin: 0;
-//   }
-
-//   .copyright {
-//     font-size: 0.8em;
-//     list-style: none;
-//     margin: _size(element-margin) 0 0 0;
-//     padding: 0;
-
-//     li {
-//       border-left: solid 1px;
-//       display: inline-block;
-//       line-height: 1em;
-//       margin-left: 1em;
-//       padding: 0 0 0 1em;
-
-//       &:first-child {
-//         border-left: 0;
-//         margin-left: 0;
-//         padding: 0;
-//       }
-//     }
-//   }
-// }
-
-// /* XLarge */
-
-// @include breakpoint(xlarge) {
-
-// /* Basic */
-
-//   body, input, select, textarea {
-//     font-size: 14pt;
-//   }
-
-// /* Header */
-
-//   #header {
-//     @include padding(6em, 0, (0,0,_size(element-margin),0));
-//   }
-
-// }
-
-// /* Large */
-
-// @include breakpoint(large) {
-
-// /* Basic */
-
-//   body, input, select, textarea {
-//     font-size: 13pt;
-//   }
-
-//   h1, h2, h3, h4, h5, h6 {
-//     br {
-//       display: none;
-//     }
-//   }
-
-// /* List */
-
-//   ul {
-//     &.major-icons {
-//       li {
-//         padding: 2em;
-
-//         .icon {
-//           height: 8em;
-//           line-height: 8em;
-//           width: 8em;
-//         }
-//       }
-//     }
-//   }
-
-// /* Main */
-
-//   .main {
-//     @include padding(4em, 0);
-
-//     &.style2 {
-//       background-attachment: scroll;
-//     }
-//   }
-
-// /* Header */
-
-//   #header {
-//     @include padding(5em, 0, (0,0,_size(element-margin),0));
-//     background-attachment: scroll;
-
-//     br {
-//       display: inline;
-//     }
-//   }
-
-// /* Footer */
-
-//   #footer {
-//     @include padding(4em, 0, (0,0,_size(element-margin),0));
-//     background-attachment: scroll;
-//   }
-
-// }
-
-// /* Medium */
-
-// @include breakpoint(medium) {
-
-// /* List */
-
-//   ul {
-//     &.major-icons {
-//       li {
-//         padding: 2em;
-
-//         .icon {
-//           height: 7em;
-//           line-height: 7em;
-//           width: 7em;
-//         }
-//       }
-//     }
-//   }
-
-// /* Main */
-
-//   .main {
-//     @include padding(5em, 3em);
-//   }
-
-// /* Header */
-
-//   #header {
-//     @include padding(8em, 3em, (0,0,_size(element-margin),0));
-//   }
-
-// /* Footer */
-
-//   #footer {
-//     @include padding(5em, 3em, (0,0,_size(element-margin),0));
-//   }
-
-// /* One */
-
-//   #one {
-//     text-align: center;
-//   }
-
-// /* Two */
-
-//   #two {
-//     text-align: center;
-//   }
-
-// }
-
-// /* Small */
-
-// @include breakpoint(small) {
-
-// /* Basic */
-
-//   body, input, select, textarea {
-//     font-size: 12pt;
-//   }
-
-//   h1 {
-//     font-size: 1.75em;
-//   }
-
-//   h2 {
-//     font-size: 1.5em;
-//   }
-
-//   h3 {
-//     font-size: 1.1em;
-//   }
-
-//   h4 {
-//     font-size: 1em;
-//   }
-
-// /* List */
-
-//   ul {
-//     &.major-icons {
-//       li {
-//         padding: 1.5em;
-
-//         .icon {
-//           height: 5em;
-//           line-height: 5em;
-//           width: 5em;
-
-//           &:before {
-//             font-size: 42px;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-// /* Icon */
-
-//   .icon {
-//     &.major {
-//       margin: 0 0 (_size(element-margin) * 0.5) 0;
-//     }
-//   }
-
-// /* Button */
-
-//   input[type="submit"],
-//   input[type="reset"],
-//   input[type="button"],
-//   button,
-//   .button {
-//     height: 3em;
-//     line-height: 3em;
-//   }
-
-// /* Main */
-
-//   .main {
-//     @include padding(3em, 1.5em);
-//   }
-
-// /* Header */
-
-//   #header {
-//     @include padding(4em, 3em, (0,0,_size(element-margin),0));
-
-//     .actions {
-//       margin: _size(element-margin) 0 0 0;
-//     }
-//   }
-
-// /* Footer */
-
-//   #footer {
-//     @include padding(3em, 1.5em, (0,0,_size(element-margin),0));
-//   }
-
-// }
-
-// /* XSmall */
-
-// @include breakpoint(xsmall) {
-
-// /* List */
-
-//   ul {
-//     &.actions {
-//       margin: 0 0 _size(element-margin) 0;
-
-//       li {
-//         display: block;
-//         padding: (_size(element-margin) * 0.5) 0 0 0;
-//         text-align: center;
-//         width: 100%;
-
-//         &:first-child {
-//           padding-top: 0;
-//         }
-
-//         > * {
-//           margin: 0 !important;
-//           width: 100%;
-
-//           &.icon {
-//             &:before {
-//               margin-left: -2em;
-//             }
-//           }
-//         }
-//       }
-
-//       &.small {
-//         li {
-//           padding: (_size(element-margin) * 0.25) 0 0 0;
-
-//           &:first-child {
-//             padding-top: 0;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-// /* Button */
-
-//   input[type="submit"],
-//   input[type="reset"],
-//   input[type="button"],
-//   .button {
-//     padding: 0;
-//   }
-
-// /* Main */
-
-//   .main {
-//     @include padding(2em, 1.5em);
-//   }
-
-// /* Header */
-
-//   #header {
-//     @include padding(4em, 2em, (0,0,_size(element-margin),0));
-
-//     br {
-//       display: none;
-//     }
-//   }
-
-// /* Footer */
-
-//   #footer {
-//     @include padding(2em, 1.5em, (0,0,_size(element-margin),0));
-
-//     .copyright {
-//       margin: (_size(element-margin) * 0.75) 0 0 0;
-
-//       li {
-//         border: 0;
-//         display: block;
-//         margin: 1em 0 0 0;
-//         padding: 0;
-
-//         &:first-child {
-//           margin-top: 0;
-//         }
-//       }
-//     }
-//   }
-
-// }
-
-// /* XXSmall */
-
-// @include breakpoint(xxsmall) {
-
-// /* Basic */
-
-//   html, body {
-//     min-width: 320px;
-//   }
-
-// /* Main */
-
-//   .main {
-//     @include padding(2em, 1em);
-//   }
-
-// /* Header */
-
-//   #header {
-//     @include padding(3em, 1em, (0,0,_size(element-margin),0));
-//   }
-
-// /* Footer */
-
-//   #footer {
-//     @include padding(2em, 1em, (0,0,_size(element-margin),0));
-//   }
-
-// }
+#footer {
+  padding-bottom: 40px;
+
+  .copyright {
+    font-size: 0.8em;
+    list-style: none;
+    margin: _size(element-margin) 0 0 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      line-height: 1em;
+      margin-left: 1em;
+      padding: 0 0 0 1em;
+      
+      a{
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

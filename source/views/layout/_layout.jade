@@ -22,8 +22,7 @@ html(lang='en')
     link(rel='stylesheet', href='./dist/css/bootstrap.css')
     link(rel='stylesheet', href='./dist/css/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href='./dist/css/main.css')
-    link(rel='stylesheet', href='./dist/css/custom.css')
-    // link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic', rel='stylesheet', type='text/css')
     
     //- PLUGINS                
     // link(href='assets/plugins/owl-carousel/owl.carousel.css', rel='stylesheet', type='text/css')
@@ -39,18 +38,29 @@ html(lang='en')
     script(src='./dist/js/jquery-1.11.2.min.js')
     script(src='./dist/js/bootstrap.min.js')
     script(src='./dist/js/jquery.backstretch.min.js')
+    script(src='./dist/js/jquery.lazyload.min.js')
+    script(src='./dist/js/smooth-scroll.min.js')
     script(src='./dist/js/skel.min.js')
     script(src='./dist/js/util.min.js')
     script(src='./dist/js/main.min.js')
     
     script.
-      $('#header').backstretch([
-        "./dist/images/jsdc-scenario-1.jpg",
-        "./dist/images/jsdc-scenario-2.jpg",
-        "./dist/images/jsdc-scenario-3.jpg",
-        "./dist/images/jsdc-scenario-4.jpg",
-        "./dist/images/jsdc-scenario-5.jpg",
-      ], {duration: 3000, fade: 1200});
+      // $('#header').backstretch([
+      //   "./dist/images/jsdc-scenario-1.jpg",
+      //   "./dist/images/jsdc-scenario-2.jpg",
+      //   "./dist/images/jsdc-scenario-3.jpg",
+      //   "./dist/images/jsdc-scenario-4.jpg",
+      //   "./dist/images/jsdc-scenario-5.jpg",
+      // ], {duration: 3000, fade: 1200, lazyload: true,});
+      $('#header').backstretch("./dist/images/jsdc-scenario-1.jpg");
+      
+      $("div.lazy").lazyload({
+        effect : "fadeIn"
+      });
+      $("img.lazy").lazyload({
+        effect : "fadeIn"
+      });
+      
     
     // #fb-root
     // script.

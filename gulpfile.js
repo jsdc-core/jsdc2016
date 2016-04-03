@@ -1,4 +1,7 @@
 var gulp         = require('gulp'),
+    browserSync  = require('browser-sync'),
+    reload       = browserSync.reload,
+    argv         = require('yargs').argv,
     del          = require('del');
     
 var plugins = require('gulp-load-plugins')({
@@ -43,20 +46,30 @@ gulp.task('clean', function() {
 });
 
 // web service
-gulp.task('webserver', function() {
-  gulp.src('./')
-    .pipe(plugins.webserver({
-      port: 2016,
-      livereload: true,
-      directoryListing: false,
-      open: true,
-      fallback: 'index.html'
-    }));
+// gulp.task('webserver', function() {
+//   gulp.src('./')
+//     .pipe(plugins.webserver({
+//       port: 2016,
+//       livereload: true,
+//       directoryListing: false,
+//       open: true,
+//       fallback: 'index.html'
+//     }));
+// });
+
+gulp.task('browser-sync', function() {
+  browserSync({
+    open: !!argv.open,
+    notify: !!argv.notify,
+    server: {
+      baseDir: "./"
+    }
+  });
 });
 
 gulp.task('build', ['sass', 'script', 'jade']);
 
-gulp.task('serve', ['clean', 'build', 'webserver'], function () {
+gulp.task('serve', ['clean', 'build', 'browser-sync'], function () {
   gulp.watch('./source/scss/**/*.scss', ['sass', reload]);
   gulp.watch('./source/js/*.js', ['script', reload]);
   gulp.watch('./source/views/*.jade', ['jade', reload]);
