@@ -1,14 +1,15 @@
 doctype html
-html(lang='en')
+html(lang='zh')
   head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title JSDC 2016
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    //- html 設定
     meta(http-equiv='Content-type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+    //- SEO meta 設定
     meta(name='description', content='This year, JSDC is breaking the barriers by integrating the technical power from independent developers, enterprises, framewords, architectures, and practices.')
     meta(name='keywords', content='website, javascript, js, JSDC')
-    meta(content='', name='author')
     meta(name='author', content='jsdc member')
     meta(property='og:title', content='JSDC 2016')
     meta(property='og:type', content='website')
@@ -16,25 +17,15 @@ html(lang='en')
     meta(property='og:image', content='http://2015.jsdc.tw/images/og.png')
     meta(property='og:description', content='This year, JSDC is breaking the barriers by integrating the technical power from independent developers, enterprises, framewords, architectures, and practices.')
     meta(property='og:site_name', content='JSDC 2016')
-    
-    //- MANDATORY
-    link(rel='shortcut icon', href='./dist/images/favicons/favicon.ico')
+
+    //- css 設定
+    link(rel='shortcut icon', href='./dist/favicons/favicon.ico')
     link(rel='stylesheet', href='./dist/css/bootstrap.css')
     link(rel='stylesheet', href='./dist/css/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href='./dist/css/main.css')
     link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic', rel='stylesheet', type='text/css')
-    
-    //- PLUGINS                
-    // link(href='assets/plugins/owl-carousel/owl.carousel.css', rel='stylesheet', type='text/css')
-    // link(href='assets/plugins/owl-carousel/owl.theme.css', rel='stylesheet', type='text/css')
-    // link(href='assets/plugins/owl-carousel/owl.transitions.css', rel='stylesheet', type='text/css')         
-    // link(href='assets/plugins/fancybox/jquery.fancybox.css', rel='stylesheet', type='text/css')
-    
-  body
-    block content
-    
-    
-    //- PLUGINS
+
+    //- js 設定
     script(src='./dist/js/jquery-1.11.2.min.js')
     script(src='./dist/js/bootstrap.min.js')
     script(src='./dist/js/jquery.backstretch.min.js')
@@ -43,34 +34,9 @@ html(lang='en')
     script(src='./dist/js/skel.min.js')
     script(src='./dist/js/util.min.js')
     script(src='./dist/js/main.min.js')
-    
-    script.
-      // $('#header').backstretch([
-      //   "./dist/images/jsdc-scenario-1.jpg",
-      //   "./dist/images/jsdc-scenario-2.jpg",
-      //   "./dist/images/jsdc-scenario-3.jpg",
-      //   "./dist/images/jsdc-scenario-4.jpg",
-      //   "./dist/images/jsdc-scenario-5.jpg",
-      // ], {duration: 3000, fade: 1200, lazyload: true,});
-      $('#header').backstretch("./dist/images/jsdc-scenario-1.jpg");
-      
-      $("div.lazy").lazyload({
-        effect : "fadeIn"
-      });
-      $("img.lazy").lazyload({
-        effect : "fadeIn"
-      });
-      
-    
-    // #fb-root
-    // script.
-    //   (function (d, s, id) {
-    //   var js,
-    //   fjs = d.getElementsByTagName(s)[0];
-    //   if (d.getElementById(id))
-    //   return;
-    //   js = d.createElement(s);
-    //   js.id = id;
-    //   js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.3&appId=715893795173476";
-    //   fjs.parentNode.insertBefore(js, fjs);
-    //   }(document, 'script', 'facebook-jssdk'));
+
+  body
+
+    block content
+
+    include ../partials/_footer

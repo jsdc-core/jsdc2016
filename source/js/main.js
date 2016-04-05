@@ -6,43 +6,54 @@
 
 (function($) {
 
-	skel.breakpoints({
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1140px)',
-		medium: '(max-width: 980px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)',
-		xxsmall: '(max-width: 320px)'
-	});
+    skel.breakpoints({
+      xlarge: '(max-width: 1680px)',
+      large: '(max-width: 1140px)',
+      medium: '(max-width: 980px)',
+      small: '(max-width: 736px)',
+      xsmall: '(max-width: 480px)',
+      xxsmall: '(max-width: 320px)'
+    });
 
-	$(function() {
+    $(function() {
 
-		var	$window = $(window),
-			$body = $('body');
+      var $window = $(window),
+          $body = $('body');
 
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+      // Disable animations/transitions until the page has loaded.
+      $body.addClass('is-loading');
 
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 250);
-			});
+      $window.on('load', function() {
+          window.setTimeout(function() {
+              $body.removeClass('is-loading');
+          }, 250);
+      });
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+      // Fix: Placeholder polyfill.
+      $('form').placeholder();
 
-		// Prioritize "important" elements on mobile.
-			skel.on('+mobile -mobile', function() {
-				$.prioritize(
-					'.important\\28 mobile\\29',
-					skel.breakpoint('mobile').active
-				);
-			});
+      // Prioritize "important" elements on mobile.
+      skel.on('+mobile -mobile', function() {
+        $.prioritize(
+          '.important\\28 mobile\\29',
+          skel.breakpoint('mobile').active
+        );
+      });
 
-		// Scrolly.
-			$('.scrolly').scrolly();
+      // Scrolly 目前看起來還用不到，所以先隱藏起來
+      // $('.scrolly').scrolly();
 
-	});
+      // backstretch
+      $('#header').backstretch('./dist/images/jsdc-scenario-1.jpg');
+
+      // lazyload
+      $('div.lazy').lazyload({
+        effect : 'fadeIn'
+      });
+      $('img.lazy').lazyload({
+        effect : 'fadeIn'
+      });
+
+    });
 
 })(jQuery);

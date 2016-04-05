@@ -95,6 +95,8 @@
   "globals": {
       "moment": false,
       "_": false,
-      "config": false
+      "config": false,
+      "skel": false,
+      "jQuery": false
   }
 }
