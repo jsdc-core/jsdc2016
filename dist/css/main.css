@@ -815,7 +815,6 @@ body.is-loading #header:after {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  width: 50vw;
   height: 50vh; }
   #last-year .last-photo:after {
     background-image: linear-gradient(90deg, #EDDE5D, #F09819);
@@ -832,7 +831,6 @@ body.is-loading #header:after {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  width: 50vw;
   height: 50vh; }
   #last-year .last-video:after {
     background-image: linear-gradient(90deg, #F09819, #EDDE5D);
