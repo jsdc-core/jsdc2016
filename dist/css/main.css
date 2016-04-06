@@ -621,11 +621,6 @@ button,
     cursor: default;
     opacity: 0.25; }
 
-/*
-	Photon by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 /* Main */
 .c-font-white {
   color: white; }
@@ -639,22 +634,26 @@ body {
 
 /* Header */
 #header {
-  padding: 9em 0 9em 0 ;
+  padding: 7em 0 7em 0 ;
   overflow: hidden;
   position: relative;
   text-align: center;
   height: 100vh; }
-  #header h1 {
+  #header h1, #header h2, #header h5 {
     margin: 0;
-    font-size: 7em;
+    font-size: 6em;
     color: white;
     text-shadow: 0px 2px 5px #777; }
+  #header h2 {
+    font-size: 2em; }
+  #header h5 {
+    font-size: 1em;
+    line-height: 4em; }
   #header p {
-    margin: 1em 0 0 0;
-    font-size: 1.6em;
+    margin: 10px 0 0;
+    font-size: 1.4em;
     line-height: 2.5em;
-    color: white;
-    text-shadow: 0px 2px 5px #777; }
+    color: white; }
   #header span {
     font-size: 1.2em;
     color: #F5F5F5; }
@@ -664,7 +663,11 @@ body {
     margin: 2.5em 0 0 0;
     position: relative; }
     #header .actions .button {
+      color: white;
       box-shadow: inset 0 0 0 1px white; }
+      #header .actions .button:visited {
+        color: white;
+        text-decoration: none; }
       #header .actions .button:hover {
         color: #777;
         text-decoration: none; }
@@ -770,24 +773,17 @@ body.is-loading #header:after {
 
 /* Community */
 #community {
-  background-color: white;
-  background-image: url("images/overlay4.svg");
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 40px 40px 60px; }
-  #community .container {
-    padding: 50px 0 20px; }
+  padding: 60px 0 120px; }
   #community .major h2 {
     color: #a8bb43;
     font-size: 1.4em; }
   #community .major:after {
     background: #b9cc54;
     height: 1px; }
-  #community .actions .button {
+  #community .button {
     box-shadow: inset 0 0 0 1px #b9cc54;
     color: #97aa32; }
-    #community .actions .button:hover {
+    #community .button:hover {
       background-color: rgba(185, 204, 84, 0.3);
       box-shadow: inset 0 0 0 0 #b9cc54;
       text-decoration: none; }
@@ -815,6 +811,7 @@ body.is-loading #header:after {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  position: relative;
   height: 50vh; }
   #last-year .last-photo:after {
     background-image: linear-gradient(90deg, #EDDE5D, #F09819);
@@ -831,6 +828,7 @@ body.is-loading #header:after {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  position: relative;
   height: 50vh; }
   #last-year .last-video:after {
     background-image: linear-gradient(90deg, #F09819, #EDDE5D);
@@ -867,7 +865,6 @@ body.is-loading #header:after {
       text-decoration: none;
       color: white; }
 
-/* Footer */
 #footer {
   padding-bottom: 40px; }
   #footer .copyright {

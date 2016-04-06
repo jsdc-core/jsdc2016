@@ -1,0 +1,326 @@
+/* Main */
+
+$jsdc-y: #FFD54F;
+$jsdc-r: #ce4d40;
+$jsdc-g: #b9cc54;
+$jsdc-b: #3096b2;
+
+.c-font-white{
+  color: white;
+}
+
+.c-bold{
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Header */
+#header {
+  @include padding(7em, 0, (0,0,_size(element-margin),0));
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  height: 100vh;
+
+  h1, h2, h5 {
+    margin: 0;
+    font-size: 6em;
+    color: white;
+    text-shadow: 0px 2px 5px #777;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h5 {
+    font-size: 1em;
+    line-height: 4em;
+  }
+
+  p {
+    margin: 10px 0 0;
+    font-size: 1.4em;
+    line-height: 2.5em;
+    color: white;
+  }
+  span{
+    font-size: 1.2em;
+    color: #F5F5F5;
+    i{
+      margin-right: 10px;
+    }
+  }
+
+  .actions {
+    margin: (_size(element-margin) * 1.25) 0 0 0;
+    position: relative;
+    .button{
+      color: white;
+      box-shadow: inset 0 0 0 1px white;
+      &:visited{
+        color: white;
+        text-decoration: none;
+      }
+      &:hover{
+        color: #777;
+        text-decoration: none;
+      }
+    }
+
+    &:after {
+      background: _palette(dark, border);
+      content: '';
+      height: 100vh;
+      left: 50%;
+      position: absolute;
+      top: 100%;
+      width: 1px;
+    }
+  }
+
+  .inner {
+    @include vendor('transition', ('transform 1.5s ease', 'opacity 2s ease'));
+    @include vendor('transition-delay', '0.25s');
+    @include vendor('transform', 'scale(1)');
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+
+
+    .actions {
+      @include vendor('transition', 'transform 1.25s ease');
+      @include vendor('transition-delay', '1s');
+      @include vendor('transform', 'translateY(0)');
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    @include vendor('transition', 'opacity 1s ease');
+    background-image: linear-gradient(135deg, #EDDE5D, #F09819);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+body.is-loading {
+  #header {
+    .inner {
+      @include vendor('transform', 'scale(1.05)');
+      opacity: 0;
+
+      .actions {
+        @include vendor('transform', 'translateY(30em)');
+        opacity: 0;
+      }
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+/* About */
+#about{
+  background-color: white;
+  background-image:url('images/overlay3.svg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 100px 40px 0px;
+  position: relative;
+  h2{
+    font-size: 1.6em;
+    color: _palette(fg-bold) + #111;
+  }
+  p{
+    margin: 0;
+    font-size: 0.8em;
+    color: _palette(fg-bold);
+  }
+  .paragraph{
+    padding: 20px;
+  }
+  .image{
+    padding-top: 20px;
+  }
+
+  .row+.row{
+    padding-top: 60px;
+    .major {
+      h2{
+        color: $jsdc-r;
+      }
+      &:after {
+        background: $jsdc-r;
+        height: 1px;
+      }
+    }
+    p{
+      color: $jsdc-r - #222;
+      font-size: 0.9em;
+      line-height: 2.5em;
+    }
+  }
+
+  #about-line{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0 (_size(element-margin) * 0.5) 0 0;
+    &:after {
+      background: $jsdc-y;
+      content: '';
+      display: inline-block;
+      height: 100px;
+      width: 1px;
+    }
+  }
+
+  #about-jsdc{
+    border: 1px solid $jsdc-y;
+    border-radius: _size(border-radius);
+    padding: 40px;
+  }
+}
+
+/* Community */
+#community{
+  // background-color: white;
+  // background-image:url('images/overlay4.svg');
+  // background-position: left bottom;
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  padding: 60px 0 120px;
+
+  .major {
+    h2{
+      color: $jsdc-g - #111;
+      font-size: 1.4em;
+    }
+    &:after {
+      background: $jsdc-g;
+      height: 1px;
+    }
+  }
+
+  .button{
+    box-shadow: inset 0 0 0 1px $jsdc-g;
+    color: $jsdc-g - #222;
+    &:hover {
+      background-color: rgba($jsdc-g, 0.3);
+      box-shadow: inset 0 0 0 0 $jsdc-g;
+      text-decoration: none;
+    }
+  }
+}
+
+/* Last JSDC */
+#last-year{
+
+  .last-content{
+    position: relative;
+    z-index: 1;
+    padding: 15vh 5vw 0;
+    .major{
+      font-size: 4vw;
+      text-shadow: 0px 2px 5px #888;
+      letter-spacing: 5px;
+    }
+    .button{
+      box-shadow: inset 0 0 0 1px white;
+      display: block;
+      &:hover{
+        background-color: rgba($jsdc-y, 1);
+        box-shadow: inset 0 0 0 0 $jsdc-g;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+
+  .last-photo{
+    background-image:url('../images/jsdc-last-photo.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 50vh;
+
+    &:after {
+      background-image: linear-gradient(90deg, #EDDE5D, #F09819);
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+  }
+  .last-video{
+    background-image:url('../images/jsdc-last-video.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 50vh;
+
+    &:after {
+      background-image: linear-gradient(90deg,#F09819,#EDDE5D);
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+/* Sponsor */
+#sponsor{
+  padding: 80px 40px 60px;
+
+  #sponsor-content{
+    background-image: linear-gradient(135deg, #26D0CE, #3096b2);
+    border-radius: _size(border-radius);
+    padding: 60px 80px;
+  }
+  .major {
+    h2{
+      font-size: 1.6em;
+    }
+    &:after {
+      background: $jsdc-y;
+      height: 1px;
+    }
+  }
+  p{
+    font-size: 0.8em;
+    padding: 10px 0 20px;
+  }
+  .button{
+    box-shadow: inset 0 0 0 1px $jsdc-y;
+    display: block;
+    color: $jsdc-y;
+    &:hover{
+      background-color: rgba($jsdc-y, 1);
+      box-shadow: inset 0 0 0 0 $jsdc-g;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
