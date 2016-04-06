@@ -773,24 +773,17 @@ body.is-loading #header:after {
 
 /* Community */
 #community {
-  background-color: white;
-  background-image: url("images/overlay4.svg");
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 40px 40px 60px; }
-  #community .container {
-    padding: 50px 0 20px; }
+  padding: 60px 0 120px; }
   #community .major h2 {
     color: #a8bb43;
     font-size: 1.4em; }
   #community .major:after {
     background: #b9cc54;
     height: 1px; }
-  #community .actions .button {
+  #community .button {
     box-shadow: inset 0 0 0 1px #b9cc54;
     color: #97aa32; }
-    #community .actions .button:hover {
+    #community .button:hover {
       background-color: rgba(185, 204, 84, 0.3);
       box-shadow: inset 0 0 0 0 #b9cc54;
       text-decoration: none; }
