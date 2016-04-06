@@ -5,15 +5,6 @@ html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-html {
-  font-size: 62.5%; }
-
-body {
-  font-size: 1.6rem;
-  font-family: "Source Sans Pro", sans-serif;
-  color: #aebcb9;
-  background-color: #0d0d0d; }
-
 a {
   text-decoration: none; }
 
@@ -58,15 +49,6 @@ a {
   font-size: 3rem;
   line-height: 1.2;
   margin: 0; }
-
-@media only screen and (min-width: 768px) {
-  .cd-headline {
-    font-size: 4.4rem;
-    font-weight: 300; } }
-
-@media only screen and (min-width: 1170px) {
-  .cd-headline {
-    font-size: 6rem; } }
 
 .cd-words-wrapper {
   display: inline-block;
