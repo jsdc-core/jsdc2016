@@ -34,7 +34,7 @@ body{
   position: relative;
   text-align: center;
   height: 100vh;
- 
+
   h1 {
     margin: 0;
     font-size: 7em;
@@ -67,7 +67,7 @@ body{
         text-decoration: none;
       }
     }
-    
+
     &:after {
       background: _palette(dark, border);
       content: '';
@@ -86,7 +86,7 @@ body{
     opacity: 1;
     position: relative;
     z-index: 1;
-    
+
 
     .actions {
       @include vendor('transition', 'transform 1.25s ease');
@@ -151,7 +151,7 @@ body.is-loading {
   .image{
     padding-top: 20px;
   }
-  
+
   .row+.row{
     padding-top: 60px;
     .major {
@@ -169,7 +169,7 @@ body.is-loading {
       line-height: 2.5em;
     }
   }
-  
+
   #about-line{
     position: absolute;
     top: 0;
@@ -183,7 +183,7 @@ body.is-loading {
       width: 1px;
     }
   }
-  
+
   #about-jsdc{
     border: 1px solid $jsdc-y;
     border-radius: _size(border-radius);
@@ -199,11 +199,11 @@ body.is-loading {
   background-repeat: no-repeat;
   background-size: contain;
   padding: 40px 40px 60px;
-  
+
   .container{
     padding: 50px 0 20px;
   }
-  
+
   .major {
     h2{
       color: $jsdc-g - #111;
@@ -214,7 +214,7 @@ body.is-loading {
       height: 1px;
     }
   }
- 
+
   .actions{
     .button{
       box-shadow: inset 0 0 0 1px $jsdc-g;
@@ -251,7 +251,7 @@ body.is-loading {
       }
     }
   }
-    
+
   .last-photo{
     background-image:url('../images/jsdc-last-photo.jpg');
     background-repeat: no-repeat;
@@ -259,7 +259,7 @@ body.is-loading {
     background-size: cover;
     width: 50vw;
     height: 50vh;
-    
+
     &:after {
       background-image: linear-gradient(90deg, #EDDE5D, #F09819);
       content: '';
@@ -270,17 +270,16 @@ body.is-loading {
       top: 0;
       width: 100%;
     }
-    
+
   }
-  .last-vedio{
-    background-image:url('../images/jsdc-last-vedio.jpg');
+  .last-video{
+    background-image:url('../images/jsdc-last-video.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     width: 50vw;
     height: 50vh;
-    float: right;
-    
+
     &:after {
       background-image: linear-gradient(90deg,#F09819,#EDDE5D);
       content: '';
@@ -297,13 +296,13 @@ body.is-loading {
 /* Sponsor */
 #sponsor{
   padding: 80px 40px 60px;
-  
+
   #sponsor-content{
     background-image: linear-gradient(135deg, #26D0CE, #3096b2);
     border-radius: _size(border-radius);
     padding: 60px 80px;
   }
-  .major {  
+  .major {
     h2{
       font-size: 1.6em;
     }
@@ -344,7 +343,7 @@ body.is-loading {
       line-height: 1em;
       margin-left: 1em;
       padding: 0 0 0 1em;
-      
+
       a{
         &:hover{
           text-decoration: none;

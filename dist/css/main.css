@@ -827,15 +827,14 @@ body.is-loading #header:after {
     top: 0;
     width: 100%; }
 
-#last-year .last-vedio {
-  background-image: url("../images/jsdc-last-vedio.jpg");
+#last-year .last-video {
+  background-image: url("../images/jsdc-last-video.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   width: 50vw;
-  height: 50vh;
-  float: right; }
-  #last-year .last-vedio:after {
+  height: 50vh; }
+  #last-year .last-video:after {
     background-image: linear-gradient(90deg, #F09819, #EDDE5D);
     content: '';
     height: 100%;
