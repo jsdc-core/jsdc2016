@@ -634,37 +634,41 @@ body {
 
 /* Header */
 #header {
-  padding: 7em 0 7em 0 ;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   text-align: center;
-  height: 100vh; }
-  #header h1, #header h2, #header h5 {
-    margin: 0;
-    font-size: 6em;
-    color: white;
-    text-shadow: 0px 2px 5px #777; }
-  #header h2 {
-    font-size: 2em; }
-  #header h5 {
-    font-size: 1em;
-    line-height: 4em; }
+  height: 100vh;
+  padding: 30% 5% 0; }
+  #header .title {
+    height: 45vh; }
+    #header .title h1, #header .title h2, #header .title h5 {
+      text-shadow: 0px 2px 5px #777;
+      color: white;
+      margin: 0; }
+    #header .title h1 {
+      font-size: 1vw; }
+    #header .title h2 {
+      font-size: 1vw;
+      padding: 5vw 2vw; }
+    #header .title h5 {
+      font-size: 1vw;
+      line-height: 8vw; }
   #header p {
     margin: 10px 0 0;
-    font-size: 1.4em;
-    line-height: 2.5em;
-    color: white; }
+    font-size: 1vw;
+    line-height: 15vw; }
   #header span {
-    font-size: 1.2em;
+    font-size: 1vw;
     color: #F5F5F5; }
     #header span i {
       margin-right: 10px; }
   #header .actions {
-    margin: 2.5em 0 0 0;
-    position: relative; }
+    position: relative;
+    margin-top: 10vw; }
     #header .actions .button {
-      color: white;
-      box-shadow: inset 0 0 0 1px white; }
+      box-shadow: inset 0 0 0 1px white;
+      font-size: 1vw;
+      color: white; }
       #header .actions .button:visited {
         color: white;
         text-decoration: none; }
@@ -731,31 +735,37 @@ body.is-loading #header:after {
   background-position: right top;
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 100px 40px 0px;
-  position: relative; }
-  #about h2 {
-    font-size: 1.6em;
-    color: #666666; }
+  position: relative;
+  padding: 60px 20px 0; }
+  #about #about-jsdc {
+    border: 1px solid #FFD54F;
+    border-radius: 4px;
+    padding: 60px 20px; }
+    #about #about-jsdc .major {
+      text-align: center; }
+      #about #about-jsdc .major h2 {
+        color: #555;
+        font-size: 28px; }
   #about p {
-    margin: 0;
-    font-size: 0.8em;
-    color: #555; }
-  #about .paragraph {
-    padding: 20px; }
-  #about .image {
-    padding-top: 20px; }
+    color: #555;
+    font-size: 15px;
+    line-height: 28px;
+    text-align: justify;
+    margin: 0 0 40px; }
   #about .row + .row {
     padding-top: 60px; }
     #about .row + .row .major h2 {
-      color: #ce4d40; }
+      color: #bd3c2f;
+      font-size: 28px; }
     #about .row + .row .major:after {
-      background: #ce4d40;
-      height: 1px; }
+      background: #ce4d40; }
     #about .row + .row p {
-      color: #ac2b1e;
-      font-size: 0.9em;
-      line-height: 2.5em; }
+      color: #ce4d40;
+      text-align: center;
+      font-size: 17px;
+      line-height: 30px; }
     #about .row + .row .image {
+      padding-top: 40px;
       margin: 0; }
   #about #about-line {
     position: absolute;
@@ -766,23 +776,13 @@ body.is-loading #header:after {
       background: #FFD54F;
       content: '';
       display: inline-block;
-      height: 100px;
+      height: 60px;
       width: 1px; }
-  #about #about-jsdc {
-    border: 1px solid #FFD54F;
-    border-radius: 4px;
-    padding: 40px; }
 
 /* Speaker */
 #speaker {
   position: relative;
-  padding: 120px 0; }
-  #speaker .major h2 {
-    color: #a8bb43;
-    font-size: 1.4em; }
-  #speaker .major:after {
-    background: #b9cc54;
-    height: 1px; }
+  padding: 60px 0; }
   #speaker .button {
     box-shadow: inset 0 0 0 1px #b9cc54;
     background-color: white;
@@ -790,8 +790,9 @@ body.is-loading #header:after {
     position: relative;
     z-index: 1;
     display: block;
+    font-size: 18px;
     margin: 0 auto;
-    width: 50%; }
+    width: 80vw; }
     #speaker .button:hover {
       background-color: #b9cc54;
       box-shadow: inset 0 0 0 0 #b9cc54;
@@ -805,71 +806,73 @@ body.is-loading #header:after {
       background: #b9cc54;
       content: '';
       display: inline-block;
-      height: 120px;
+      height: 60px;
       width: 1px; }
 
 /* Last JSDC */
-#last-year .last-content {
-  position: relative;
-  z-index: 1;
-  padding: 12vh 5vw 0; }
-  #last-year .last-content .major {
-    font-size: 4vw;
-    text-shadow: 0px 2px 5px #888;
-    letter-spacing: 5px; }
-  #last-year .last-content .button {
-    box-shadow: inset 0 0 0 1px white;
-    display: block; }
-    #last-year .last-content .button:hover {
-      background-color: #ffd54f;
-      box-shadow: inset 0 0 0 0 #b9cc54;
-      text-decoration: none;
-      color: white; }
-
-#last-year .last-photo {
-  background-image: url("../images/jsdc-last-photo.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-  height: 45vh; }
-  #last-year .last-photo:after {
-    background-image: linear-gradient(90deg, #EDDE5D, #F09819);
-    content: '';
-    height: 100%;
-    left: 0;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    width: 100%; }
-
-#last-year .last-video {
-  background-image: url("../images/jsdc-last-video.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
-  height: 45vh; }
-  #last-year .last-video:after {
-    background-image: linear-gradient(90deg, #F09819, #EDDE5D);
-    content: '';
-    height: 100%;
-    left: 0;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    width: 100%; }
+#last-year {
+  padding: 0 20px; }
+  #last-year .last-content {
+    position: relative;
+    z-index: 1;
+    padding: 100px 8% 0; }
+    #last-year .last-content .major {
+      text-shadow: 0px 2px 5px #888;
+      letter-spacing: 5px;
+      font-size: 28px; }
+    #last-year .last-content .button {
+      box-shadow: inset 0 0 0 1px white;
+      display: block;
+      font-size: 18px; }
+      #last-year .last-content .button:hover {
+        background-color: #ffd54f;
+        box-shadow: inset 0 0 0 0 #b9cc54;
+        text-decoration: none;
+        color: white; }
+  #last-year .last-photo {
+    background-image: url("../images/jsdc-last-photo.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 45vh; }
+    #last-year .last-photo:after {
+      background-image: linear-gradient(90deg, #EDDE5D, #F09819);
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 100%; }
+  #last-year .last-video {
+    background-image: url("../images/jsdc-last-video.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 45vh; }
+    #last-year .last-video:after {
+      background-image: linear-gradient(90deg, #F09819, #EDDE5D);
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 100%; }
+  #last-year .col-xs-12 + .col-xs-12 {
+    margin-top: 1px; }
 
 /* Sponsor */
 #sponsor {
   position: relative;
-  padding: 120px 40px; }
+  padding: 60px 20px; }
   #sponsor .major h2 {
     color: #1f85a1;
-    font-size: 1.6em; }
+    font-size: 7vw; }
   #sponsor .major:after {
-    background: #3096b2;
-    height: 1px; }
+    background: #3096b2; }
   #sponsor .button {
     box-shadow: inset 0 0 0 1px #3096b2;
     background-color: white;
@@ -877,8 +880,9 @@ body.is-loading #header:after {
     position: relative;
     z-index: 1;
     display: block;
+    font-size: 5vw;
     margin: 0 auto;
-    width: 50%; }
+    width: 80vw; }
     #sponsor .button:hover {
       background-color: #3096b2;
       box-shadow: inset 0 0 0 0 #3096b2;
@@ -895,19 +899,98 @@ body.is-loading #header:after {
       height: 1px;
       width: 100vw; }
 
-#footer {
-  padding-bottom: 40px; }
-  #footer .copyright {
-    font-size: 0.8em;
-    list-style: none;
-    margin: 2em 0 0 0;
+#footer .copyright {
+  font-size: 5vw;
+  list-style: none;
+  padding: 0; }
+  #footer .copyright a {
+    color: #ddb32d; }
+    #footer .copyright a:hover {
+      color: #FFD54F;
+      text-decoration: none; }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* About */
+  #about {
+    padding: 80px 0 0; }
+    #about #about-jsdc .major {
+      text-align: left; }
+      #about #about-jsdc .major h2 {
+        font-size: 32px; }
+    #about p {
+      font-size: 16px;
+      margin: 0; }
+    #about .image {
+      margin-top: 60px; }
+    #about .row + .row .major h2 {
+      font-size: 32px; }
+    #about .row + .row p {
+      font-size: 18px; }
+    #about .row + .row .image {
+      padding-top: 40px;
+      margin: 0; }
+  /* Speaker */
+  #speaker {
+    padding: 80px 0; }
+    #speaker .button {
+      width: 70vw; }
+    #speaker #speaker-line:after {
+      height: 80px; }
+  /* Last JSDC */
+  #last-year {
     padding: 0; }
-    #footer .copyright li {
-      display: inline-block;
-      line-height: 1em;
-      margin-left: 1em;
-      padding: 0 0 0 1em; }
-      #footer .copyright li a:hover {
-        text-decoration: none; }
+    #last-year .last-content {
+      position: relative;
+      z-index: 1;
+      padding: 100px 10% 0; }
+      #last-year .last-content .major {
+        letter-spacing: 5px;
+        font-size: 32px; }
+      #last-year .last-content .button {
+        box-shadow: inset 0 0 0 1px white;
+        display: block;
+        font-size: 18px; }
+        #last-year .last-content .button:hover {
+          background-color: #ffd54f;
+          box-shadow: inset 0 0 0 0 #b9cc54;
+          text-decoration: none;
+          color: white; }
+    #last-year .last-photo {
+      background-image: url("../images/jsdc-last-photo.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: relative;
+      height: 45vh; }
+      #last-year .last-photo:after {
+        background-image: linear-gradient(90deg, #EDDE5D, #F09819);
+        content: '';
+        height: 100%;
+        left: 0;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        width: 100%; }
+    #last-year .last-video {
+      background-image: url("../images/jsdc-last-video.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: relative;
+      height: 45vh; }
+      #last-year .last-video:after {
+        background-image: linear-gradient(90deg, #F09819, #EDDE5D);
+        content: '';
+        height: 100%;
+        left: 0;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        width: 100%; }
+    #last-year .col-xs-12 + .col-xs-12 {
+      margin-top: 1px; } }
+
+/* Medium devices (desktops, 992px and up) */
 
 /*# sourceMappingURL=main.css.map */
