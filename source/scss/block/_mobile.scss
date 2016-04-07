@@ -2,7 +2,135 @@ $screen-md-min: 992px;
 $screen-sm-min: 768px;
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: $screen-sm-min) { }
+@media (min-width: $screen-sm-min) {
+  /* About */
+  #about{
+    padding: 80px 0 0;
+    
+    #about-jsdc{
+      
+      .major{
+        text-align: left;
+        h2{
+          font-size: 32px;
+        }
+      }
+    }
+    
+    p{
+      font-size: 16px;
+      margin: 0;
+    }
+    
+    .image{
+      margin-top: 60px;
+    }
+
+    .row + .row{
+      
+      .major {
+        h2{
+          font-size: 32px;
+        }
+      }
+      
+      p{
+        font-size: 18px;
+      }
+      .image{
+        padding-top: 40px;
+        margin: 0;
+      }
+    }
+  }
+  
+  /* Speaker */
+  #speaker{
+    padding: 80px 0;
+    
+    .button{
+      width: 70vw;
+    }
+  
+    #speaker-line{
+      &:after {
+        height: 80px;
+      }
+    }
+  }
+  
+/* Last JSDC */
+#last-year{
+  padding: 0;
+  
+  .last-content{
+    position: relative;
+    z-index: 1;
+    padding: 100px 10% 0;
+    .major{
+      letter-spacing: 5px;
+      font-size: 32px;
+    }
+    .button{
+      box-shadow: inset 0 0 0 1px white;
+      display: block;
+      font-size: 18px;
+      &:hover{
+        background-color: rgba($jsdc-y, 1);
+        box-shadow: inset 0 0 0 0 $jsdc-g;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+
+  .last-photo{
+    background-image:url('../images/jsdc-last-photo.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 45vh;
+
+    &:after {
+      background-image: linear-gradient(90deg, #EDDE5D, #F09819);
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+  }
+  .last-video{
+    background-image:url('../images/jsdc-last-video.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 45vh;
+
+    &:after {
+      background-image: linear-gradient(90deg,#F09819,#EDDE5D);
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  
+  .col-xs-12 + .col-xs-12{
+    margin-top: 1px;
+  }
+}
+ }
+ 
+ 
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) {
