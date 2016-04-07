@@ -171,6 +171,9 @@ body.is-loading {
       font-size: 0.9em;
       line-height: 2.5em;
     }
+    .image{
+      margin: 0;
+    }
   }
 
   #about-line{
@@ -194,14 +197,10 @@ body.is-loading {
   }
 }
 
-/* Community */
-#community{
-  // background-color: white;
-  // background-image:url('images/overlay4.svg');
-  // background-position: left bottom;
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  padding: 60px 0 120px;
+/* Speaker */
+#speaker{
+  position: relative;
+  padding: 120px 0;
 
   .major {
     h2{
@@ -216,11 +215,31 @@ body.is-loading {
 
   .button{
     box-shadow: inset 0 0 0 1px $jsdc-g;
+    background-color: white;
     color: $jsdc-g - #222;
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
     &:hover {
-      background-color: rgba($jsdc-g, 0.3);
+      background-color: $jsdc-g;
       box-shadow: inset 0 0 0 0 $jsdc-g;
       text-decoration: none;
+      color: white;
+    }
+  }
+  
+  #speaker-line{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    &:after {
+      background: $jsdc-g;
+      content: '';
+      display: inline-block;
+      height: 120px;
+      width: 1px;
     }
   }
 }
@@ -231,7 +250,7 @@ body.is-loading {
   .last-content{
     position: relative;
     z-index: 1;
-    padding: 15vh 5vw 0;
+    padding: 12vh 5vw 0;
     .major{
       font-size: 4vw;
       text-shadow: 0px 2px 5px #888;
@@ -255,7 +274,7 @@ body.is-loading {
     background-position: center center;
     background-size: cover;
     position: relative;
-    height: 50vh;
+    height: 45vh;
 
     &:after {
       background-image: linear-gradient(90deg, #EDDE5D, #F09819);
@@ -275,7 +294,7 @@ body.is-loading {
     background-position: center center;
     background-size: cover;
     position: relative;
-    height: 50vh;
+    height: 45vh;
 
     &:after {
       background-image: linear-gradient(90deg,#F09819,#EDDE5D);
@@ -292,35 +311,50 @@ body.is-loading {
 
 /* Sponsor */
 #sponsor{
-  padding: 80px 40px 60px;
+  // background-image: linear-gradient(135deg, #26D0CE, #3096b2);
+  position: relative;
+  padding: 120px 40px;
 
-  #sponsor-content{
-    background-image: linear-gradient(135deg, #26D0CE, #3096b2);
-    border-radius: _size(border-radius);
-    padding: 60px 80px;
-  }
   .major {
     h2{
+      color: $jsdc-b - #111;
       font-size: 1.6em;
     }
     &:after {
-      background: $jsdc-y;
+      background: $jsdc-b;
       height: 1px;
     }
   }
-  p{
-    font-size: 0.8em;
-    padding: 10px 0 20px;
-  }
+  // p{
+  //   font-size: 0.8em;
+  //   padding: 10px 0 20px;
+  // }
   .button{
-    box-shadow: inset 0 0 0 1px $jsdc-y;
+    box-shadow: inset 0 0 0 1px $jsdc-b;
+    background-color: white;
+    color: $jsdc-b - #222;
+    position: relative;
+    z-index: 1;
     display: block;
-    color: $jsdc-y;
-    &:hover{
-      background-color: rgba($jsdc-y, 1);
-      box-shadow: inset 0 0 0 0 $jsdc-g;
+    margin: 0 auto;
+    width: 50%;
+    &:hover {
+      background-color: $jsdc-b;
+      box-shadow: inset 0 0 0 0 $jsdc-b;
       text-decoration: none;
       color: white;
+    }
+  }
+  #sponsor-line{
+    position: absolute;
+    top: 60%;
+    left: 0;
+    &:after {
+      background: $jsdc-b;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 100vw;
     }
   }
 }
