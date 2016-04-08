@@ -637,8 +637,7 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
-  height: 100vh;
-  padding: 30% 5% 0; }
+  height: 100vh; }
   #header .title {
     height: 45vh; }
     #header .title h1, #header .title h2, #header .title h5 {
@@ -646,19 +645,18 @@ body {
       color: white;
       margin: 0; }
     #header .title h1 {
-      font-size: 1vw; }
+      font-size: 6em; }
     #header .title h2 {
-      font-size: 1vw;
+      font-size: 2em;
       padding: 5vw 2vw; }
     #header .title h5 {
-      font-size: 1vw;
-      line-height: 8vw; }
+      font-size: 1em; }
   #header p {
     margin: 10px 0 0;
-    font-size: 1vw;
+    font-size: 1.4em;
     line-height: 15vw; }
   #header span {
-    font-size: 1vw;
+    font-size: 1.2em;
     color: #F5F5F5; }
     #header span i {
       margin-right: 10px; }
@@ -870,7 +868,7 @@ body.is-loading #header:after {
   padding: 60px 20px; }
   #sponsor .major h2 {
     color: #1f85a1;
-    font-size: 7vw; }
+    font-size: 1.6em; }
   #sponsor .major:after {
     background: #3096b2; }
   #sponsor .button {
@@ -880,9 +878,9 @@ body.is-loading #header:after {
     position: relative;
     z-index: 1;
     display: block;
-    font-size: 5vw;
     margin: 0 auto;
-    width: 80vw; }
+    width: 50%;
+    font-size: 0.9em; }
     #sponsor .button:hover {
       background-color: #3096b2;
       box-shadow: inset 0 0 0 0 #3096b2;
@@ -900,7 +898,7 @@ body.is-loading #header:after {
       width: 100vw; }
 
 #footer .copyright {
-  font-size: 5vw;
+  font-size: 0.8em;
   list-style: none;
   padding: 0; }
   #footer .copyright a {
@@ -910,7 +908,7 @@ body.is-loading #header:after {
       text-decoration: none; }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   /* About */
   #about {
     padding: 80px 0 0; }
@@ -989,7 +987,45 @@ body.is-loading #header:after {
         top: 0;
         width: 100%; }
     #last-year .col-xs-12 + .col-xs-12 {
-      margin-top: 1px; } }
+      margin-top: 1px; }
+  #header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    height: 100vh;
+    padding: 30% 5% 0; }
+    #header .title {
+      height: 45vh; }
+      #header .title h1,
+      #header .title h2,
+      #header .title h5 {
+        text-shadow: 0 2px 5px #777;
+        color: white;
+        margin: 0; }
+      #header .title h1 {
+        font-size: 1vw; }
+      #header .title h2 {
+        font-size: 1vw;
+        padding: 5vw 2vw; }
+      #header .title h5 {
+        font-size: 1vw;
+        line-height: 8vw; }
+    #header p {
+      margin: 10px 0 0;
+      font-size: 1vw;
+      line-height: 15vw; }
+    #header span {
+      font-size: 1vw;
+      color: #F5F5F5; }
+      #header span i {
+        margin-right: 10px; }
+  #footer .copyright {
+    font-size: 5vw; }
+  #sponsor .major h2 {
+    font-size: 7vw; }
+  #sponsor .button {
+    font-size: 5vw;
+    width: 80vw; } }
 
 /* Medium devices (desktops, 992px and up) */
 

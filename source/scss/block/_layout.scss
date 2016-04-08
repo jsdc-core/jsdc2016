@@ -25,36 +25,34 @@ body{
   overflow: hidden;
   text-align: center;
   height: 100vh;
-  padding: 30% 5% 0;
-  
+
   .title{
     height: 45vh;
-    
+
     h1, h2, h5 {
       text-shadow: 0px 2px 5px #777;
       color: white;
       margin: 0;
     }
     h1 {
-      font-size: 1vw;
+      font-size: 6em;
     }
     h2 {
-      font-size: 1vw;
+      font-size: 2em;
       padding: 5vw 2vw;
     }
     h5 {
-      font-size: 1vw;
-      line-height: 8vw;
-    } 
+      font-size: 1em;
+    }
   }
 
   p {
     margin: 10px 0 0;
-    font-size: 1vw;
+    font-size: 1.4em;
     line-height: 15vw;
   }
   span{
-    font-size: 1vw;
+    font-size: 1.2em;
     color: #F5F5F5;
     i{
       margin-right: 10px;
@@ -145,12 +143,12 @@ body.is-loading {
   background-size: contain;
   position: relative;
   padding: 60px 20px 0;
-  
+
   #about-jsdc{
     border: 1px solid $jsdc-y;
     border-radius: _size(border-radius);
     padding: 60px 20px;
-    
+
     .major{
       text-align: center;
       h2{
@@ -159,7 +157,7 @@ body.is-loading {
       }
     }
   }
-  
+
   p{
     color: _palette(fg-bold);
     font-size: 15px;
@@ -170,7 +168,7 @@ body.is-loading {
 
   .row + .row{
     padding-top: 60px;
-    
+
     .major {
       h2{
         color: $jsdc-r  - #111;
@@ -180,7 +178,7 @@ body.is-loading {
         background: $jsdc-r;
       }
     }
-    
+
     p{
       color: $jsdc-r;
       text-align: center;
@@ -230,7 +228,7 @@ body.is-loading {
       color: white;
     }
   }
-  
+
   #speaker-line{
     position: absolute;
     top: 0;
@@ -248,7 +246,7 @@ body.is-loading {
 /* Last JSDC */
 #last-year{
   padding: 0 20px;
-  
+
   .last-content{
     position: relative;
     z-index: 1;
@@ -310,7 +308,7 @@ body.is-loading {
       width: 100%;
     }
   }
-  
+
   .col-xs-12 + .col-xs-12{
     margin-top: 1px;
   }
@@ -324,7 +322,7 @@ body.is-loading {
   .major {
     h2{
       color: $jsdc-b - #111;
-      font-size: 7vw;
+      font-size: 1.6em;
     }
     &:after {
       background: $jsdc-b;
@@ -338,9 +336,9 @@ body.is-loading {
     position: relative;
     z-index: 1;
     display: block;
-    font-size: 5vw;
     margin: 0 auto;
-    width: 80vw;
+    width: 50%;
+    font-size: 0.9em;
     &:hover {
       background-color: $jsdc-b;
       box-shadow: inset 0 0 0 0 $jsdc-b;

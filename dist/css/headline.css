@@ -57,7 +57,8 @@ a {
 .cd-words-wrapper {
   display: inline-block;
   position: relative;
-  text-align: left; }
+  text-align: left;
+  margin-right: 5px; }
 
 .cd-words-wrapper b {
   display: inline-block;
