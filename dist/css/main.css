@@ -648,13 +648,13 @@ body {
       font-size: 6em; }
     #header .title h2 {
       font-size: 2em;
-      padding: 5vw 2vw; }
+      padding: 2vw; }
     #header .title h5 {
       font-size: 1em; }
   #header p {
     margin: 10px 0 0;
     font-size: 1.4em;
-    line-height: 15vw; }
+    line-height: 7vw; }
   #header span {
     font-size: 1.2em;
     color: #F5F5F5; }
