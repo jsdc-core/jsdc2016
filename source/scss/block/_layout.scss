@@ -21,31 +21,35 @@ body{
 
 /* Header */
 #header {
-  @include padding(7em, 0, (0,0,_size(element-margin),0));
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
   text-align: center;
   height: 100vh;
 
-  h1, h2, h5 {
-    margin: 0;
-    font-size: 6em;
-    color: white;
-    text-shadow: 0px 2px 5px #777;
-  }
-  h2 {
-    font-size: 2em;
-  }
-  h5 {
-    font-size: 1em;
-    line-height: 4em;
+  .title{
+    height: 45vh;
+
+    h1, h2, h5 {
+      text-shadow: 0px 2px 5px #777;
+      color: white;
+      margin: 0;
+    }
+    h1 {
+      font-size: 6em;
+    }
+    h2 {
+      font-size: 2em;
+      padding: 5vw 2vw;
+    }
+    h5 {
+      font-size: 1em;
+    }
   }
 
   p {
     margin: 10px 0 0;
     font-size: 1.4em;
-    line-height: 2.5em;
-    color: white;
+    line-height: 15vw;
   }
   span{
     font-size: 1.2em;
@@ -56,11 +60,12 @@ body{
   }
 
   .actions {
-    margin: (_size(element-margin) * 1.25) 0 0 0;
     position: relative;
+    margin-top: 10vw;
     .button{
-      color: white;
       box-shadow: inset 0 0 0 1px white;
+      font-size: 1vw;
+      color: white;
       &:visited{
         color: white;
         text-decoration: none;
@@ -89,7 +94,6 @@ body{
     opacity: 1;
     position: relative;
     z-index: 1;
-
 
     .actions {
       @include vendor('transition', 'transform 1.25s ease');
@@ -137,41 +141,52 @@ body.is-loading {
   background-position: right top;
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 100px 40px 0px;
   position: relative;
-  h2{
-    font-size: 1.6em;
-    color: _palette(fg-bold) + #111;
-  }
-  p{
-    margin: 0;
-    font-size: 0.8em;
-    color: _palette(fg-bold);
-  }
-  .paragraph{
-    padding: 20px;
-  }
-  .image{
-    padding-top: 20px;
+  padding: 60px 20px 0;
+
+  #about-jsdc{
+    border: 1px solid $jsdc-y;
+    border-radius: _size(border-radius);
+    padding: 60px 20px;
+
+    .major{
+      text-align: center;
+      h2{
+        color: _palette(fg-bold);
+        font-size: 28px;
+      }
+    }
   }
 
-  .row+.row{
+  p{
+    color: _palette(fg-bold);
+    font-size: 15px;
+    line-height: 28px;
+    text-align: justify;
+    margin: 0 0 40px;
+  }
+
+  .row + .row{
     padding-top: 60px;
+
     .major {
       h2{
-        color: $jsdc-r;
+        color: $jsdc-r  - #111;
+        font-size: 28px;
       }
       &:after {
         background: $jsdc-r;
-        height: 1px;
       }
     }
+
     p{
-      color: $jsdc-r - #222;
-      font-size: 0.9em;
-      line-height: 2.5em;
+      color: $jsdc-r;
+      text-align: center;
+      font-size: 17px;
+      line-height: 30px;
     }
     .image{
+      padding-top: 40px;
       margin: 0;
     }
   }
@@ -185,33 +200,16 @@ body.is-loading {
       background: $jsdc-y;
       content: '';
       display: inline-block;
-      height: 100px;
+      height: 60px;
       width: 1px;
     }
-  }
-
-  #about-jsdc{
-    border: 1px solid $jsdc-y;
-    border-radius: _size(border-radius);
-    padding: 40px;
   }
 }
 
 /* Speaker */
 #speaker{
   position: relative;
-  padding: 120px 0;
-
-  .major {
-    h2{
-      color: $jsdc-g - #111;
-      font-size: 1.4em;
-    }
-    &:after {
-      background: $jsdc-g;
-      height: 1px;
-    }
-  }
+  padding: 60px 0;
 
   .button{
     box-shadow: inset 0 0 0 1px $jsdc-g;
@@ -220,8 +218,9 @@ body.is-loading {
     position: relative;
     z-index: 1;
     display: block;
+    font-size: 18px;
     margin: 0 auto;
-    width: 50%;
+    width: 80vw;
     &:hover {
       background-color: $jsdc-g;
       box-shadow: inset 0 0 0 0 $jsdc-g;
@@ -229,7 +228,7 @@ body.is-loading {
       color: white;
     }
   }
-  
+
   #speaker-line{
     position: absolute;
     top: 0;
@@ -238,7 +237,7 @@ body.is-loading {
       background: $jsdc-g;
       content: '';
       display: inline-block;
-      height: 120px;
+      height: 60px;
       width: 1px;
     }
   }
@@ -246,19 +245,21 @@ body.is-loading {
 
 /* Last JSDC */
 #last-year{
+  padding: 0 20px;
 
   .last-content{
     position: relative;
     z-index: 1;
-    padding: 12vh 5vw 0;
+    padding: 100px 8% 0;
     .major{
-      font-size: 4vw;
       text-shadow: 0px 2px 5px #888;
       letter-spacing: 5px;
+      font-size: 28px;
     }
     .button{
       box-shadow: inset 0 0 0 1px white;
       display: block;
+      font-size: 18px;
       &:hover{
         background-color: rgba($jsdc-y, 1);
         box-shadow: inset 0 0 0 0 $jsdc-g;
@@ -307,13 +308,16 @@ body.is-loading {
       width: 100%;
     }
   }
+
+  .col-xs-12 + .col-xs-12{
+    margin-top: 1px;
+  }
 }
 
 /* Sponsor */
 #sponsor{
-  // background-image: linear-gradient(135deg, #26D0CE, #3096b2);
   position: relative;
-  padding: 120px 40px;
+  padding: 60px 20px;
 
   .major {
     h2{
@@ -322,13 +326,9 @@ body.is-loading {
     }
     &:after {
       background: $jsdc-b;
-      height: 1px;
     }
   }
-  // p{
-  //   font-size: 0.8em;
-  //   padding: 10px 0 20px;
-  // }
+
   .button{
     box-shadow: inset 0 0 0 1px $jsdc-b;
     background-color: white;
@@ -338,6 +338,7 @@ body.is-loading {
     display: block;
     margin: 0 auto;
     width: 50%;
+    font-size: 0.9em;
     &:hover {
       background-color: $jsdc-b;
       box-shadow: inset 0 0 0 0 $jsdc-b;
