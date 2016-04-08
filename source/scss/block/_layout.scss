@@ -211,7 +211,7 @@ body.is-loading {
   position: relative;
   padding: 60px 0;
 
-  .button{
+  .typeform-button {
     box-shadow: inset 0 0 0 1px $jsdc-g;
     background-color: white;
     color: $jsdc-g - #222;
@@ -329,7 +329,7 @@ body.is-loading {
     }
   }
 
-  .button{
+  .typeform-button {
     box-shadow: inset 0 0 0 1px $jsdc-b;
     background-color: white;
     color: $jsdc-b - #222;
