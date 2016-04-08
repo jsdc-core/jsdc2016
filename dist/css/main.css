@@ -789,8 +789,7 @@ body.is-loading #header:after {
     z-index: 1;
     display: block;
     font-size: 18px;
-    margin: 0 auto;
-    width: 80vw; }
+    margin: 0 auto; }
     #speaker .button:hover {
       background-color: #b9cc54;
       box-shadow: inset 0 0 0 0 #b9cc54;
@@ -1019,6 +1018,8 @@ body.is-loading #header:after {
       color: #F5F5F5; }
       #header span i {
         margin-right: 10px; }
+    #header .actions .button {
+      font-size: 5vw; }
   #footer .copyright {
     font-size: 5vw; }
   #sponsor .major h2 {

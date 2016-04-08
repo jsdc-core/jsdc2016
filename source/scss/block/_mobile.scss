@@ -152,6 +152,11 @@ $screen-sm-min: 768px;
         margin-right: 10px;
       }
     }
+    .actions {
+      .button{
+        font-size: 5vw;
+      }
+    }
   }
   // Footer
   #footer {
