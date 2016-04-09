@@ -772,7 +772,7 @@ body.is-loading #header:after {
       background: #ce4d40; }
     #about .row + .row p {
       color: #ce4d40;
-      text-align: center;
+      text-align: justify;
       font-size: 17px;
       line-height: 30px; }
     #about .row + .row .image {
@@ -922,28 +922,24 @@ body.is-loading #header:after {
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) {
   /* About */
-  #about {
-    padding: 80px 0 0; }
-    #about #about-jsdc .major {
-      text-align: left; }
-      #about #about-jsdc .major h2 {
-        font-size: 32px; }
-    #about p {
-      font-size: 16px;
-      margin: 0; }
-    #about .image {
-      margin-top: 60px; }
-    #about .row + .row .major h2 {
-      font-size: 32px; }
-    #about .row + .row p {
-      font-size: 18px; }
-    #about .row + .row .image {
-      padding-top: 40px;
-      margin: 0; }
+  #about #about-jsdc .major h2 {
+    font-size: 32px; }
+  #about p {
+    font-size: 16px;
+    margin: 0; }
+  #about .image {
+    margin-top: 60px; }
+  #about .row + .row .major h2 {
+    font-size: 32px; }
+  #about .row + .row p {
+    font-size: 18px; }
+  #about .row + .row .image {
+    padding-top: 40px;
+    margin: 0; }
   /* Speaker */
   #speaker {
     padding: 80px 0; }
-    #speaker .button {
+    #speaker .typeform-button {
       width: 70vw; }
     #speaker #speaker-line:after {
       height: 80px; }
@@ -1037,7 +1033,7 @@ body.is-loading #header:after {
     font-size: 5vw; }
   #sponsor .major h2 {
     font-size: 7vw; }
-  #sponsor .button {
+  #sponsor .typeform-button {
     font-size: 5vw;
     width: 80vw; } }
 
