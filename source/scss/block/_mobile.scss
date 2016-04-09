@@ -5,10 +5,8 @@ $screen-sm-min: 768px;
 @media (max-width: $screen-sm-min) {
   /* About */
   #about {
-    padding: 80px 0 0;
     #about-jsdc {
       .major {
-        text-align: left;
         h2 {
           font-size: 32px;
         }
@@ -39,7 +37,7 @@ $screen-sm-min: 768px;
   /* Speaker */
   #speaker {
     padding: 80px 0;
-    .button {
+    .typeform-button {
       width: 70vw;
     }
     #speaker-line {
@@ -169,7 +167,7 @@ $screen-sm-min: 768px;
     .major h2{
       font-size: 7vw;
     }
-    .button{
+    .typeform-button {
       font-size: 5vw;
       width: 80vw;
     }
