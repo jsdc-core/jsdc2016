@@ -772,7 +772,7 @@ body.is-loading #header:after {
       background: #ce4d40; }
     #about .row + .row p {
       color: #ce4d40;
-      text-align: justify;
+      text-align: center;
       font-size: 17px;
       line-height: 30px; }
     #about .row + .row .image {
@@ -932,6 +932,7 @@ body.is-loading #header:after {
   #about .row + .row .major h2 {
     font-size: 32px; }
   #about .row + .row p {
+    text-align: justify;
     font-size: 18px; }
   #about .row + .row .image {
     padding-top: 40px;
