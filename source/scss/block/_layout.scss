@@ -18,6 +18,7 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Start form small devices */
 
 /* Header */
 #header {
@@ -25,34 +26,43 @@ body{
   overflow: hidden;
   text-align: center;
   height: 100vh;
+  padding: 15vh 5vw 0;
 
   .title{
     height: 45vh;
-
-    h1, h2, h5 {
-      text-shadow: 0px 2px 5px #777;
+    h1,
+    h2,
+    h5 {
+      text-shadow: 0 2px 5px #777;
       color: white;
       margin: 0;
     }
     h1 {
-      font-size: 6em;
+      font-size: 15vw;
     }
     h2 {
-      font-size: 2em;
-      padding: 2vw;
+      font-size: 8vw;
+      padding: 10% 0;
     }
     h5 {
-      font-size: 1em;
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+      line-height: 8vw;
+      
+      span{
+        font-size: 6vw;
+        color: white;
+      }
     }
   }
 
   p {
     margin: 10px 0 0;
-    font-size: 1.4em;
-    line-height: 7vw;
+    font-size: 7vw;
+    line-height: 15vw;
   }
   span{
-    font-size: 1.2em;
+    font-size: 5vw;
     color: #F5F5F5;
     i{
       margin-right: 10px;
@@ -64,7 +74,7 @@ body{
     margin-top: 10vw;
     .button{
       box-shadow: inset 0 0 0 1px white;
-      font-size: 1vw;
+      font-size: 5vw;
       color: white;
       &:visited{
         color: white;
@@ -147,23 +157,23 @@ body.is-loading {
   #about-jsdc{
     border: 1px solid $jsdc-y;
     border-radius: _size(border-radius);
-    padding: 60px 20px;
+    padding: 60px 15px;
 
     .major{
       text-align: center;
       h2{
         color: _palette(fg-bold);
-        font-size: 28px;
+        font-size: 9vw;
       }
     }
   }
 
   p{
     color: _palette(fg-bold);
-    font-size: 15px;
-    line-height: 28px;
     text-align: justify;
-    margin: 0 0 40px;
+    margin: 0 0 30px;
+    font-size: 4.2vw;
+    line-height: 9vw;
   }
 
   .row + .row{
@@ -172,7 +182,7 @@ body.is-loading {
     .major {
       h2{
         color: $jsdc-r  - #111;
-        font-size: 28px;
+        font-size: 7.5vw;
       }
       &:after {
         background: $jsdc-r;
@@ -182,8 +192,8 @@ body.is-loading {
     p{
       color: $jsdc-r;
       text-align: center;
-      font-size: 17px;
-      line-height: 30px;
+      font-size: 5vw;
+      line-height: 10vw;
     }
     .image{
       padding-top: 40px;
@@ -209,7 +219,7 @@ body.is-loading {
 /* Speaker */
 #speaker{
   position: relative;
-  padding: 60px 0;
+  padding: 60px 10%;
 
   .typeform-button {
     box-shadow: inset 0 0 0 1px $jsdc-g;
@@ -218,9 +228,7 @@ body.is-loading {
     position: relative;
     z-index: 1;
     display: block;
-    font-size: 18px;
-    margin: 0 auto;
-    // width: 80vw;
+    font-size: 5vw;
     &:hover {
       background-color: $jsdc-g;
       box-shadow: inset 0 0 0 0 $jsdc-g;
@@ -254,12 +262,13 @@ body.is-loading {
     .major{
       text-shadow: 0px 2px 5px #888;
       letter-spacing: 5px;
-      font-size: 28px;
+      font-size: 9vw;
+      opacity: 0.9;
     }
     .button{
       box-shadow: inset 0 0 0 1px white;
       display: block;
-      font-size: 18px;
+      font-size: 5vw;
       &:hover{
         background-color: rgba($jsdc-y, 1);
         box-shadow: inset 0 0 0 0 $jsdc-g;
@@ -317,12 +326,12 @@ body.is-loading {
 /* Sponsor */
 #sponsor{
   position: relative;
-  padding: 60px 20px;
+  padding: 80px 5%;
 
   .major {
     h2{
       color: $jsdc-b - #111;
-      font-size: 1.6em;
+      font-size: 7.5vw;
     }
     &:after {
       background: $jsdc-b;
@@ -338,7 +347,7 @@ body.is-loading {
     display: block;
     margin: 0 auto;
     width: 50%;
-    font-size: 0.9em;
+    font-size: 5vw;
     &:hover {
       background-color: $jsdc-b;
       box-shadow: inset 0 0 0 0 $jsdc-b;
@@ -348,7 +357,7 @@ body.is-loading {
   }
   #sponsor-line{
     position: absolute;
-    top: 60%;
+    top: 58%;
     left: 0;
     &:after {
       background: $jsdc-b;
