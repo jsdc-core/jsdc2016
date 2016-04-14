@@ -653,6 +653,9 @@ body {
   text-align: center;
   height: 100vh;
   padding: 15vh 5vw 0; }
+  #header .image {
+    -webkit-filter: drop-shadow(0px 5px 10px rgba(119, 119, 119, 0.5));
+    filter: drop-shadow(0px 5px 10px rgba(119, 119, 119, 0.5)); }
   #header .title {
     height: 45vh; }
     #header .title h1,
