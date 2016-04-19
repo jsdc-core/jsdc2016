@@ -1,29 +1,40 @@
 doctype html
 html(lang='zh-hant')
   head
+    - var title = 'JSDC Taiwan 2016';
+    - var description = 'JavaScript 開發者年會 ( JavaScript Developers Conference，簡稱 JSDC ) 是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。';
+    - var coverImage = 'http://2016.jsdc.tw/dist/images/jsdc-2015.jpg';
+
     title JSDC 2016
-    //- html 設定
+    // html 設定
     meta(http-equiv='Content-type', content='text/html; charset=utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-
-    //- SEO meta 設定
-    meta(name='title', itemprop='title', content='JSDC Taiwan 2016')
-    meta(name='description', itemprop='description', content='JavaScript 開發者年會 ( JavaScript Developers Conference，簡稱 JSDC ) 是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。')
-    meta(name='keywords', content='website, javascript, js, JSDC, JSDC 2016, jsdc, jsdc 2016, 2016jsdc, 2016 jsdc, jsdc2016')
     meta(name='author', content='JSDC Member')
-    meta(name='images', itemprop='image', content='http://2016.jsdc.tw/dist/images/jsdc-2015.jpg')
-    meta(property='og:title', content='JSDC Taiwan 2016')
+    meta(name='copyright', content='JSDC Taiwan')
+    meta(name='keywords', content='website, javascript, js, JSDC, JSDC 2016, jsdc, jsdc 2016, 2016jsdc, 2016 jsdc, jsdc2016')
+
+    // SEO meta 設定
+    meta(itemprop='title', content='#{title}')
+    meta(itemprop='description', content='#{description}')
+    meta(itemprop='image', content='#{coverImage}')
+
+    // og 設定
     meta(property='og:type', content='website')
+    meta(property='og:title', content='#{title}')
+    meta(property='og:description', content='#{description}')
+    meta(property='og:image', content='#{coverImage}')
     meta(property='og:url', content='http://2016.jsdc.tw/')
-    meta(property='og:image', content='http://2016.jsdc.tw/dist/images/jsdc-2015.jpg')
-    meta(property='og:description', content='JavaScript 開發者年會 ( JavaScript Developers Conference，簡稱 JSDC ) 是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。')
     meta(property='og:site_name', content='JSDC 2016')
-    meta(property='og:type' content='website')
-    meta(name='twitter:title' content='JSDC Taiwan 2016')
-    meta(name='twitter:description' content='JavaScript 開發者年會 ( JavaScript Developers Conference，簡稱 JSDC ) 是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。')
-    meta(property='twitter:image', content='http://2016.jsdc.tw/dist/images/jsdc-2015.jpg')
-    link(href='http://2016.jsdc.tw/dist/images/jsdc-2015.jpg' rel='image_src' type='image/jpeg')
+    
+    // twitter 設定
+    meta(name='twitter:card' content='summary_large_image')
+    meta(name='twitter:site' content='@jsdc_tw')
+    meta(name='twitter:title' content='#{title}')
+    meta(name='twitter:description' content='#{description}')
+    meta(property='twitter:image', content='#{coverImage}')
+    meta(property='twitter:creator', content='@jsdc_tw')
+    link(href='#{coverImage}' rel='image_src' type='image/jpeg')
 
     //- css 設定
     link(rel='shortcut icon', href='./dist/favicons/favicon.ico')
