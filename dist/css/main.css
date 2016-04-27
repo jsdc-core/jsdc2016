@@ -866,6 +866,11 @@ body.is-loading #header:after {
     font-size: 26px; }
   #speakers .major:after {
     background: #b9cc54; }
+  #speakers .speakers-container {
+    border: 1px solid #b9cc54;
+    border-radius: 4px;
+    background: white;
+    padding: 40px 30px; }
   #speakers #speakers-line {
     position: absolute;
     top: 58%;

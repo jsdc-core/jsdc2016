@@ -319,6 +319,14 @@ body.is-loading {
       background: $jsdc-g;
     }
   }
+  
+  .speakers-container{
+    border: 1px solid $jsdc-g;
+    border-radius: _size(border-radius);
+    background: white;
+    padding: 40px 30px;
+  }
+  
 
   #speakers-line{
     position: absolute;
