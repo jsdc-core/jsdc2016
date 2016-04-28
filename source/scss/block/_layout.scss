@@ -308,8 +308,8 @@ body.is-loading {
 /* Speaker */
 #speakers{
   position: relative;
-  padding: 60px 10%;
-  
+  padding: 40px 10%;
+
   .major {
     h2{
       color: $jsdc-g - #111;
@@ -320,17 +320,49 @@ body.is-loading {
     }
   }
   
+  .speaker-button {
+    box-shadow: inset 0 0 0 1px $jsdc-g;
+    border-radius: _size(border-radius);
+    background-color: white;
+    color: $jsdc-g - #222;
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 60px;
+    padding: 10px 0;
+    &:hover {
+      background-color: $jsdc-g;
+      box-shadow: inset 0 0 0 0 $jsdc-g;
+      text-decoration: none;
+      color: white;
+    }
+  }
+  
   .speakers-container{
     border: 1px solid $jsdc-g;
     border-radius: _size(border-radius);
     background: white;
-    padding: 40px 30px;
+    padding: 40px;
+    
+    .owl-carousel{
+      
+      .item{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: _size(border-radius);
+        height: 250px;
+        
+      }
+    }
+      
   }
   
-
   #speakers-line{
     position: absolute;
-    top: 58%;
+    top: 47%;
     left: 0;
     &:after {
       background: $jsdc-g;
@@ -338,6 +370,19 @@ body.is-loading {
       display: inline-block;
       height: 1px;
       width: 100vw;
+    }
+  }
+  
+  #speakers-button-line{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    &:after {
+      background: $jsdc-g;
+      content: '';
+      display: inline-block;
+      height: 60px;
+      width: 1px;
     }
   }
 }
