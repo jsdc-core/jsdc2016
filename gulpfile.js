@@ -11,7 +11,7 @@ var plugins = require('gulp-load-plugins')({
 
 // 編譯 scss
 gulp.task('scss', function() {
-  return gulp.src('./source/scss/**/*.scss')
+  return gulp.src('./source/scss/**/*[".scss",".css"]')
     .pipe(plugins.plumber())
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass())

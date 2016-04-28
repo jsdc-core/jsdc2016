@@ -643,7 +643,7 @@ button,
   letter-spacing: 3px; }
 
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 /* Start form small devices */
 /* Header */
@@ -759,12 +759,14 @@ body.is-loading #header:after {
   position: relative;
   padding: 60px 20px 0; }
   #news #news-wrapper {
-    border: 1px solid #E0E0E0;
+    border: 1px solid #FFD54F;
     border-radius: 4px;
     padding: 40px 30px; }
   #news .major h2 {
-    color: #555;
+    color: #eec43e;
     font-size: 28px; }
+  #news .major:after {
+    background: #FFD54F; }
   #news .news:nth-of-type(1) .date {
     background-color: #3096b2; }
   #news .news:nth-of-type(2) .date {
@@ -775,34 +777,38 @@ body.is-loading #header:after {
     background-color: #575757;
     text-align: center;
     font-size: 16px;
+    line-height: 1.2;
     color: white;
-    line-height: 1;
-    padding: 8px 0; }
+    padding: 10px 0; }
     #news .date span {
       margin: 0 5px; }
-  #news .news-container .news {
-    padding: 16px 0; }
-    #news .news-container .news .news-title, #news .news-container .news .news-paragraph {
-      color: #575757;
-      margin: 0;
-      line-height: 1.5; }
-    #news .news-container .news .news-title {
-      text-align: center;
-      font-size: 20px;
-      line-height: 2.5;
-      font-weight: bold;
-      color: #222; }
-    #news .news-container .news .news-paragraph {
-      font-size: 16px; }
-  #news .news-container .news + .news {
-    border-top: 1px solid #ddd; }
+  #news .news-container {
+    display: block; }
+    #news .news-container .news {
+      display: block; }
+      #news .news-container .news .news-content {
+        display: block; }
+        #news .news-container .news .news-content .news-title, #news .news-container .news .news-content .news-paragraph {
+          color: #575757;
+          margin: 0;
+          line-height: 1.5; }
+        #news .news-container .news .news-content .news-title {
+          text-align: center;
+          font-size: 18px;
+          font-weight: 600;
+          color: #222;
+          padding: 15px 0; }
+        #news .news-container .news .news-content .news-paragraph {
+          font-size: 16px; }
+    #news .news-container .news + .news {
+      margin-top: 20px; }
   #news #news-line {
     position: absolute;
     top: 0;
     left: 50%;
     margin: 0 1em 0 0; }
     #news #news-line:after {
-      background: #E0E0E0;
+      background: #FFD54F;
       content: '';
       display: inline-block;
       height: 60px;
@@ -814,14 +820,15 @@ body.is-loading #header:after {
   position: relative;
   padding: 60px 20px 0; }
   #about #about-jsdc {
-    border: 1px solid #FFD54F;
+    border: 1px solid rgba(144, 144, 144, 0.5);
     border-radius: 4px;
     padding: 60px 15px; }
     #about #about-jsdc .major {
       text-align: center; }
       #about #about-jsdc .major h2 {
         color: #555;
-        font-size: 28px; }
+        font-size: 28px;
+        font-weight: 400; }
   #about p {
     color: #555;
     text-align: justify;
@@ -832,7 +839,8 @@ body.is-loading #header:after {
     padding-top: 60px; }
     #about .row + .row .major h2 {
       color: #bd3c2f;
-      font-size: 28px; }
+      font-size: 28px;
+      font-weight: 400; }
     #about .row + .row .major:after {
       background: #ce4d40; }
     #about .row + .row p {
@@ -849,103 +857,129 @@ body.is-loading #header:after {
     left: 50%;
     margin: 0 1em 0 0; }
     #about #about-line:after {
-      background: #FFD54F;
+      background: rgba(144, 144, 144, 0.5);
       content: '';
       display: inline-block;
       height: 60px;
       width: 1px; }
 
 /* Speaker */
-#speaker {
+#speakers {
   position: relative;
-  padding: 60px 10%; }
-  #speaker .typeform-button {
+  padding: 40px 5%; }
+  #speakers .major h2 {
+    color: #97aa32;
+    font-size: 26px;
+    font-weight: 400; }
+  #speakers .major:after {
+    background: #b9cc54; }
+  #speakers .speaker-button, #speakers .agenda-button {
     box-shadow: inset 0 0 0 1px #b9cc54;
+    border-radius: 4px;
     background-color: white;
+    transition: background 0.2s ease;
     color: #97aa32;
     position: relative;
     z-index: 1;
     display: block;
-    font-size: 20px; }
-    #speaker .typeform-button:hover {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0; }
+    #speakers .speaker-button:hover, #speakers .agenda-button:hover {
       background-color: #b9cc54;
       box-shadow: inset 0 0 0 0 #b9cc54;
       text-decoration: none;
       color: white; }
-  #speaker #speaker-line {
+  #speakers .agenda-button {
+    background-color: #b9cc54;
+    font-size: 22px;
+    color: white;
+    margin-top: 60px;
+    padding: 15px 0; }
+    #speakers .agenda-button:hover {
+      background-color: #97aa32; }
+  #speakers .speakers-container {
+    border: 1px solid #b9cc54;
+    border-radius: 4px;
+    background: white;
+    padding: 30px; }
+    #speakers .speakers-container .owl-carousel .item {
+      height: 250px; }
+      #speakers .speakers-container .owl-carousel .item:hover .introduction {
+        bottom: 0;
+        padding: 40px 20px; }
+      #speakers .speakers-container .owl-carousel .item .avatar {
+        border-radius: 4px;
+        height: 100%;
+        object-fit: cover; }
+      #speakers .speakers-container .owl-carousel .item .introduction {
+        background: rgba(255, 255, 255, 0.8);
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+        width: 100%;
+        height: 250px;
+        padding: 15px;
+        position: absolute;
+        bottom: -180px; }
+        #speakers .speakers-container .owl-carousel .item .introduction .speaker-name {
+          font-size: 24px;
+          color: #555; }
+        #speakers .speakers-container .owl-carousel .item .introduction .project {
+          font-size: 18px;
+          color: #666666; }
+        #speakers .speakers-container .owl-carousel .item .introduction .link a {
+          color: rgba(69, 90, 100, 0.5);
+          margin: 0 10px; }
+          #speakers .speakers-container .owl-carousel .item .introduction .link a:hover {
+            color: rgba(69, 90, 100, 0.8); }
+    #speakers .speakers-container .speaker-nav {
+      margin: 40px auto 0; }
+      #speakers .speakers-container .speaker-nav .owl-prev, #speakers .speakers-container .speaker-nav .owl-next {
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        color: #b9cc54;
+        width: 15%; }
+      #speakers .speakers-container .speaker-nav .speaker-button {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: inline-block;
+        width: 70%; }
+  #speakers #speakers-line {
+    position: absolute;
+    top: 47%;
+    left: 0; }
+    #speakers #speakers-line:after {
+      background: #b9cc54;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 100vw; }
+  #speakers #agenda-line {
     position: absolute;
     top: 0;
     left: 50%; }
-    #speaker #speaker-line:after {
+    #speakers #agenda-line:after {
       background: #b9cc54;
       content: '';
       display: inline-block;
       height: 60px;
       width: 1px; }
 
-/* Last JSDC */
-#last-year {
-  padding: 0 20px; }
-  #last-year .last-content {
-    position: relative;
-    z-index: 1;
-    padding: 100px 8% 0; }
-    #last-year .last-content .major {
-      text-shadow: 0px 2px 5px #888;
-      letter-spacing: 3px;
-      font-size: 32px;
-      opacity: 0.9; }
-    #last-year .last-content .button {
-      box-shadow: inset 0 0 0 1px white;
-      display: block;
-      font-size: 20px; }
-      #last-year .last-content .button:hover {
-        background-color: #ffd54f;
-        box-shadow: inset 0 0 0 0 #b9cc54;
-        text-decoration: none;
-        color: white; }
-  #last-year .last-photo {
-    background-image: url("../images/jsdc-last-photo.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    height: 45vh; }
-    #last-year .last-photo:after {
-      background-image: linear-gradient(90deg, #EDDE5D, #F09819);
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      width: 100%; }
-  #last-year .last-video {
-    background-image: url("../images/jsdc-last-video.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    height: 45vh; }
-    #last-year .last-video:after {
-      background-image: linear-gradient(90deg, #F09819, #EDDE5D);
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      width: 100%; }
-  #last-year .col-xs-12 + .col-xs-12 {
-    margin-top: 1px; }
-
 /* Sponsor */
 #sponsor {
   position: relative;
-  padding: 80px 10%; }
+  padding: 80px 10%;
+  background-image: url("images/overlay4.svg");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: contain; }
   #sponsor .major h2 {
     color: #1f85a1;
-    font-size: 26px; }
+    font-size: 26px;
+    font-weight: 400; }
   #sponsor .major:after {
     background: #3096b2; }
   #sponsor .typeform-button {
@@ -1009,13 +1043,10 @@ body.is-loading #header:after {
     #about #about-line:after {
       height: 80px; }
   /* Speaker */
-  #speaker {
-    padding: 80px 60px; }
-    #speaker #speaker-line:after {
-      height: 80px; }
-  /* Last JSDC */
-  #last-year .last-content {
-    padding: 15vh 8% 0; }
+  #speakers {
+    padding: 80px 40px 0; }
+    #speakers .major h2 {
+      font-size: 28px; }
   /* Sponsor */
   #sponsor {
     padding: 80px 60px; }
@@ -1036,16 +1067,23 @@ body.is-loading #header:after {
     #news #news-wrapper {
       padding: 40px 60px; }
     #news .date {
-      width: 60px;
-      height: 60px;
-      padding: 5px 0 0; }
+      display: table-cell;
+      vertical-align: middle;
+      width: 80px; }
       #news .date span {
         display: block; }
-    #news .news-container .news {
-      padding: 16px 0; }
-      #news .news-container .news .news-title {
-        text-align: left;
-        line-height: 1.6; }
+    #news .news-container {
+      display: table; }
+      #news .news-container .news {
+        display: table-row;
+        border-spacing: 5px; }
+        #news .news-container .news .news-content {
+          display: table-cell;
+          padding: 0 20px 5px 20px; }
+          #news .news-container .news .news-content .news-title {
+            text-align: left;
+            line-height: 2;
+            padding: 0; }
     #news #news-line:after {
       height: 80px; }
   /* About */
@@ -1054,15 +1092,12 @@ body.is-loading #header:after {
     #about #about-jsdc {
       padding: 60px 40px; }
   /* Speaker */
-  #speaker {
+  #speakers {
     padding: 80px 0; }
-    #speaker .typeform-button {
-      margin: 0 20px; }
-    #speaker #speaker-line:after {
-      height: 80px; }
-  /* Last JSDC */
-  #last-year {
-    padding: 0; }
+    #speakers .speaker-nav .owl-prev, #speakers .speaker-nav .owl-next {
+      width: 5% !important; }
+    #speakers .speaker-nav .speaker-button {
+      width: 90% !important; }
   /* Sponsor */
   #sponsor {
     padding: 80px 0; }
@@ -1123,19 +1158,16 @@ body.is-loading #header:after {
     #about #about-line:after {
       height: 120px; }
   /* Speaker */
-  #speaker {
-    padding: 100px 0; }
-    #speaker #speaker-line:after {
-      height: 100px; }
-  /* Last JSDC */
-  #last-year {
-    padding: 0; }
-    #last-year .last-content {
-      padding: 15vh 8% 0; }
-      #last-year .last-content .major {
-        font-size: 36px; }
-      #last-year .last-content .button {
-        font-size: 20px; }
+  #speakers {
+    padding: 100px 0 20px; }
+    #speakers .major h2 {
+      font-size: 32px; }
+    #speakers .speakers-container {
+      padding: 40px; }
+    #speakers .agenda-button {
+      margin-top: 80px; }
+    #speakers #agenda-line:after {
+      height: 80px; }
   /* Sponsor */
   #sponsor {
     padding: 80px 0; }

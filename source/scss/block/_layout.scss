@@ -15,7 +15,7 @@ $jsdc-b: #3096b2;
 }
 
 body{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* Start form small devices */
@@ -157,15 +157,18 @@ body.is-loading {
   padding: 60px 20px 0;
 
   #news-wrapper{
-    border: 1px solid #E0E0E0;
+    border: 1px solid $jsdc-y;
     border-radius: _size(border-radius);
     padding: 40px 30px;
   }
 
   .major{
     h2{
-      color: _palette(fg-bold);
+      color: $jsdc-y - #111;
       font-size: 28px;
+    }
+    &:after {
+      background: $jsdc-y;
     }
   }
 
@@ -185,36 +188,43 @@ body.is-loading {
     background-color: #575757;
     text-align: center;
     font-size: 16px;
+    line-height: 1.2;
     color: white;
-    line-height: 1;
-    padding: 8px 0;
+    padding: 10px 0;
+    
     span{
       margin: 0 5px;
     }
   }
   .news-container{
+    display: block;
+    
     .news{
-      padding: 16px 0;
-
-      .news-title, .news-paragraph{
-        color: #575757;
-        margin: 0;
-        line-height: 1.5;
-      }
-      .news-title {
-        text-align: center;
-        font-size: 20px;
-        line-height: 2.5;
-        font-weight: bold;
-        color: #222;
-      }
-      .news-paragraph{
-        font-size: 16px;
+      display: block;
+      
+      .news-content{
+        display: block;
+        
+        .news-title, .news-paragraph{
+          color: #575757;
+          margin: 0;
+          line-height: 1.5;
+        }
+        .news-title {
+          text-align: center;
+          font-size: 18px;
+          font-weight: 600;
+          color: #222;
+          padding: 15px 0;
+        }
+        .news-paragraph{
+          font-size: 16px;
+        }
       }
     }
 
     .news + .news {
-      border-top: 1px solid #ddd;
+      margin-top: 20px;
     }
   }
 
@@ -224,7 +234,7 @@ body.is-loading {
     left: 50%;
     margin: 0 (_size(element-margin) * 0.5) 0 0;
     &:after {
-      background: #E0E0E0;
+      background: $jsdc-y;
       content: '';
       display: inline-block;
       height: 60px;
@@ -237,15 +247,11 @@ body.is-loading {
 /* About */
 #about{
   background-color: white;
-  // background-image:url('images/overlay3.svg');
-  // background-position: right top;
-  // background-repeat: no-repeat;
-  // background-size: contain;
   position: relative;
   padding: 60px 20px 0;
 
   #about-jsdc{
-    border: 1px solid $jsdc-y;
+    border: 1px solid rgba(144, 144, 144, 0.5);
     border-radius: _size(border-radius);
     padding: 60px 15px;
 
@@ -254,6 +260,7 @@ body.is-loading {
       h2{
         color: _palette(fg-bold);
         font-size: 28px;
+        font-weight: 400;
       }
     }
   }
@@ -273,6 +280,7 @@ body.is-loading {
       h2{
         color: $jsdc-r  - #111;
         font-size: 28px;
+        font-weight: 400;
       }
       &:after {
         background: $jsdc-r;
@@ -297,7 +305,7 @@ body.is-loading {
     left: 50%;
     margin: 0 (_size(element-margin) * 0.5) 0 0;
     &:after {
-      background: $jsdc-y;
+      background: rgba(144, 144, 144, 0.5);
       content: '';
       display: inline-block;
       height: 60px;
@@ -307,18 +315,33 @@ body.is-loading {
 }
 
 /* Speaker */
-#speaker{
+#speakers{
   position: relative;
-  padding: 60px 10%;
+  padding: 40px 5%;
 
-  .typeform-button {
+  .major {
+    h2{
+      color: $jsdc-g - #222;
+      font-size: 26px;
+      font-weight: 400;
+    }
+    &:after {
+      background: $jsdc-g;
+    }
+  }
+  
+  .speaker-button,.agenda-button {
     box-shadow: inset 0 0 0 1px $jsdc-g;
+    border-radius: _size(border-radius);
     background-color: white;
+    transition: background 0.2s ease;
     color: $jsdc-g - #222;
     position: relative;
     z-index: 1;
     display: block;
     font-size: 20px;
+    text-align: center;
+    padding: 10px 0;
     &:hover {
       background-color: $jsdc-g;
       box-shadow: inset 0 0 0 0 $jsdc-g;
@@ -326,8 +349,109 @@ body.is-loading {
       color: white;
     }
   }
-
-  #speaker-line{
+  
+  .agenda-button{
+    background-color: $jsdc-g;
+    font-size: 22px;
+    color: white;
+    margin-top: 60px;
+    padding: 15px 0;
+    &:hover {
+      background-color: $jsdc-g - #222;
+    }
+  }
+  
+  .speakers-container{
+    border: 1px solid $jsdc-g;
+    border-radius: _size(border-radius);
+    background: white;
+    padding: 30px;
+    
+    .owl-carousel{
+      .item{
+        height: 250px;
+        
+        &:hover {
+          .introduction{
+            bottom: 0;
+            padding: 40px 20px;
+          }
+        } 
+        
+        .avatar{
+          border-radius: _size(border-radius);
+          height: 100%;
+          object-fit: cover;
+        }
+        
+        .introduction{
+          background: rgba(white, 0.8);
+          transition: all 0.2s ease-in-out;
+          text-align: center;
+          width: 100%;
+          height: 250px;
+          padding: 15px;
+          position: absolute;
+          bottom: -180px;
+          
+          .speaker-name{
+            font-size: 24px;
+            color: _palette(fg-bold);
+          }
+          .project{
+            font-size: 18px;
+            color: _palette(fg-bold) + #111;
+          }
+          .link{
+            a{
+              color: rgba(#455A64, 0.5);
+              margin: 0 10px;
+              &:hover {
+                color: rgba(#455A64, 0.8);
+              } 
+            }
+          }
+        }
+      }
+    }
+    
+    .speaker-nav{
+      margin: 40px auto 0;
+      
+      .owl-prev, .owl-next{
+        display: inline-block;
+        text-align: center;
+        cursor: pointer; 
+        color: $jsdc-g;
+        width: 15%;
+        
+      }
+      .speaker-button{
+        -webkit-user-select: none;  
+        -moz-user-select: none;    
+        -ms-user-select: none;      
+        user-select: none;
+        display: inline-block;
+        width: 70%;
+      }
+    }
+      
+  }
+  
+  #speakers-line{
+    position: absolute;
+    top: 47%;
+    left: 0;
+    &:after {
+      background: $jsdc-g;
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 100vw;
+    }
+  }
+  
+  #agenda-line{
     position: absolute;
     top: 0;
     left: 50%;
@@ -341,87 +465,20 @@ body.is-loading {
   }
 }
 
-/* Last JSDC */
-#last-year{
-  padding: 0 20px;
-
-  .last-content{
-    position: relative;
-    z-index: 1;
-    padding: 100px 8% 0;
-    .major{
-      text-shadow: 0px 2px 5px #888;
-      letter-spacing: 3px;
-      font-size: 32px;
-      opacity: 0.9;
-    }
-    .button{
-      box-shadow: inset 0 0 0 1px white;
-      display: block;
-      font-size: 20px;
-      &:hover{
-        background-color: rgba($jsdc-y, 1);
-        box-shadow: inset 0 0 0 0 $jsdc-g;
-        text-decoration: none;
-        color: white;
-      }
-    }
-  }
-
-  .last-photo{
-    background-image:url('../images/jsdc-last-photo.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    height: 45vh;
-
-    &:after {
-      background-image: linear-gradient(90deg, #EDDE5D, #F09819);
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-
-  }
-  .last-video{
-    background-image:url('../images/jsdc-last-video.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    height: 45vh;
-
-    &:after {
-      background-image: linear-gradient(90deg,#F09819,#EDDE5D);
-      content: '';
-      height: 100%;
-      left: 0;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-  }
-
-  .col-xs-12 + .col-xs-12{
-    margin-top: 1px;
-  }
-}
-
 /* Sponsor */
 #sponsor{
   position: relative;
   padding: 80px 10%;
+  background-image:url('images/overlay4.svg');
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 
   .major {
     h2{
       color: $jsdc-b - #111;
       font-size: 26px;
+      font-weight: 400;
     }
     &:after {
       background: $jsdc-b;

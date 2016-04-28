@@ -53,21 +53,12 @@ $screen-md: 992px;
   }
   
   /* Speaker */
-  #speaker{
-    padding: 80px 60px;
-
-    #speaker-line{
-      &:after {
-        height: 80px;
+  #speakers{
+    padding: 80px 40px 0;
+    .major {
+      h2{
+        font-size: 28px;
       }
-    }
-  }
-  
-  /* Last JSDC */
-  #last-year{
-
-    .last-content{
-      padding: 15vh 8% 0;
     }
   }
   
@@ -106,20 +97,29 @@ $screen-md: 992px;
     }
     
     .date{
-      width: 60px;
-      height: 60px;
-      padding: 5px 0 0;
+      display: table-cell;
+      vertical-align: middle;
+      width: 80px;
       span{
         display: block;
       }
     }
     .news-container{
+      display: table;
+      
       .news{
-        padding: 16px 0;
+        display: table-row;
+        border-spacing: 5px;
         
-        .news-title,{
-          text-align: left;
-          line-height: 1.6;
+        .news-content{
+          display: table-cell;
+          padding: 0 20px 5px 20px;
+        
+          .news-title{
+            text-align: left;
+            line-height: 2;
+            padding: 0;
+          }
         }
       }
     }
@@ -141,23 +141,20 @@ $screen-md: 992px;
   }
   
   /* Speaker */
-  #speaker{
+  #speakers{
     padding: 80px 0;
 
-    .typeform-button {
-      margin: 0 20px;
-    }
-
-    #speaker-line{
-      &:after {
-        height: 80px;
+    .speaker-nav{
+      
+      .owl-prev, .owl-next{
+        width: 5% !important;
+        
+      }
+      .speaker-button{
+        width: 90% !important;
       }
     }
-  }
-  
-  /* Last JSDC */
-  #last-year{
-    padding: 0;
+
   }
   
   /* Sponsor */
@@ -276,27 +273,23 @@ $screen-md: 992px;
   }
   
   /* Speaker */
-  #speaker{
-    padding: 100px 0;
-
-    #speaker-line{
-      &:after {
-        height: 100px;
+  #speakers{
+    padding: 100px 0 20px;
+    .major {
+      h2{
+        font-size: 32px;
       }
     }
-  }
-  
-  /* Last JSDC */
-  #last-year{
-    padding: 0;
-
-    .last-content{
-      padding: 15vh 8% 0;
-      .major{
-        font-size: 36px;
-      }
-      .button{
-        font-size: 20px;
+    .speakers-container{
+      padding: 40px;
+    }
+    
+    .agenda-button{
+      margin-top: 80px;
+    }
+    #agenda-line{
+      &:after {
+        height: 80px;
       }
     }
   }

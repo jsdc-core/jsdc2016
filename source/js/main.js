@@ -1,9 +1,3 @@
-/*
-	Photon by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
     skel.breakpoints({
@@ -58,6 +52,28 @@
       });
       $('img.lazy').lazyload({
         effect : 'fadeIn'
+      });
+      
+      // Slider / owl-carousel
+      $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+          responsive:{
+            0:{items:1},
+            600:{items:2},
+            768:{items:3},
+            992:{items:4}
+        },
+          loop:true,
+          margin:30,
+          dots: false,
+          nav: true,
+          navContainer: '.speaker-nav',
+          navText: ['<i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>','<i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>'],
+          autoplay: true,
+          autoplayTimeout: 2500,
+          autoplayHoverPause: true,
+          lazyLoad:true,
+        })
       });
 
     });
