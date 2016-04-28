@@ -62,18 +62,17 @@
             600:{items:2},
             768:{items:3},
             992:{items:4}
-          },
+        },
           loop:true,
           margin:30,
           dots: false,
-          nav:false,
-          navText: ['<i class="fa fa-caret-left" aria-hidden="true"></i>','<i class="fa fa-caret-right" aria-hidden="true"></i>'],
+          nav: true,
+          navContainer: '.speaker-nav',
+          navText: ['<i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>','<i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>'],
           autoplay: true,
           autoplayTimeout: 2500,
           autoplayHoverPause: true,
-          center : false,
-          lazyLoad: true
-          
+          lazyLoad:true,
         })
       });
 
