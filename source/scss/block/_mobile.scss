@@ -24,11 +24,7 @@ $screen-md: 992px;
 
   /* News */
   #news{
-    padding: 80px 40px 0;
-    
-    #news-wrapper{
-      padding: 40px;
-    }
+    padding-top: 80px;
     
     #news-line{
       &:after {
@@ -39,11 +35,7 @@ $screen-md: 992px;
 
   /* About */
   #about{
-    padding: 80px 40px 0;
-
-    #about-jsdc{
-      padding: 60px 20px;
-    }
+    padding-top: 80px;
 
     #about-line{
       &:after {
@@ -54,22 +46,32 @@ $screen-md: 992px;
   
   /* Speaker */
   #speakers{
-    padding: 80px 40px 0;
-    .major {
-      h2{
-        font-size: 28px;
-      }
+    padding-top: 60px;
+    
+    .speakers-container{
+      padding: 40px;
     }
   }
   
   /* Sponsor */
   #sponsor{
-    padding: 80px 60px;
-    .major {
-      h2{
-        font-size: 28px;
-      }
-    }
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  /* location */
+  #location{
+    padding-top: 60px;
+  }
+  
+  /* Activity */
+  #activity{
+    padding-top: 60px;
+  }
+  
+  /* Staff */
+  #staffs{
+    padding-top: 60px;
   }
 }
 
@@ -90,79 +92,158 @@ $screen-md: 992px;
   
   /* News */
   #news{
-    padding: 80px 0 0;
     
-    #news-wrapper{
-      padding: 40px 60px;
-    }
-    
-    .date{
-      display: table-cell;
-      vertical-align: middle;
-      width: 80px;
-      span{
-        display: block;
-      }
-    }
-    .news-container{
-      display: table;
-      
-      .news{
-        display: table-row;
-        border-spacing: 5px;
+    .news-wrapper{
+      padding: 60px 40px 40px;
+
+      .news-container{
+        display: table;
         
-        .news-content{
-          display: table-cell;
-          padding: 0 20px 5px 20px;
-        
-          .news-title{
-            text-align: left;
-            line-height: 2;
-            padding: 0;
+        .news{
+          display: table-row;
+          border-spacing: 5px;
+          
+          .date{
+            display: table-cell;
+            vertical-align: middle;
+            width: 80px;
+            span{
+              display: block;
+            }
+          }
+          
+          .news-content{
+            display: table-cell !important;
+            padding: 0 20px 5px 20px;
+          
+            .news-title{
+              text-align: left !important;
+              line-height: 2;
+              padding: 0;
+            }
           }
         }
-      }
-    }
-    
-    #news-line{
-      &:after {
-        height: 80px;
       }
     }
   }
   
   /* About */
   #about{
-    padding: 80px 0 0;
 
-    #about-jsdc{
-      padding: 60px 40px;
+    #what-is-jsdc{
+      padding: 60px 40px 40px;
     }
   }
   
   /* Speaker */
   #speakers{
-    padding: 80px 0;
+    padding-top: 60px;
 
     .speaker-nav{
-      
       .owl-prev, .owl-next{
         width: 5% !important;
-        
       }
       .speaker-button{
         width: 90% !important;
       }
     }
-
   }
   
   /* Sponsor */
   #sponsor{
-    padding: 80px 0;
+  }
+  
+  /* Location */
+  #location{
     
-    .typeform-button {
-      margin: 0 20px;
+    .information{
+      padding-left: 20px
+    }
+    
+    .major, .info, .address {
+      text-align: left;
+    }
+    
+    .info{
+      font-size: 24px;
+      
+      &.date{
+        i{
+          margin-right: 20px;
+        }
+      }
+      
+      &.spot{
+        i{
+          margin: 0 22px 0 5px;
+        }
+      }
+    }
+    .address{
+      font-size: 18px;
+      padding-left: 40px;
+    }
+  }
+
+  /* Activity */
+  #activity{
+    
+    .activity-container{
+      #activity-carousel{
+        .item{
+          padding: 40px;
+          width: 90%;
+          min-height: 600px;
+          
+          .activity-img{
+            width: 100%;
+            height: 300px;
+          }
+          .activity-description{
+            .title{
+              font-size: 24px;
+            }
+            .content{
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .activity-nav{
+        .owl-prev{
+          left: 0;
+        }
+        .owl-next{
+          right: 0;
+        }
+      }
+    }
+  }
+  
+  /* Staff */
+  #staffs{
+    
+    .staff-container{
+      padding: 0;
+      padding-top: 20px;
+      
+      #tabs{
+        
+        ul li{
+          width: 21%;
+          margin: 0 2%;
+          
+          a{
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+          }
+          + li {
+            margin-top: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -206,15 +287,15 @@ $screen-md: 992px;
   
   /* News */
   #news{
-    padding: 120px 0 0;
+    padding-top: 120px;
     
-    #news-wrapper{
+    .news-wrapper{
       padding: 60px 80px;
-    }
-    
-    .major{
-      h2{
-        font-size: 32px;
+      
+      .major{
+        h2{
+          font-size: 32px;
+        }
       }
     }
     
@@ -227,10 +308,16 @@ $screen-md: 992px;
   
   /* About */
   #about{
-    padding: 120px 0 0;
+    padding-top: 120px;
     
-    #about-jsdc{
-      padding: 80px 60px;
+    p{
+      font-size: 18px;
+      margin-bottom: 0;
+      padding-right: 5%;
+    }
+    
+    #what-is-jsdc{
+      padding: 80px;
 
       .major{
         text-align: left;
@@ -240,14 +327,8 @@ $screen-md: 992px;
       }
     }
 
-    p{
-      font-size: 18px;
-      margin-bottom: 0;
-      padding-right: 5%;
-    }
-
-    .row + .row{
-      padding-top: 80px;
+    #about-jsdc{
+      margin-top: 80px;
       
       .major {
         h2{
@@ -260,9 +341,6 @@ $screen-md: 992px;
         font-size: 20px;
         line-height: 2.5;
       }
-      .image{
-        padding-top: 60px;
-      }
     }
     
     #about-line{
@@ -274,7 +352,8 @@ $screen-md: 992px;
   
   /* Speaker */
   #speakers{
-    padding: 100px 0 20px;
+    padding-top: 80px;
+    
     .major {
       h2{
         font-size: 32px;
@@ -296,10 +375,72 @@ $screen-md: 992px;
   
   /* Sponsor */
   #sponsor{
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
     .major {
       h2{
         font-size: 32px;
+      }
+    }
+  }
+  
+  /* Location */
+  #location{
+    padding-top: 80px;
+    
+    .major {
+      h2{
+        font-size: 32px;
+      }
+    }
+  }
+  
+  /* Activity */
+  #activity{
+    padding-top: 80px;
+    
+    .major {
+      h2{
+        font-size: 32px;
+      }
+    }
+    
+    .activity-container{
+      #activity-carousel{
+        .item{
+          min-height: 300px;
+          
+          .activity-img{
+            width: 100%;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Staff */
+  #staffs{
+    padding-top: 80px;
+    
+    .staff-container{
+      
+      #staff-carousel{
+          
+        .item{
+
+          .staff-img{
+            height: auto;
+            width: auto;
+            margin: 0 auto;
+            
+            .staff{
+              width: 20%;
+              
+            }
+          }
+        }
       }
     }
   }
