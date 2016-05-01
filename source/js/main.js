@@ -54,6 +54,11 @@
       effect : 'fadeIn'
     });
     
+    // Tabs
+    $(function() {
+      $( "#tabs" ).tabs();
+    });
+    
     // Slider / owl-carousel
     $(document).ready(function(){
       $('#speaker-carousel').owlCarousel({
@@ -74,21 +79,17 @@
         autoplayHoverPause: true,
         lazyLoad:true,
       })
-      $('#staff-carousel').owlCarousel({
+      $('#activity-carousel').owlCarousel({
         responsive:{
-          0:{items:1},
-          600:{items:2},
-          768:{items:3},
-          992:{items:4}
-      },
-        loop:true,
-        margin:30,
+          0:{items:1}
+        },
+        loop: true,
         dots: false,
-        nav: false,
-        autoplay: true,
-        autoplayTimeout: 2500,
-        autoplayHoverPause: true,
-        lazyLoad:true,
+        nav: true,
+        navContainer: '.activity-nav',
+        navText: ['<i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>','<i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>'],
+        navSpeed: 800,
+        lazyLoad: true,
       })
     });
     

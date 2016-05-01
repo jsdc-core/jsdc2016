@@ -185,46 +185,146 @@ block content
             | 議程表
             i.fa.fa-bolt
 
-  section#location
-    .container
-      .row
-        .col-xs-12.col-sm-5.col-md-4
-          header.major
-            h2 年會地點
-          h3.info.date
-            i.fa.fa-calendar
-            | 2016 / 10 / 22 - 23 
-          h3.info.spot
-            i.fa.fa-map-marker
-            | 中央研究院
-          p.address
-            | 台北市南港區研究院路二段128號
-            br
-            | 人文社會科學館 國際會議廳
-          
-        .col-xs-12.col-sm-6.col-md-8
-          #map
-          
-
   section#sponsor
     .container
       .row
         .col.xs-12.text-center
           header.major
-            h2 年度贊助
+            h2 合作夥伴
+
+  section#location
+    .container
+      .row
+        .col-xs-12.col-sm-6.col-md-4
+          .information
+            header.major
+              h2 年會地點
+            h3.info.date
+              i.fa.fa-calendar
+              | 2016 / 10 / 22 - 23 
+            h3.info.spot
+              i.fa.fa-map-marker
+              | 中央研究院
+            p.address
+              | 台北市南港區研究院路二段128號
+              br
+              | 人文社會科學館 國際會議廳
+          
+        .col-xs-12.col-sm-6.col-md-8
+          #map
+
+  section#activity
+    .container
+      .row
+        .col.xs-12.text-center
+          header.major
+            h2 活動
+        .col-xs-12
+          .activity-container
+            .owl-carousel#activity-carousel
+              .item
+                .row
+                  .col-xs-12.col-md-5
+                    .activity-img
+                      img.owl-lazy(data-src="./dist/images/jsdc-t-shirt.jpg", alt="JSDC T-Shirt")
+                  .col-xs-12.col-md-7
+                    .activity-description
+                      h4.title JSDC T-Shirt
+                      p.content「Build anything with javascript」是JSDC2015的主題， 而「建構」就是此次主視覺的圖像核心， 具像與抽象的物件交錯，表達程式語言的無限可能，而中間的積木形，即是活動名稱JSDC字母的轉化， 它能夠組成亦能拆解，收放自如間建造世界。
+              
+              .item
+                .row
+                  .col-xs-12.col-md-5
+                    .activity-img
+                      img.owl-lazy(data-src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                  .col-xs-12.col-md-7
+                    .activity-description
+                      h4.title JSDC 吉祥物登場！
+                      p.content 今年我們很榮幸請到傲嬌的 Amei 擔任本年度的吉祥物！和它打卡即可兌換精美贈品。
+                      
+            .activity-nav
 
   section#staffs
-    // #staff-line
+    #staff-line
     .container
       .row
         .col.xs-12.text-center
           header.major
             h2 工作人員
         .col-xs-12
-          .staffs-container
-            .owl-carousel#staff-carousel
-              .item
-                img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.staff-name Amei Chi
-                  p.position 總召
+          .staff-container
+            #tabs
+              ul
+                li
+                  a(href='#plan') 策劃
+                li
+                  a(href='#admin') 行政
+                li
+                  a(href='#stage') 場務
+                li
+                  a(href='#web') 網站
+                  
+              #plan
+                .row
+                  .col-xs-12.col-sm-6
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 總召
+                  .col-xs-12.col-sm-6
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 顧問
+              #admin
+                .row
+                  .col-xs-12.col-sm-4
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 票卷
+                  .col-xs-12.col-sm-4
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 財務
+                  .col-xs-12.col-sm-4
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 公關
+              #stage
+                .row
+                  .col-xs-12.col-sm-4
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 紀錄
+                  .col-xs-12.col-sm-4
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 場務
+                  .col-xs-12.col-sm-4
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 場務
+
+              #web
+                .row
+                  .col-xs-12.col-sm-4
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 開發
+                  .col-xs-12.col-sm-4
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 開發
+                  .col-xs-12.col-sm-4
+                    .staff
+                      img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                      h5.name Amei Chi 
+                      p.title 設計

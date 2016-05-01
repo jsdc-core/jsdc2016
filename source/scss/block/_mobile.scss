@@ -24,7 +24,7 @@ $screen-md: 992px;
 
   /* News */
   #news{
-    padding: 80px 20px 0;
+    padding-top: 80px;
     
     #news-line{
       &:after {
@@ -35,7 +35,7 @@ $screen-md: 992px;
 
   /* About */
   #about{
-    padding: 80px 20px 0;
+    padding-top: 80px;
 
     #about-line{
       &:after {
@@ -46,21 +46,32 @@ $screen-md: 992px;
   
   /* Speaker */
   #speakers{
-    padding: 60px 20px;
+    padding-top: 60px;
     
     .speakers-container{
       padding: 40px;
     }
   }
   
-  /* location */
-  #location{
-    padding: 60px 20px;
-  }
-  
   /* Sponsor */
   #sponsor{
-    padding: 60px 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  /* location */
+  #location{
+    padding-top: 60px;
+  }
+  
+  /* Activity */
+  #activity{
+    padding-top: 60px;
+  }
+  
+  /* Staff */
+  #staffs{
+    padding-top: 60px;
   }
 }
 
@@ -81,7 +92,6 @@ $screen-md: 992px;
   
   /* News */
   #news{
-    padding: 80px 0 0;
     
     .news-wrapper{
       padding: 60px 40px 40px;
@@ -119,7 +129,6 @@ $screen-md: 992px;
   
   /* About */
   #about{
-    padding: 80px 0 0;
 
     #what-is-jsdc{
       padding: 60px 40px 40px;
@@ -128,7 +137,7 @@ $screen-md: 992px;
   
   /* Speaker */
   #speakers{
-    padding: 60px 0;
+    padding-top: 60px;
 
     .speaker-nav{
       .owl-prev, .owl-next{
@@ -140,9 +149,16 @@ $screen-md: 992px;
     }
   }
   
+  /* Sponsor */
+  #sponsor{
+  }
+  
   /* Location */
   #location{
-    padding: 60px 0 60px 40px;
+    
+    .information{
+      padding-left: 20px
+    }
     
     .major, .info, .address {
       text-align: left;
@@ -153,24 +169,82 @@ $screen-md: 992px;
       
       &.date{
         i{
-          margin-right: 0 10px;
+          margin-right: 20px;
         }
       }
       
       &.spot{
         i{
-          margin: 0 15px 0 5px;
+          margin: 0 22px 0 5px;
         }
       }
     }
     .address{
       font-size: 18px;
+      padding-left: 40px;
+    }
+  }
+
+  /* Activity */
+  #activity{
+    
+    .activity-container{
+      #activity-carousel{
+        .item{
+          padding: 40px;
+          width: 90%;
+          min-height: 600px;
+          
+          .activity-img{
+            width: 100%;
+            height: 300px;
+          }
+          .activity-description{
+            .title{
+              font-size: 24px;
+            }
+            .content{
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .activity-nav{
+        .owl-prev{
+          left: 0;
+        }
+        .owl-next{
+          right: 0;
+        }
+      }
     }
   }
   
-  /* Sponsor */
-  #sponsor{
-    padding: 60px 0;
+  /* Staff */
+  #staffs{
+    
+    .staff-container{
+      padding: 0;
+      padding-top: 20px;
+      
+      #tabs{
+        
+        ul li{
+          width: 21%;
+          margin: 0 2%;
+          
+          a{
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+          }
+          + li {
+            margin-top: 0;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -213,7 +287,7 @@ $screen-md: 992px;
   
   /* News */
   #news{
-    padding: 120px 0 0;
+    padding-top: 120px;
     
     .news-wrapper{
       padding: 60px 80px;
@@ -234,7 +308,7 @@ $screen-md: 992px;
   
   /* About */
   #about{
-    padding: 120px 0 0;
+    padding-top: 120px;
     
     p{
       font-size: 18px;
@@ -278,7 +352,7 @@ $screen-md: 992px;
   
   /* Speaker */
   #speakers{
-    padding: 80px 0;
+    padding-top: 80px;
     
     .major {
       h2{
@@ -299,17 +373,74 @@ $screen-md: 992px;
     }
   }
   
-  /* Location */
-  #location{
-    padding: 80px 0;
-  }
-  
   /* Sponsor */
   #sponsor{
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
     .major {
       h2{
         font-size: 32px;
+      }
+    }
+  }
+  
+  /* Location */
+  #location{
+    padding-top: 80px;
+    
+    .major {
+      h2{
+        font-size: 32px;
+      }
+    }
+  }
+  
+  /* Activity */
+  #activity{
+    padding-top: 80px;
+    
+    .major {
+      h2{
+        font-size: 32px;
+      }
+    }
+    
+    .activity-container{
+      #activity-carousel{
+        .item{
+          min-height: 300px;
+          
+          .activity-img{
+            width: 100%;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Staff */
+  #staffs{
+    padding-top: 80px;
+    
+    .staff-container{
+      
+      #staff-carousel{
+          
+        .item{
+
+          .staff-img{
+            height: auto;
+            width: auto;
+            margin: 0 auto;
+            
+            .staff{
+              width: 20%;
+              
+            }
+          }
+        }
       }
     }
   }
