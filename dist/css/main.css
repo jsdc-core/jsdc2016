@@ -653,6 +653,17 @@ body {
   text-align: center;
   height: 100vh;
   padding: 13vh 20px 0; }
+  #header .container {
+    position: relative; }
+  #header .lang.topbar-menu-item {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    top: -65px;
+    z-index: 1;
+    right: 0; }
+    #header .lang.topbar-menu-item a {
+      padding: 5px 10px; }
   #header .image {
     -webkit-filter: drop-shadow(0px 5px 10px rgba(119, 119, 119, 0.5));
     filter: drop-shadow(0px 5px 10px rgba(119, 119, 119, 0.5)); }
@@ -668,7 +679,6 @@ body {
       font-size: 26px;
       padding: 5% 0 10%; }
     #header .title h5 {
-      font-family: 'Courier New', Courier, monospace;
       color: white;
       line-height: 1; }
       #header .title h5 span {

@@ -24,7 +24,7 @@ gulp.task('scss', function() {
 
 // 編譯 jade
 gulp.task('jade', function() {
-  return gulp.src('source/views/*.jade')
+  return gulp.src('source/views/**/*.jade')
     .pipe(plugins.jade())
     .pipe(gulp.dest('.'));
 });
