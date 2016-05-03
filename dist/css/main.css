@@ -679,7 +679,6 @@ body {
       font-size: 26px;
       padding: 5% 0 10%; }
     #header .title h5 {
-      color: white;
       line-height: 1; }
       #header .title h5 span {
         font-size: 22px;
@@ -992,6 +991,28 @@ body.is-loading #header:after {
     #footer .copyright a:hover {
       color: #FFD54F;
       text-decoration: none; }
+
+/* mobile devices (mobile, 0px and 425px) */
+@media (min-width: 0px) and (max-width: 425px) {
+  /* Header */
+  #header {
+    padding: 13vh 0px 0; }
+    #header .title h2 {
+      padding: 5% 0; }
+    #header .title h5 {
+      font-size: 19px; }
+      #header .title h5 span {
+        font-size: 20px;
+        color: white; }
+  #about .paragraph {
+    padding: 0; }
+    #about .paragraph p.text-center {
+      margin: 0; }
+  /* Speaker */
+  /* Sponsor */
+  #speaker .typeform-share, #sponsor .typeform-share {
+    padding: 0;
+    font-size: 18px; } }
 
 /* Medium devices (tables, 425px and up) */
 @media (min-width: 425px) {
