@@ -4,74 +4,12 @@ $screen-md: 992px;
 
 /* Medium devices (tables, 425px and up) */
 @media (min-width: $screen-xs) {
-  
-  /* Header */
-  #header {
-    padding: 15vh 40px 0;
 
-    .title {
-      height: 48vh;
-      
-      h2 {
-        padding: 5% 0;
-      }
-    }
-
-    .actions {
-      margin-top: 7%;
-    }
-  }
-
-  /* News */
-  #news{
-    padding-top: 80px;
-    
-    #news-line{
-      &:after {
-        height: 80px;
-      }
-    }
-  }
-
-  /* About */
-  #about{
-    padding-top: 80px;
-
-    #about-line{
-      &:after {
-        height: 80px;
-      }
-    }
-  }
-  
   /* Speaker */
-  #speakers{
-    padding-top: 60px;
-    
+  #speakers{ 
     .speakers-container{
       padding: 40px;
     }
-  }
-  
-  /* Sponsor */
-  #sponsor{
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  
-  /* location */
-  #location{
-    padding-top: 60px;
-  }
-  
-  /* Activity */
-  #activity{
-    padding-top: 60px;
-  }
-  
-  /* Staff */
-  #staffs{
-    padding-top: 60px;
   }
 }
 
@@ -79,19 +17,28 @@ $screen-md: 992px;
 @media (min-width: $screen-sm) {
   
   #header {
-    padding: 12vh 0;
     
     .title {
-      height: 50vh;
+      height: 55vh;
+      
+      h2, span {
+        font-size: 32px;
+      } 
     }
-
-    .actions {
-      margin-top: 7%;
+    
+    .cd-headline {
+      font-size: 20px;
+      margin-top: 0px;
+    }
+    
+    .sub-title{
+      top: 70vh;
     }
   }
   
   /* News */
   #news{
+    padding: $pt_table;
     
     .news-wrapper{
       padding: 60px 40px 40px;
@@ -125,36 +72,31 @@ $screen-md: 992px;
         }
       }
     }
+    #news-line{
+      &:after {
+        height: 80px;
+      }
+    }
   }
   
   /* About */
   #about{
+    padding: $p_table;
 
     #what-is-jsdc{
       padding: 60px 40px 40px;
     }
-  }
-  
-  /* Speaker */
-  #speakers{
-    padding-top: 60px;
-
-    .speaker-nav{
-      .owl-prev, .owl-next{
-        width: 5% !important;
-      }
-      .speaker-button{
-        width: 90% !important;
+    
+    #about-line{
+      &:after {
+        height: 80px;
       }
     }
   }
   
-  /* Sponsor */
-  #sponsor{
-  }
-  
   /* Location */
   #location{
+    padding: $p_table;
     
     .information{
       padding-left: 20px
@@ -184,9 +126,30 @@ $screen-md: 992px;
       padding-left: 40px;
     }
   }
+  
+  /* Speaker */
+  #speakers{
+    padding: $pt_table;
+
+    .speaker-nav{
+      .owl-prev, .owl-next{
+        width: 5% !important;
+      }
+      .speaker-button{
+        width: 90% !important;
+      }
+    }
+  }
+  
+  /* Sponsor */
+  #sponsor{
+    padding: $pt_table;
+  }
 
   /* Activity */
   #activity{
+    padding: $pt_table;
+    padding-top: 60px;
     
     .activity-container{
       #activity-carousel{
@@ -222,6 +185,7 @@ $screen-md: 992px;
   
   /* Staff */
   #staffs{
+    padding: $pt_table;
     
     .staff-container{
       padding: 0;
@@ -237,7 +201,7 @@ $screen-md: 992px;
             width: 100%;
             text-align: center;
             color: white;
-            font-size: 16px;
+            font-size: 18px;
           }
           + li {
             margin-top: 0;
@@ -254,34 +218,9 @@ $screen-md: 992px;
   
   /* Header */
   #header {
-    padding: 12vh 0;
-    
-    .title{
-
-      h2 {
-        font-size: 32px;
-        padding: 40px 0;
-      }
-      
-      h5 {
-        span{
-          font-size: 24px;
-          color: white;
-        }
-      }
-    }
-    
-    p {
-      margin: 30px 0 0;
+    .sub-title{
       font-size: 24px;
-      line-height: 2;
-    }
-    span{
-      font-size: 22px;
-    }
-
-    .actions {
-      margin-top: 5%;
+      line-height: 1.8;
     }
   }
   
@@ -352,7 +291,6 @@ $screen-md: 992px;
   
   /* Speaker */
   #speakers{
-    padding-top: 80px;
     
     .major {
       h2{
@@ -375,8 +313,6 @@ $screen-md: 992px;
   
   /* Sponsor */
   #sponsor{
-    padding-top: 80px;
-    padding-bottom: 80px;
     
     .major {
       h2{
@@ -387,7 +323,6 @@ $screen-md: 992px;
   
   /* Location */
   #location{
-    padding-top: 80px;
     
     .major {
       h2{
@@ -398,7 +333,6 @@ $screen-md: 992px;
   
   /* Activity */
   #activity{
-    padding-top: 80px;
     
     .major {
       h2{
@@ -422,7 +356,12 @@ $screen-md: 992px;
   
   /* Staff */
   #staffs{
-    padding-top: 80px;
+    
+    .major {
+      h2{
+        font-size: 32px;
+      }
+    }
     
     .staff-container{
       
