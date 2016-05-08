@@ -218,9 +218,19 @@ $screen-md: 992px;
   
   /* Header */
   #header {
+    
+    .title{
+      height: 52vh;
+    }
+    
     .sub-title{
+      top: 62vh;
       font-size: 24px;
       line-height: 1.8;
+    }
+    
+    .actions {
+      top: 80vh;
     }
   }
   

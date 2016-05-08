@@ -1291,9 +1291,14 @@ body.is-loading #header:after {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   /* Header */
+  #header .title {
+    height: 52vh; }
   #header .sub-title {
+    top: 62vh;
     font-size: 24px;
     line-height: 1.8; }
+  #header .actions {
+    top: 80vh; }
   /* News */
   #news {
     padding-top: 120px; }
