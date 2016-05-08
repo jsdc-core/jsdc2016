@@ -1,23 +1,9 @@
 /* Main */
-
-$jsdc-y: #FFD54F;
-$jsdc-r: #ce4d40;
-$jsdc-g: #b9cc54;
-$jsdc-b: #3096b2;
-
-.c-font-white{
-  color: white;
-}
-
-.c-bold{
-  font-weight: 900;
-}
-
 body{
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Start form small devices */
+/* Small devices */
 
 /* Header */
 #header {
@@ -25,54 +11,64 @@ body{
   overflow: hidden;
   text-align: center;
   height: 100vh;
-  padding: 13vh 20px 0;
-
-  .image{
-    -webkit-filter: drop-shadow(0px 5px 10px rgba(#777, 0.5));
-    filter:         drop-shadow(0px 5px 10px rgba(#777, 0.5));
-  }
 
   .title{
     height: 45vh;
-    h1,
-    h2,
-    h5 {
-      text-shadow: 0 2px 5px #777;
-      color: white;
+    padding-top: 15vh;
+    
+    .image{
+      -webkit-filter: drop-shadow(0px 5px 10px rgba(#777, 0.5));
+      filter:         drop-shadow(0px 5px 10px rgba(#777, 0.5));
+    }
+
+    h2, span {
+      text-shadow: 0 2px 5px rgba(#777, 0.5);
+      font-size: 26px;
+      color: #67696a;
+      font-weight: bold;
+      padding: 0 10px;
+      margin: 20px 0 0;
+      
+      span{
+        word-break: keep-all;
+      }
+    }
+  }
+  
+  .cd-headline {
+    font-family: 'Courier New', Courier, monospace;
+    color: #67696a;
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  
+  .sub-title{
+    position: absolute;
+    top: 65vh;
+    width: 100%;
+    
+    color: #F5F5F5;
+    font-size: 20px;
+    font-weight: bold;
+    
+    p{
       margin: 0;
     }
-    h2 {
-      font-size: 26px;
-      padding: 5% 0 10%;
-    }
-    h5 {
-      font-family: 'Courier New', Courier, monospace;
-      color: white;
-      line-height: 1;
-
-      span{
-        font-size: 22px;
-        color: white;
+    
+    span{
+      i{
+        margin-right: 10px;
       }
     }
   }
 
-  p {
-    margin: 10px 0 0;
-    font-size: 20px;
-    line-height: 1.5;
-  }
-  span{
-    font-size: 18px;
-    color: #F5F5F5;
-    i{
-      margin-right: 10px;
-    }
-  }
-
   .actions {
-    position: relative;
-    margin-top: 10vw;
+    position: absolute;
+    top: 85vh;
+    width: 100%;
+    
     .button{
       box-shadow: inset 0 0 0 1px white;
       font-size: 18px;
@@ -147,13 +143,11 @@ body.is-loading {
 
 /* News */
 #news{
-  background-color: white;
+  @include background();
   background-image:url('images/overlay3.svg');
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-size: contain;
+
   position: relative;
-  padding-top: 60px;
+  padding: $pt_mobile;
 
   .news-wrapper{
     border: 1px solid $jsdc-y;
@@ -242,6 +236,7 @@ body.is-loading {
       text-align: center;
       margin-top: 40px;
       padding: 5px 0;
+      
       &:hover {
         background-color: $jsdc-y;
         box-shadow: inset 0 0 0 0 $jsdc-y;
@@ -256,6 +251,7 @@ body.is-loading {
     top: 0;
     left: 50%;
     margin: 0 (_size(element-margin) * 0.5) 0 0;
+    
     &:after {
       background: $jsdc-y;
       content: '';
@@ -271,7 +267,7 @@ body.is-loading {
 #about{
   background-color: white;
   position: relative;
-  padding-top: 60px;
+  padding: $p_mobile;
   
   p{
     color: #555;
@@ -317,6 +313,7 @@ body.is-loading {
       line-height: 1.5;
       padding: 0 20px;
     }
+    
     .image{
       margin: 40px 0 0;
     }
@@ -327,6 +324,7 @@ body.is-loading {
     top: 0;
     left: 50%;
     margin: 0 (_size(element-margin) * 0.5) 0 0;
+    
     &:after {
       background: rgba(144, 144, 144, 0.5);
       content: '';
@@ -337,28 +335,83 @@ body.is-loading {
   }
 }
 
+
+/* Location */
+#location{
+  position: relative;
+  background-color: #fafafa;
+  padding: $p_mobile;
+
+  .major {
+    text-align: center;
+    
+    h2{
+      color: #555;
+      font-size: 28px;
+      font-weight: 500;
+    }
+    &:after {
+      background: #ddd;
+    }
+  }
+  .info{
+    font-size: 20px;
+    text-align: center;
+    
+    &.date{
+      color: #555;
+      font-weight: 400;
+      i{
+        color: $jsdc-r;
+        margin-right: 15px;
+      }
+    }
+    
+    &.spot{
+      color: #555;
+      margin-bottom: 10px;
+      i{
+        color: $jsdc-b;
+        margin-right: 15px;
+      }
+    }
+  }
+  .address{
+    color: #777;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  #map{
+    border-radius: _size(border-radius);
+    background-color: #333;
+    height: 300px;
+  }
+}
+
+
 /* Speaker */
 #speakers{
   position: relative;
-  padding-top: 60px;
+  padding: $pt_mobile;
 
   .major {
     h2{
-      color: $jsdc-g - #222;
-      font-size: 26px;
+      color: $jsdc-r - #222;
+      font-size: 28px;
       font-weight: 400;
     }
     &:after {
-      background: $jsdc-g;
+      background: $jsdc-r;
     }
   }
   
   .speaker-button,.agenda-button {
-    box-shadow: inset 0 0 0 1px $jsdc-g;
+    box-shadow: inset 0 0 0 1px $jsdc-r;
     border-radius: _size(border-radius);
-    background-color: white;
     transition: background 0.2s ease;
-    color: $jsdc-g - #222;
+    color: $jsdc-r - #222;
     position: relative;
     z-index: 1;
     display: block;
@@ -366,21 +419,21 @@ body.is-loading {
     text-align: center;
     padding: 10px 0;
     &:hover {
-      background-color: $jsdc-g;
-      box-shadow: inset 0 0 0 0 $jsdc-g;
+      background-color: $jsdc-r;
+      box-shadow: inset 0 0 0 0 $jsdc-r;
       text-decoration: none;
       color: white;
     }
   }
   
   .agenda-button{
-    background-color: $jsdc-g;
+    background-color: $jsdc-r;
     font-size: 22px;
     color: white;
     margin-top: 60px;
     padding: 20px 0;
     &:hover {
-      background-color: $jsdc-g - #222;
+      background-color: $jsdc-r - #222;
     }
     
     i{
@@ -389,9 +442,9 @@ body.is-loading {
   }
   
   .speakers-container{
-    border: 1px solid $jsdc-g;
+    border: 1px solid $jsdc-r;
     border-radius: _size(border-radius);
-    background: white;
+    background-color: white;
     padding: 30px;
     
     #speaker-carousel{
@@ -449,7 +502,7 @@ body.is-loading {
         display: inline-block;
         text-align: center;
         cursor: pointer; 
-        color: $jsdc-g;
+        color: $jsdc-r;
         width: 15%;
         
       }
@@ -469,7 +522,7 @@ body.is-loading {
     top: 47%;
     left: 0;
     &:after {
-      background: $jsdc-g;
+      background: $jsdc-r;
       content: '';
       display: inline-block;
       height: 1px;
@@ -482,7 +535,7 @@ body.is-loading {
     top: 0;
     left: 50%;
     &:after {
-      background: $jsdc-g;
+      background: $jsdc-r;
       content: '';
       display: inline-block;
       height: 60px;
@@ -491,10 +544,11 @@ body.is-loading {
   }
 }
 
+
 /* Sponsor */
 #sponsor{
   position: relative;
-  padding-top: 60px;
+  padding: $pt_mobile;
 
   .major {
     h2{
@@ -507,86 +561,56 @@ body.is-loading {
     }
   }
   
-  #sponsor-line{
-    position: absolute;
-    top: 58%;
-    left: 0;
+  .sponsor-title{
+    margin-bottom: 50px;
+    
+    h3{
+      border-radius: _size(border-radius);
+      background: white;
+      width: 100px;
+      margin: 20px auto;
+      padding: 0 5px;
+      text-align: center;
+      font-size: 22px;
+      color: $jsdc-b + #111;
+    }
+
     &:after {
-      background: $jsdc-b;
       content: '';
-      display: inline-block;
+      display: block;
       height: 1px;
-      width: 100vw;
+      margin-top: -36px;
+      width: 100%;
+      background: $jsdc-b + #111;
+      position: relative;
+      z-index: -1;
     }
-  }
-}
-
-/* Location */
-#location{
-  position: relative;
-  background: #F5F5F5;
-  padding: 60px 0;
-
-  .major {
-    text-align: center;
-    
-    h2{
-      color: #555;
-      font-size: 28px;
-      font-weight: 400;
-    }
-    &:after {
-      background: #ddd;
-    }
-  }
-  .info{
-    font-size: 20px;
-    text-align: center;
-    
-    &.date{
-      color: #555;
-      font-weight: 400;
-      i{
-        color: $jsdc-r;
-        margin-right: 15px;
-      }
-    }
-    
-    &.spot{
-      color: #555;
-      margin-bottom: 10px;
-      i{
-        color: $jsdc-b;
-        margin-right: 15px;
-      }
-    }
-  }
-  .address{
-    color: #777;
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.5;
   }
   
-  #map{
-    border-radius: _size(border-radius);
-    background-color: #333;
-    height: 300px;
+  .logo{
+    max-width: 280px;
+    margin: 0 auto 20px;
+    img{
+      display: block;
+      margin: 0 auto;  
+    }
   }
 }
+
 
 /* Activity */
 #activity{
-  padding-top: 60px;
+  padding: $pt_mobile;
+  padding-top: 40px;
   
   .major {
     h2{
-      color: $jsdc-r - #111;
+      color: $jsdc-g - #111;
       font-size: 28px;
       font-weight: 400;
     }
     &:after {
-      background: $jsdc-r;
+      background: $jsdc-g;
     }
   }
   .activity-container{
@@ -594,12 +618,12 @@ body.is-loading {
     
     #activity-carousel{
       .item{
-        border: 1px solid $jsdc-r;
+        border: 1px solid $jsdc-g;
         border-radius: _size(border-radius);
         padding: 20px;
         margin: 0 auto;
         width: 80%;
-        min-height: 600px;
+        min-height: 650px;
         
         .activity-img{
           width: 100%;
@@ -635,7 +659,7 @@ body.is-loading {
         position: absolute;
         top: 45%; 
         z-index: 10;
-        color: $jsdc-r - #111
+        color: $jsdc-g - #111
       }
       .owl-next{
         right: 0;
@@ -646,7 +670,7 @@ body.is-loading {
 
 /* Staff */
 #staffs{
-  padding-top: 60px;
+  padding: $p_mobile;
   
   .major {
     h2{
@@ -742,6 +766,36 @@ body.is-loading {
           font-size: 18px;
           margin: 0;
         }
+      }
+    }
+  }
+}
+
+/* Subscribe */
+#subscribe{
+  form{
+    margin: 0 auto;
+      
+    input{
+      width: 100%;
+      height: 50px;
+      border-color: $jsdc-y - #111;
+      background-color: white;
+    }
+  
+    .subscribe-button{
+      box-shadow: inset 0 0 0 1px $jsdc-y;
+      background-color: $jsdc-y - #111;
+      border-radius: _size(border-radius);
+      transition: background 0.2s ease;
+      color: white;
+      display: block;
+      font-size: 18px;
+      &:hover {
+        background-color: $jsdc-y;
+        box-shadow: inset 0 0 0 0 $jsdc-y;
+        text-decoration: none;
+        color: white;
       }
     }
 
