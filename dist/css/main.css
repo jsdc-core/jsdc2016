@@ -1106,7 +1106,7 @@ body.is-loading #header:after {
 
 /* Staff */
 #staffs {
-  padding: 60px 0 0; }
+  padding: 60px 0; }
   #staffs .major h2 {
     color: #555;
     font-size: 28px;
@@ -1165,12 +1165,53 @@ body.is-loading #header:after {
         font-size: 18px;
         margin: 0; }
 
+/* Subscribe */
+#subscribe form {
+  margin: 0 auto; }
+  #subscribe form input {
+    width: 100%;
+    height: 50px;
+    border-color: #eec43e;
+    background-color: white; }
+  #subscribe form .subscribe-button {
+    box-shadow: inset 0 0 0 1px #FFD54F;
+    background-color: #eec43e;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+    color: white;
+    display: block;
+    font-size: 18px; }
+    #subscribe form .subscribe-button:hover {
+      background-color: #FFD54F;
+      box-shadow: inset 0 0 0 0 #FFD54F;
+      text-decoration: none;
+      color: white; }
+
 #footer {
-  margin-top: 60px; }
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+  background-image: url("images/overlay4.svg");
+  padding: 60px 0 40px; }
+  #footer #elevator-btn {
+    margin: 0 auto;
+    text-align: center; }
+    #footer #elevator-btn a {
+      color: #777;
+      font-size: 18px;
+      font-weight: 500; }
+      #footer #elevator-btn a i {
+        display: block;
+        line-height: 0.2; }
+      #footer #elevator-btn a:hover {
+        text-decoration: none; }
   #footer .copyright {
-    font-size: 0.8em;
+    font-size: 18px;
+    color: #777;
     list-style: none;
-    padding: 0; }
+    margin: 0;
+    padding: 10px 0 0; }
     #footer .copyright a {
       color: #ddb32d; }
       #footer .copyright a:hover {
@@ -1273,7 +1314,7 @@ body.is-loading #header:after {
       right: 0; }
   /* Staff */
   #staffs {
-    padding: 80px 0 0; }
+    padding: 80px 0; }
     #staffs .staff-container {
       padding: 0;
       padding-top: 20px; }
@@ -1286,7 +1327,9 @@ body.is-loading #header:after {
           color: white;
           font-size: 18px; }
         #staffs .staff-container #tabs ul li + li {
-          margin-top: 0; } }
+          margin-top: 0; }
+  #footer {
+    padding: 80px 0 40px; } }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {

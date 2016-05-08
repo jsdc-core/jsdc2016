@@ -185,7 +185,7 @@ $screen-md: 992px;
   
   /* Staff */
   #staffs{
-    padding: $pt_table;
+    padding: $p_table;
     
     .staff-container{
       padding: 0;
@@ -209,6 +209,10 @@ $screen-md: 992px;
         }
       }
     }
+  }
+  
+  #footer{
+    padding: 80px 0 40px;
   }
 }
 
