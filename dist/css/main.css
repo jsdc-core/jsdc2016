@@ -1233,7 +1233,7 @@ main.spaekers-page {
     position: relative;
     overflow: hidden;
     text-align: center;
-    height: 30vh; }
+    height: 250px; }
     main.spaekers-page #speakers-header .inner {
       opacity: 1;
       position: relative;
@@ -1248,7 +1248,7 @@ main.spaekers-page {
       top: 0;
       width: 100%; }
     main.spaekers-page #speakers-header .major {
-      padding-top: 11vh; }
+      padding-top: 100px; }
       main.spaekers-page #speakers-header .major h2 {
         text-shadow: 0 2px 5px rgba(119, 119, 119, 0.5);
         color: white;
@@ -1263,8 +1263,22 @@ main.spaekers-page {
       margin: 0 auto;
       padding-bottom: 80px; }
       main.spaekers-page #speakers-list .speaker .avatar {
-        width: 180px;
-        border-radius: 50%; }
+        width: 200px;
+        border-radius: 50%;
+        margin: 0 auto; }
+      main.spaekers-page #speakers-list .speaker .introduction {
+        padding-top: 30px;
+        text-align: center;
+        color: #555; }
+        main.spaekers-page #speakers-list .speaker .introduction .speaker-name {
+          font-size: 20px;
+          margin-bottom: 10px; }
+        main.spaekers-page #speakers-list .speaker .introduction .project {
+          font-size: 18px;
+          margin-bottom: 20px; }
+        main.spaekers-page #speakers-list .speaker .introduction .link a i {
+          font-size: 32px;
+          margin: 0 15px; }
 
 /* Medium devices (tables, 425px and up) */
 @media (min-width: 425px) {
