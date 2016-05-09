@@ -1,0 +1,47 @@
+extends ./layout/_layout.jade
+
+block content
+
+  nav.navbar
+    .container
+      .navbar-header
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-mobile', aria-expanded='false')
+          i.fa.fa-bars
+          
+        a.navbar-brand(href='./index.html')
+          img.image.img-responsive.lazy(itemprop="image" data-original='./dist/images/jsdc-logo.png', alt='JSDC 2016')
+
+      .collapse.navbar-collapse#navbar-mobile
+        ul.nav.navbar-nav
+          li
+            a(href='./speakers.html') 講者
+          li.active
+            a(href='./agenda.html') 議程
+          li
+            a(href='http://blog.jsdc.tw/' target="_blank") 部落格
+  
+  main.agenda-page
+  
+    section#agenda-header
+      .container
+        .inner
+          header.major.text-center
+            h2 JSDC 2016 議程
+            
+    section#agenda-list
+      .container
+        .row
+          .col-xs-12
+            .agenda-container
+              #tabs
+                ul
+                  li
+                    a(href='#day_1') Day 1 ( 10 / 22 )
+                  li
+                    a(href='#day_2') Day 2 ( 10 / 23 )
+                    
+                #day_1
+                  .row
+
+                #day_2
+                  .row
