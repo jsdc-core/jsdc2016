@@ -1,21 +1,22 @@
 doctype html
-- var title = 'JSDC Taiwan 2016';
+- var title = 'JSDC 2016';
 - var description = 'JavaScript 開發者年會 ( JavaScript Developers Conference，簡稱 JSDC ) 是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。';
 - var coverImage = 'http://2016.jsdc.tw/dist/images/jsdc-2015.jpg';
-- var path = './dist';
+- var cssPath = './dist/css';
+- var jsPath = './dist/js';
 - var lang = 'zh-hant';
 
 html(lang='#{lang}')
   head
 
-    title JSDC 2016
+    title #{title}
     // html 設定
     meta(http-equiv='Content-type', content='text/html; charset=utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='author', content='JSDC Member')
+    meta(name='author', content='JSDC Members')
     meta(name='copyright', content='JSDC Taiwan')
-    meta(name='keywords', content='website, javascript, js, JSDC 2016, JSDC Taiwan 2016')
+    meta(name='keywords', content='website,javascript,js,JSDC,Taiwan,2016')
 
     // SEO meta 設定
     meta(itemprop='name', content='#{title}')
@@ -49,23 +50,23 @@ html(lang='#{lang}')
       ga('send', 'pageview');
 
     // css 設定
-    link(rel='shortcut icon', href='#{path}/favicons/favicon.ico')
-    link(rel='stylesheet', href='#{path}/css/bootstrap.css')
-    link(rel='stylesheet', href='#{path}/css/font-awesome/css/font-awesome.min.css')
-    link(rel='stylesheet', href='#{path}/css/main.css')
+    link(rel='shortcut icon', href='./dist/favicons/favicon.ico')
+    link(rel='stylesheet', href='#{cssPath}/bootstrap.css')
+    link(rel='stylesheet', href='#{cssPath}/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='#{cssPath}/main.css')
     link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,700,400italic,700italic', rel='stylesheet', type='text/css')
-    link(rel='stylesheet', href='#{path}/css/headline.css')
+    link(rel='stylesheet', href='#{cssPath}/headline.css')
 
     // js 設定
-    script(src='#{path}/js/jquery-1.11.2.min.js')
-    script(src='#{path}/js/bootstrap.min.js')
-    script(src='#{path}/js/jquery.backstretch.min.js')
-    script(src='#{path}/js/jquery.lazyload.min.js')
-    script(src='#{path}/js/smooth-scroll.min.js')
-    script(src='#{path}/js/skel.min.js')
-    script(src='#{path}/js/util.min.js')
-    script(src='#{path}/js/main.min.js')
-    script(src='#{path}/js/headline.min.js')
+    script(src='#{jsPath}/jquery-1.11.2.min.js')
+    script(src='#{jsPath}/bootstrap.min.js')
+    script(src='#{jsPath}/jquery.backstretch.min.js')
+    script(src='#{jsPath}/jquery.lazyload.min.js')
+    script(src='#{jsPath}/smooth-scroll.min.js')
+    script(src='#{jsPath}/skel.min.js')
+    script(src='#{jsPath}/util.min.js')
+    script(src='#{jsPath}/main.min.js')
+    script(src='#{jsPath}/headline.min.js')
 
   body#h5o-1
 

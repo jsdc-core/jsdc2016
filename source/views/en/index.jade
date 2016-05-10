@@ -1,13 +1,12 @@
 extends ../layout/_en-layout.jade
 
-
 block content
-
   - var slogan = 'JavaScript in essence and in action';
   - var date = 'Oct 22-23 2016';
   - var address = 'HSS Bldg. of Academia Sinica';
   - var LatestNews = 'Latest News';
 
+  h1.hide #{title}
   //- Header
   section#header
     .container
@@ -28,7 +27,7 @@ block content
               b Raspberry Pi 
               b Robot 
             span with JavaScript
-        p.c-bold.c-font-white Oct_22-23 2016
+        p.c-bold.c-font-white #{date}
         span
           i.fa.fa-map-marker
           | #{address}
@@ -125,6 +124,7 @@ block content
     .container
       .row
         .col.xs-12.text-center
+          h2.hide Become a speaker
           a.typeform-share.typeform-button.c-bold(href="https://jsdc.typeform.com/to/kAQ0yC" data-mode="1" target="_blank") Become a speaker
 
   section#last-year
