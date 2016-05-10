@@ -86,6 +86,7 @@ $balloon-arrow-height:   6px;
         border-radius: 4px;
         color: #fff;
         content: attr(data-balloon);
+        text-align: left;
         font-size: 16px;
         line-height: 1.5;
         padding: 60px 20px 20px;
@@ -104,6 +105,7 @@ $balloon-arrow-height:   6px;
         padding-top: 20px;
         position: absolute;
         z-index: 11;
+        word-break: keep-all;
 
     }
 
