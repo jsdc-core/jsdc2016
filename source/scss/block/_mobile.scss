@@ -214,6 +214,42 @@ $screen-md: 992px;
   #footer{
     padding: 80px 0 40px;
   }
+  
+  main.agenda-page{
+  
+    #agenda-list{
+      
+      .agenda-container{
+      
+        #tabs{
+          
+          ul{
+            padding: 1em 1.4em 0;
+            
+            li{
+              width: 49%;
+              margin: 20px 0;
+              
+              &:nth-of-type(2){
+                margin-top: 20px;
+                margin-left: 2%;
+              }
+            }
+            
+            a{
+              font-size: 20px;
+              padding: 15px 0;
+            }
+          }
+          
+          .ui-tabs-panel{
+            padding: 1em 1.4em;
+          }
+        }
+      }
+    }
+  }
+  
 }
 
 

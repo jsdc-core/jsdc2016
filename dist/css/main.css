@@ -1396,6 +1396,123 @@ main.agenda-page {
         font-weight: bold; }
       main.agenda-page #agenda-header .major:after {
         background: white; }
+  main.agenda-page #agenda-list .agenda-container #tabs ul li {
+    border-radius: 4px;
+    transition: background 0.2s ease;
+    background-color: #777;
+    width: 100%;
+    margin: 10px 0; }
+    main.agenda-page #agenda-list .agenda-container #tabs ul li:nth-of-type(1):hover {
+      background-color: #ce4d40; }
+    main.agenda-page #agenda-list .agenda-container #tabs ul li:nth-of-type(1).ui-state-active {
+      background-color: #ce4d40; }
+    main.agenda-page #agenda-list .agenda-container #tabs ul li:nth-of-type(2) {
+      margin-top: 0; }
+      main.agenda-page #agenda-list .agenda-container #tabs ul li:nth-of-type(2):hover {
+        background-color: #3096b2; }
+      main.agenda-page #agenda-list .agenda-container #tabs ul li:nth-of-type(2).ui-state-active {
+        background-color: #3096b2; }
+  main.agenda-page #agenda-list .agenda-container #tabs ul a {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    padding: 10px 0; }
+  main.agenda-page #agenda-list .agenda-container #tabs .ui-tabs-panel {
+    padding: 5px; }
+  main.agenda-page #agenda-list .agenda-container table thead {
+    border-width: 0; }
+    main.agenda-page #agenda-list .agenda-container table thead tr th {
+      border-width: 0;
+      background-color: #ddd;
+      border-bottom: 5px solid white;
+      text-align: center;
+      font-weight: bold;
+      color: #555;
+      font-size: 20px;
+      padding: 15px 0; }
+      main.agenda-page #agenda-list .agenda-container table thead tr th:nth-of-type(1) {
+        border-right: 5px solid white;
+        border-radius: 4px 0 0 0; }
+      main.agenda-page #agenda-list .agenda-container table thead tr th:nth-of-type(3) {
+        border-left: 5px solid white;
+        border-radius: 0 4px 0 0; }
+  main.agenda-page #agenda-list .agenda-container table tbody tr td {
+    text-align: center;
+    padding: 30px 20px;
+    border-width: 0; }
+    main.agenda-page #agenda-list .agenda-container table tbody tr td:nth-of-type(1) {
+      text-align: center;
+      vertical-align: middle;
+      font-size: 18px;
+      font-weight: bold;
+      color: #777; }
+    main.agenda-page #agenda-list .agenda-container table tbody tr td .avatar.avatar, main.agenda-page #agenda-list .agenda-container table tbody tr td .speaker.avatar {
+      width: 120px;
+      border-radius: 50%;
+      margin: 0 20px 10px; }
+    main.agenda-page #agenda-list .agenda-container table tbody tr td .avatar.speaker, main.agenda-page #agenda-list .agenda-container table tbody tr td .speaker.speaker {
+      vertical-align: middle; }
+      main.agenda-page #agenda-list .agenda-container table tbody tr td .avatar.speaker h6, main.agenda-page #agenda-list .agenda-container table tbody tr td .avatar.speaker p, main.agenda-page #agenda-list .agenda-container table tbody tr td .speaker.speaker h6, main.agenda-page #agenda-list .agenda-container table tbody tr td .speaker.speaker p {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555;
+        font-weight: 400; }
+      main.agenda-page #agenda-list .agenda-container table tbody tr td .avatar.speaker h6, main.agenda-page #agenda-list .agenda-container table tbody tr td .speaker.speaker h6 {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 2; }
+    main.agenda-page #agenda-list .agenda-container table tbody tr td .label {
+      margin-right: 10px;
+      font-size: 14px; }
+    main.agenda-page #agenda-list .agenda-container table tbody tr td i {
+      margin: 0 10px; }
+    main.agenda-page #agenda-list .agenda-container table tbody tr td.colspan:nth-of-type(2) {
+      border-right: 0px solid white; }
+    main.agenda-page #agenda-list .agenda-container table tbody tr td.colspan .avatar, main.agenda-page #agenda-list .agenda-container table tbody tr td.colspan .speaker {
+      display: inline-block; }
+      main.agenda-page #agenda-list .agenda-container table tbody tr td.colspan .avatar.speaker, main.agenda-page #agenda-list .agenda-container table tbody tr td.colspan .speaker.speaker {
+        margin-top: 0;
+        text-align: left; }
+    main.agenda-page #agenda-list .agenda-container table tbody tr td.break {
+      vertical-align: middle; }
+    main.agenda-page #agenda-list .agenda-container table tbody tr td:nth-of-type(1), main.agenda-page #agenda-list .agenda-container table tbody tr td:nth-of-type(2) {
+      border-right: 5px solid white; }
+  main.agenda-page #agenda-list .agenda-container table.hidden-xs tr:hover {
+    background-color: rgba(185, 204, 84, 0.3); }
+  main.agenda-page #agenda-list .agenda-container table.visible-xs tbody, main.agenda-page #agenda-list .agenda-container table.visible-xs tr {
+    display: block; }
+    main.agenda-page #agenda-list .agenda-container table.visible-xs tbody:nth-child(2n + 1), main.agenda-page #agenda-list .agenda-container table.visible-xs tr:nth-child(2n + 1) {
+      background-color: white; }
+    main.agenda-page #agenda-list .agenda-container table.visible-xs tbody th, main.agenda-page #agenda-list .agenda-container table.visible-xs tr th {
+      display: block;
+      background-color: #ddd;
+      border-width: 0;
+      text-align: center;
+      font-weight: bold;
+      color: #777; }
+    main.agenda-page #agenda-list .agenda-container table.visible-xs tbody td, main.agenda-page #agenda-list .agenda-container table.visible-xs tr td {
+      display: block;
+      padding: 25px 0; }
+      main.agenda-page #agenda-list .agenda-container table.visible-xs tbody td:nth-of-type(1), main.agenda-page #agenda-list .agenda-container table.visible-xs tr td:nth-of-type(1) {
+        border-right: 0px solid white; }
+      main.agenda-page #agenda-list .agenda-container table.visible-xs tbody td:hover, main.agenda-page #agenda-list .agenda-container table.visible-xs tr td:hover {
+        background-color: rgba(185, 204, 84, 0.3); }
+      main.agenda-page #agenda-list .agenda-container table.visible-xs tbody td .label-default, main.agenda-page #agenda-list .agenda-container table.visible-xs tr td .label-default {
+        display: block;
+        width: 80%;
+        margin: 0 auto 20px;
+        line-height: 1.5;
+        font-size: 16px; }
+      main.agenda-page #agenda-list .agenda-container table.visible-xs tbody td .avatar.speaker h6, main.agenda-page #agenda-list .agenda-container table.visible-xs tbody td .avatar.speaker p, main.agenda-page #agenda-list .agenda-container table.visible-xs tbody td .speaker.speaker h6, main.agenda-page #agenda-list .agenda-container table.visible-xs tbody td .speaker.speaker p, main.agenda-page #agenda-list .agenda-container table.visible-xs tr td .avatar.speaker h6, main.agenda-page #agenda-list .agenda-container table.visible-xs tr td .avatar.speaker p, main.agenda-page #agenda-list .agenda-container table.visible-xs tr td .speaker.speaker h6, main.agenda-page #agenda-list .agenda-container table.visible-xs tr td .speaker.speaker p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 2;
+        color: #555; }
+      main.agenda-page #agenda-list .agenda-container table.visible-xs tbody td .avatar.speaker h6, main.agenda-page #agenda-list .agenda-container table.visible-xs tbody td .speaker.speaker h6, main.agenda-page #agenda-list .agenda-container table.visible-xs tr td .avatar.speaker h6, main.agenda-page #agenda-list .agenda-container table.visible-xs tr td .speaker.speaker h6 {
+        font-size: 18px;
+        line-height: 1.5; }
 
 /* Medium devices (tables, 425px and up) */
 @media (min-width: 425px) {
@@ -1508,7 +1625,20 @@ main.agenda-page {
         #staffs .staff-container #tabs ul li + li {
           margin-top: 0; }
   #footer {
-    padding: 80px 0 40px; } }
+    padding: 80px 0 40px; }
+  main.agenda-page #agenda-list .agenda-container #tabs ul {
+    padding: 1em 1.4em 0; }
+    main.agenda-page #agenda-list .agenda-container #tabs ul li {
+      width: 49%;
+      margin: 20px 0; }
+      main.agenda-page #agenda-list .agenda-container #tabs ul li:nth-of-type(2) {
+        margin-top: 20px;
+        margin-left: 2%; }
+    main.agenda-page #agenda-list .agenda-container #tabs ul a {
+      font-size: 20px;
+      padding: 15px 0; }
+  main.agenda-page #agenda-list .agenda-container #tabs .ui-tabs-panel {
+    padding: 1em 1.4em; } }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
