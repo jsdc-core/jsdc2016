@@ -636,7 +636,6 @@ button,
 
 .navbar {
   height: 62px;
-  background-color: #fafafa;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   z-index: 10;
   margin: 0; }
@@ -679,6 +678,14 @@ button,
             height: 5px;
             width: 60px; }
 
+main.main-page .navbar {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%; }
+  main.main-page .navbar .navbar-collapse {
+    background-color: rgba(250, 250, 250, 0.9); }
+
 #footer {
   background-position: right top;
   background-repeat: no-repeat;
@@ -720,7 +727,8 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
-  height: 100vh; }
+  height: 100vh;
+  z-index: 101; }
   #header .title {
     height: 45vh;
     padding-top: 15vh; }
