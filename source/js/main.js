@@ -104,5 +104,20 @@
       });
     });
     
+    
+    // Reveal Navbar
+    $(document).scroll(function () {
+      var dist = $('#news').offset().top;
+      var y = $(this).scrollTop();
+      
+      console.log(dist)
+      
+      if (y > dist) {
+          $('.navbar').fadeIn();
+      } else {
+          $('.navbar').fadeOut();
+      }
+    });
+    
   });
 })(jQuery);

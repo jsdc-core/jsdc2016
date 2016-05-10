@@ -2,7 +2,7 @@ extends ./layout/_layout.jade
 
 block content
 
-  main
+  main.main-page
   
     section#header
       .container
@@ -33,6 +33,8 @@ block content
             li
               a.button(href='#news') Discover
 
+    include ./partials/_nav
+    
     section#news
       #news-line
       .container

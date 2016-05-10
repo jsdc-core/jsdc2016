@@ -1,6 +1,5 @@
 .navbar{
   height: 62px;
-  background-color: #fafafa;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   z-index: 10;
   margin: 0;
@@ -60,6 +59,18 @@
           }
         }
       }
+    }
+  }
+}
+
+main.main-page{
+  .navbar{
+    position: fixed;
+    top:0;
+    z-index: 100;
+    width: 100%;
+    .navbar-collapse{
+      background-color: rgba(#fafafa, 0.9);
     }
   }
 }
