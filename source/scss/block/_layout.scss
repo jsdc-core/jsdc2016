@@ -3,6 +3,12 @@ body{
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+a, button {
+  &:focus, &:visited {
+    outline: none;
+  }
+}
+
 /* Small devices */
 
 /* Header */

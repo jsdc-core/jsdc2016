@@ -721,6 +721,9 @@ main.main-page .navbar {
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
+a:focus, a:visited, button:focus, button:visited {
+  outline: none; }
+
 /* Small devices */
 /* Header */
 #header {
