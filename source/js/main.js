@@ -53,12 +53,11 @@
     $('img.lazy').lazyload({
       effect : 'fadeIn'
     });
-    
+
     // Tabs
-    $(function() {
-      $( "#tabs" ).tabs();
-    });
-    
+    $('#tabs ul a').off('click'); // 不知道是哪個 lib 加入滑動的參數，因此先將之拿掉
+    $( "#tabs" ).tabs();
+
     // Slider / owl-carousel
     $(document).ready(function(){
       $('#speaker-carousel').owlCarousel({
@@ -92,8 +91,8 @@
         lazyLoad: true,
       })
     });
-    
-    
+
+
     // Back to Top
     $(document).ready(function () {
       $('#elevator-btn').click(function () {
@@ -103,21 +102,21 @@
           return false;
       });
     });
-    
-    
+
+
     // Reveal Navbar
     $(document).scroll(function () {
       var dist = $('#news').offset().top;
       var y = $(this).scrollTop();
-      
+
       console.log(dist)
-      
+
       if (y > dist) {
           $('.navbar').fadeIn();
       } else {
           $('.navbar').fadeOut();
       }
     });
-    
+
   });
 })(jQuery);
