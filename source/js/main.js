@@ -94,22 +94,17 @@
 
 
     // Back to Top
-    $(document).ready(function () {
-      $('#elevator-btn').click(function () {
-          $("html, body").animate({
-              scrollTop: 0
-          }, 600);
-          return false;
-      });
+    // elevator
+    var elevator = new Elevator({
+      element: document.querySelector('#elevator-btn'),
+      mainAudio: '/dist/music/elevator.mp3',
+      endAudio:  '/dist/music/ding.mp3'
     });
-
 
     // Reveal Navbar
     $(document).scroll(function () {
       var dist = $('#news').offset().top;
       var y = $(this).scrollTop();
-
-      console.log(dist)
 
       if (y > dist) {
           $('.navbar').fadeIn();
