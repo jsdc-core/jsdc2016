@@ -33,9 +33,16 @@
         skel.breakpoint('mobile').active
       );
     });
-
-    // Scrolly 目前看起來還用不到，所以先隱藏起來
-    // $('.scrolly').scrolly();
+    
+    $(function() {
+        $('#discover').bind('click', function(event) {
+            var $anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+            event.preventDefault();
+        });
+    });
 
     // backstretch
     $('#header').backstretch([

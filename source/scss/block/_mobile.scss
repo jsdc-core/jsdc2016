@@ -20,6 +20,7 @@ $screen-md: 992px;
     
     .title {
       height: 55vh;
+      padding-top: 15vh;
       
       h2, span {
         font-size: 32px;
@@ -33,6 +34,10 @@ $screen-md: 992px;
     
     .sub-title{
       top: 70vh;
+    }
+    
+    .actions {
+      top: 85vh;
     }
   }
   
@@ -211,6 +216,24 @@ $screen-md: 992px;
     }
   }
   
+  #subscribe{
+    .subscribe-button{
+      margin-top: 0 !important;
+    }
+  }
+  
+  .navbar .navbar-collapse{
+    
+    .navbar-nav li{
+      
+      width: 100px;
+      
+      &:nth-child(2n + 1) {
+        background-color: rgba(#fff, 1)
+      }
+    }
+  }
+  
   #footer{
     padding: 80px 0 40px;
   }
@@ -261,6 +284,7 @@ $screen-md: 992px;
     
     .title{
       height: 52vh;
+      padding-top: 15vh;
     }
     
     .sub-title{
