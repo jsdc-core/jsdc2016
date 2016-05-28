@@ -1535,6 +1535,69 @@ main.agenda-page {
         font-size: 18px;
         line-height: 1.5; }
 
+.sponsor {
+  padding: 20px 10px 0;
+  margin-bottom: 60px;
+  position: relative;
+  border: 5px solid #fafafa; }
+  .sponsor img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px; }
+
+.sponsor-gold {
+  padding: 80px 80px 30px;
+  border: 5px solid #ffc525; }
+  .sponsor-gold:before {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #ffc525;
+    border-radius: 100%; }
+  .sponsor-gold img {
+    display: block;
+    margin: auto; }
+
+.sponsor-silver {
+  padding: 80px 60px 30px;
+  border: 5px solid #a1a1a1; }
+  .sponsor-silver:before {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #a1a1a1;
+    border-radius: 100%; }
+  .sponsor-silver img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px; }
+
+.sponsor-bronze {
+  padding: 80px 10px 30px;
+  border: 5px solid #c37141; }
+  .sponsor-bronze:before {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #c37141;
+    border-radius: 100%; }
+  .sponsor-bronze img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px; }
+
 /* Medium devices (tables, 425px and up) */
 @media (min-width: 425px) {
   /* Speaker */

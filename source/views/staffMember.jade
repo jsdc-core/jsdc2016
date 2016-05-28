@@ -1,0 +1,101 @@
+extends ./layout/_layout.jade
+
+block title
+  title 工作人員｜JSDC 2016
+
+block content
+
+  include ./partials/_nav
+
+  main.agenda-page
+  
+    section#agenda-header
+      .container
+        .inner
+          header.major.text-center
+            h2 JSDC 2016 工作人員
+            
+    section#staffs
+      .container
+        .row
+          .col-xs-12.text-center
+            header.major
+              h2 工作人員
+          .col-xs-12
+            .staff-container
+              #tabs
+                ul
+                  li
+                    a(href='#plan') 策劃
+                  li
+                    a(href='#admin') 行政
+                  li
+                    a(href='#stage') 場務
+                  li
+                    a(href='#web') 網站
+                    
+                #plan
+                  .row
+                    .col-xs-12.col-sm-6
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 總召
+                    .col-xs-12.col-sm-6
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 顧問
+                #admin
+                  .row
+                    .col-xs-12.col-sm-4
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 票卷
+                    .col-xs-12.col-sm-4
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 財務
+                    .col-xs-12.col-sm-4
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 公關
+                #stage
+                  .row
+                    .col-xs-12.col-sm-4
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 紀錄
+                    .col-xs-12.col-sm-4
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 場務
+                    .col-xs-12.col-sm-4
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 場務
+
+                #web
+                  .row
+                    .col-xs-12.col-sm-4
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 開發
+                    .col-xs-12.col-sm-4
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 開發
+                    .col-xs-12.col-sm-4
+                      .staff
+                        img(src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                        h5.name Amei Chi 
+                        p.title 設計
+                                

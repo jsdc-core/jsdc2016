@@ -33,7 +33,7 @@
         skel.breakpoint('mobile').active
       );
     });
-    
+
     $(function() {
         $('#discover').bind('click', function(event) {
             var $anchor = $(this);
@@ -109,16 +109,18 @@
     });
 
     // Reveal Navbar
-    $(document).scroll(function () {
-      var dist = $('#news').offset().top;
-      var y = $(this).scrollTop();
+    if ($('#news').length){
+        $(document).scroll(function () {
+          var dist = $('#news').offset().top - 20;
+          var y = $(this).scrollTop();
 
-      if (y > dist) {
-          $('.navbar').fadeIn();
-      } else {
-          $('.navbar').fadeOut();
-      }
-    });
+          if (y > dist) {
+              $('.navbar').fadeIn();
+          } else {
+              $('.navbar').fadeOut();
+          }
+        });
+    }
 
   });
 })(jQuery);
