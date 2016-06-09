@@ -99,7 +99,6 @@
       })
     });
 
-
     // Back to Top
     // elevator
     var elevator = new Elevator({
@@ -107,20 +106,6 @@
       mainAudio: '/dist/music/elevator.mp3',
       endAudio:  '/dist/music/ding.mp3'
     });
-
-    // Reveal Navbar
-    if ($('#news').length){
-        $(document).scroll(function () {
-          var dist = $('#news').offset().top - 20;
-          var y = $(this).scrollTop();
-
-          if (y > dist) {
-              $('.navbar').fadeIn();
-          } else {
-              $('.navbar').fadeOut();
-          }
-        });
-    }
 
   });
 })(jQuery);

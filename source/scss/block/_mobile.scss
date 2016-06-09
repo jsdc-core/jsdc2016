@@ -2,6 +2,32 @@ $screen-xs: 425px;
 $screen-sm: 768px;
 $screen-md: 992px;
 
+@media (max-width: $screen-xs) {
+
+  .navbar{
+    .navbar-collapse{
+      z-index: 10;
+      background-color: rgba(#fff, 0.9);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+      padding: 0;
+
+      .navbar-nav{
+        margin: 0;
+        width: 100%;
+        li:nth-child(2n) {
+          background-color: rgba(#ddd, 0.3)
+        }
+
+        &.navbar-right{
+          li:nth-child(2n + 1) {
+            background-color: rgba(#ddd, 0.3)
+          }
+        }
+      } 
+    }
+  }
+}
+
 /* Medium devices (tables, 425px and up) */
 @media (min-width: $screen-xs) {
 
@@ -103,32 +129,18 @@ $screen-md: 992px;
   #location{
     padding: $p_table;
     
-    .information{
-      padding-left: 20px
-    }
-    
-    .major, .info, .address {
-      text-align: left;
-    }
-    
     .info{
       font-size: 24px;
-      
-      &.date{
-        i{
-          margin-right: 20px;
-        }
-      }
-      
+
       &.spot{
         i{
           margin: 0 22px 0 5px;
         }
       }
     }
+
     .address{
       font-size: 18px;
-      padding-left: 40px;
     }
   }
   
@@ -216,20 +228,12 @@ $screen-md: 992px;
     }
   }
   
-  #subscribe{
-    .subscribe-button{
-      margin-top: 0 !important;
-    }
-  }
-  
-  .navbar .navbar-collapse{
-    
-    .navbar-nav li{
-      
-      width: 100px;
-      
-      &:nth-child(2n + 1) {
-        background-color: rgba(#fff, 1)
+  .navbar{
+    .navbar-nav{
+      margin: 0 -15px;
+
+      li a{
+        padding: 20px 10px 0 !important;
       }
     }
   }

@@ -9,7 +9,7 @@ block content
 
   main.spaekers-page
 
-    section#speakers-header
+    section#sub-header
       .container
         .inner
           header.major.text-center
@@ -157,3 +157,22 @@ block content
               i.fa.fa-bolt 
               | 議程表
               i.fa.fa-bolt
+
+    script.
+      (function($) {
+        
+        $('#nav-speakers').addClass('active');
+
+        if ($('#speakers-list').length){
+          $(document).scroll(function () {
+            var dist = $('#speakers-list').offset().top;
+            var y = $(this).scrollTop();
+
+            if (y > dist) {
+                $('.navbar').addClass('block');
+            } else {
+                $('.navbar').removeClass('block');
+            }
+          });
+        }
+      })(jQuery);

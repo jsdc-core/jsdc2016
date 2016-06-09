@@ -7,13 +7,13 @@ block content
 
   include ./partials/_nav
 
-  main.agenda-page
+  main.about-page
   
-    section#agenda-header
+    section#sub-header
       .container
         .inner
           header.major.text-center
-            h2 JSDC 2016 關於
+            h2 關於 JSDC 2016 
 
     section#about
       #about-line
@@ -41,3 +41,22 @@ block content
                 include partials/_fb-share
             .col-xs-12
               img.image.fit.lazy(data-original='./dist/images/jsdc-2015.jpg', alt='JSDC 2015 工作人員')
+
+    script.
+      (function($) {
+        
+        $('#nav-about').addClass('active');
+
+        if ($('#about').length){
+          $(document).scroll(function () {
+            var dist = $('#about').offset().top;
+            var y = $(this).scrollTop();
+
+            if (y > dist) {
+                $('.navbar').addClass('block');
+            } else {
+                $('.navbar').removeClass('block');
+            }
+          });
+        }
+      })(jQuery);

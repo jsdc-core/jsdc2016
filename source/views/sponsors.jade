@@ -7,9 +7,9 @@ block content
 
   include ./partials/_nav
 
-  main.agenda-page
+  main.sponsors-page
 
-    section#agenda-header
+    section#sub-header
       .container
         .inner
           header.major.text-center
@@ -166,3 +166,22 @@ block content
         //-       .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
         //-         a(href="#", target='_blank')
         //-           img(src="./dist/images/logo.png", alt="")
+
+    script.
+      (function($) {
+        
+        $('#nav-sponsors').addClass('active');
+
+        if ($('#sponsor').length){
+          $(document).scroll(function () {
+            var dist = $('#sponsor').offset().top;
+            var y = $(this).scrollTop();
+
+            if (y > dist) {
+                $('.navbar').addClass('block');
+            } else {
+                $('.navbar').removeClass('block');
+            }
+          });
+        }
+      })(jQuery);

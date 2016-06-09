@@ -17,7 +17,6 @@ a, button {
   overflow: hidden;
   text-align: center;
   height: 100vh;
-  z-index: 101;
 
   .title{
     height: 42vh;
@@ -144,6 +143,46 @@ body.is-loading {
 
     &:after {
       opacity: 1;
+    }
+  }
+}
+
+/* Sub pages Header */
+#sub-header {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  height: 280px;
+
+  .inner {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  &:after {
+    background-image: linear-gradient(135deg, #EDDE5D, #F09819);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .major{
+    padding-top: 120px;
+    
+    h2{
+      text-shadow: 0 2px 5px rgba(#777, 0.5);
+      color: white;
+      
+      font-size: 36px;
+      font-weight: bold;
+    }
+    &:after {
+      background: white;
     }
   }
 }
@@ -345,60 +384,78 @@ body.is-loading {
 
 /* Location */
 #location{
-  position: relative;
-  background-color: #fafafa;
   padding: $p_mobile;
 
-  .major {
-    text-align: center;
-
-    h2{
-      color: #555;
-      font-size: 28px;
-      font-weight: 500;
-    }
-    &:after {
-      background: #ddd;
-    }
+  a{
+    color: $jsdc-b;
   }
+
   .info{
     font-size: 20px;
     text-align: center;
 
-    &.date{
-      color: #555;
-      font-weight: 400;
-      i{
-        color: $jsdc-r;
-        margin-right: 15px;
-      }
-    }
-
     &.spot{
       color: #555;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       i{
         color: $jsdc-b;
         margin-right: 15px;
       }
     }
   }
+
   .address{
-    color: #777;
+    color: #555;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
+    padding: 20px;
   }
 
   #map{
     border-radius: _size(border-radius);
-    background-color: #333;
+    background-color: #555;
     height: 300px;
     position: relative;
     .mask-map {
       width: 100%;
       height: 300px;
       position: absolute;
+    }
+  }
+
+  .transportation{
+
+    .major {
+      h2{
+        color: $jsdc-g  - #111;
+        font-size: 28px;
+        font-weight: 400;
+      }
+      &:after {
+        background: $jsdc-g;
+      }
+    }
+
+    h3{
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    p, ol{
+      font-size: 16px;
+      color: #777;
+      margin-bottom: 10px;
+
+      span{
+        padding-bottom: 5px;
+        border-bottom: 1px solid #999;
+      }
+    }
+
+    article + article{
+      margin-top: 40px;
     }
   }
 }
@@ -781,37 +838,5 @@ body.is-loading {
         }
       }
     }
-  }
-}
-
-/* Subscribe */
-#subscribe{
-  form{
-    margin: 0 auto;
-
-    input{
-      width: 100%;
-      height: 50px;
-      border-color: $jsdc-y - #111;
-      background-color: white;
-    }
-
-    .subscribe-button{
-      box-shadow: inset 0 0 0 1px $jsdc-y;
-      background-color: $jsdc-y - #111;
-      border-radius: _size(border-radius);
-      transition: background 0.2s ease;
-      color: white;
-      display: block;
-      font-size: 18px;
-      margin-top: 10px;
-      &:hover {
-        background-color: $jsdc-y;
-        box-shadow: inset 0 0 0 0 $jsdc-y;
-        text-decoration: none;
-        color: white;
-      }
-    }
-
   }
 }
