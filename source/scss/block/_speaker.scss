@@ -1,4 +1,4 @@
-main.spaekers-page{
+main.spaekers-page, main.staff-page{
 
   /* Header */
   #speakers-header {
@@ -40,7 +40,7 @@ main.spaekers-page{
     }
   }
 
-  #speakers-list{
+  #speakers-list, #staffs{
     @include background();
     background-image:url('images/overlay3.svg');
     background-size: 55% auto;
@@ -149,5 +149,9 @@ main.spaekers-page{
         width: 100vw;
       }
     } 
+  }
+
+  article + article{
+    margin-top: 40px;
   }
 }

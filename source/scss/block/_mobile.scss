@@ -392,10 +392,24 @@ $screen-md: 992px;
   /* Sponsor */
   #sponsor{
     
-    .major {
-      h2{
-        font-size: 32px;
+    .sponsor {
+      padding: 40px;
+    }
+
+    .sponsor-golden{
+      .logo{
+        display: inline-block;
+        width: 30%;
       }
+      .info{
+        display: inline-block;
+        width: 70%;
+        padding-left: 40px;
+      }
+    }
+    
+    article + article{
+      margin-top: 60px;
     }
   }
   

@@ -1293,18 +1293,18 @@ body.is-loading #header:after {
         font-size: 18px;
         margin: 0; }
 
-main.spaekers-page {
+main.spaekers-page, main.staff-page {
   /* Header */ }
-  main.spaekers-page #speakers-header {
+  main.spaekers-page #speakers-header, main.staff-page #speakers-header {
     position: relative;
     overflow: hidden;
     text-align: center;
     height: 250px; }
-    main.spaekers-page #speakers-header .inner {
+    main.spaekers-page #speakers-header .inner, main.staff-page #speakers-header .inner {
       opacity: 1;
       position: relative;
       z-index: 1; }
-    main.spaekers-page #speakers-header:after {
+    main.spaekers-page #speakers-header:after, main.staff-page #speakers-header:after {
       background-image: linear-gradient(135deg, #EDDE5D, #F09819);
       content: '';
       height: 100%;
@@ -1313,58 +1313,58 @@ main.spaekers-page {
       position: absolute;
       top: 0;
       width: 100%; }
-    main.spaekers-page #speakers-header .major {
+    main.spaekers-page #speakers-header .major, main.staff-page #speakers-header .major {
       padding-top: 90px; }
-      main.spaekers-page #speakers-header .major h2 {
+      main.spaekers-page #speakers-header .major h2, main.staff-page #speakers-header .major h2 {
         text-shadow: 0 2px 5px rgba(119, 119, 119, 0.5);
         color: white;
         font-size: 36px;
         font-weight: bold; }
-      main.spaekers-page #speakers-header .major:after {
+      main.spaekers-page #speakers-header .major:after, main.staff-page #speakers-header .major:after {
         background: white; }
-  main.spaekers-page #speakers-list {
+  main.spaekers-page #speakers-list, main.spaekers-page #staffs, main.staff-page #speakers-list, main.staff-page #staffs {
     background-position: right top;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url("images/overlay3.svg");
     background-size: 55% auto;
     padding-top: 80px; }
-    main.spaekers-page #speakers-list .speaker {
+    main.spaekers-page #speakers-list .speaker, main.spaekers-page #staffs .speaker, main.staff-page #speakers-list .speaker, main.staff-page #staffs .speaker {
       width: 200px;
       margin: 0 auto;
       padding-bottom: 80px; }
-      main.spaekers-page #speakers-list .speaker .avatar {
+      main.spaekers-page #speakers-list .speaker .avatar, main.spaekers-page #staffs .speaker .avatar, main.staff-page #speakers-list .speaker .avatar, main.staff-page #staffs .speaker .avatar {
         width: 200px;
         margin: 0 auto; }
-        main.spaekers-page #speakers-list .speaker .avatar img {
+        main.spaekers-page #speakers-list .speaker .avatar img, main.spaekers-page #staffs .speaker .avatar img, main.staff-page #speakers-list .speaker .avatar img, main.staff-page #staffs .speaker .avatar img {
           display: block;
           width: 100%;
           border-radius: 50%; }
-      main.spaekers-page #speakers-list .speaker .introduction {
+      main.spaekers-page #speakers-list .speaker .introduction, main.spaekers-page #staffs .speaker .introduction, main.staff-page #speakers-list .speaker .introduction, main.staff-page #staffs .speaker .introduction {
         padding-top: 30px;
         text-align: center;
         color: #555; }
-        main.spaekers-page #speakers-list .speaker .introduction .speaker-name {
+        main.spaekers-page #speakers-list .speaker .introduction .speaker-name, main.spaekers-page #staffs .speaker .introduction .speaker-name, main.staff-page #speakers-list .speaker .introduction .speaker-name, main.staff-page #staffs .speaker .introduction .speaker-name {
           font-size: 20px;
           font-weight: bold;
           margin-bottom: 10px; }
-        main.spaekers-page #speakers-list .speaker .introduction .project {
+        main.spaekers-page #speakers-list .speaker .introduction .project, main.spaekers-page #staffs .speaker .introduction .project, main.staff-page #speakers-list .speaker .introduction .project, main.staff-page #staffs .speaker .introduction .project {
           font-size: 18px;
           margin-bottom: 20px; }
-        main.spaekers-page #speakers-list .speaker .introduction .link a i {
+        main.spaekers-page #speakers-list .speaker .introduction .link a i, main.spaekers-page #staffs .speaker .introduction .link a i, main.staff-page #speakers-list .speaker .introduction .link a i, main.staff-page #staffs .speaker .introduction .link a i {
           font-size: 32px;
           margin: 0 15px; }
-          main.spaekers-page #speakers-list .speaker .introduction .link a i.fa-link {
+          main.spaekers-page #speakers-list .speaker .introduction .link a i.fa-link, main.spaekers-page #staffs .speaker .introduction .link a i.fa-link, main.staff-page #speakers-list .speaker .introduction .link a i.fa-link, main.staff-page #staffs .speaker .introduction .link a i.fa-link {
             color: #ce4d40; }
-            main.spaekers-page #speakers-list .speaker .introduction .link a i.fa-link:hover {
+            main.spaekers-page #speakers-list .speaker .introduction .link a i.fa-link:hover, main.spaekers-page #staffs .speaker .introduction .link a i.fa-link:hover, main.staff-page #speakers-list .speaker .introduction .link a i.fa-link:hover, main.staff-page #staffs .speaker .introduction .link a i.fa-link:hover {
               color: #bd3c2f; }
-          main.spaekers-page #speakers-list .speaker .introduction .link a i.fa-github {
+          main.spaekers-page #speakers-list .speaker .introduction .link a i.fa-github, main.spaekers-page #staffs .speaker .introduction .link a i.fa-github, main.staff-page #speakers-list .speaker .introduction .link a i.fa-github, main.staff-page #staffs .speaker .introduction .link a i.fa-github {
             color: #3096b2; }
-            main.spaekers-page #speakers-list .speaker .introduction .link a i.fa-github:hover {
+            main.spaekers-page #speakers-list .speaker .introduction .link a i.fa-github:hover, main.spaekers-page #staffs .speaker .introduction .link a i.fa-github:hover, main.staff-page #speakers-list .speaker .introduction .link a i.fa-github:hover, main.staff-page #staffs .speaker .introduction .link a i.fa-github:hover {
               color: #1f85a1; }
-  main.spaekers-page #agenda {
+  main.spaekers-page #agenda, main.staff-page #agenda {
     position: relative; }
-    main.spaekers-page #agenda .agenda-button {
+    main.spaekers-page #agenda .agenda-button, main.staff-page #agenda .agenda-button {
       box-shadow: inset 0 0 0 1px #b9cc54;
       border-radius: 4px;
       background-color: white;
@@ -1379,23 +1379,25 @@ main.spaekers-page {
       font-size: 20px;
       padding: 10px 0;
       margin-top: 40px; }
-      main.spaekers-page #agenda .agenda-button i {
+      main.spaekers-page #agenda .agenda-button i, main.staff-page #agenda .agenda-button i {
         margin: 0 15px; }
-      main.spaekers-page #agenda .agenda-button:hover {
+      main.spaekers-page #agenda .agenda-button:hover, main.staff-page #agenda .agenda-button:hover {
         background-color: #97aa32;
         box-shadow: inset 0 0 0 0 #b9cc54;
         text-decoration: none;
         color: white; }
-    main.spaekers-page #agenda #agenda-line {
+    main.spaekers-page #agenda #agenda-line, main.staff-page #agenda #agenda-line {
       position: absolute;
       top: 45%;
       left: 0; }
-      main.spaekers-page #agenda #agenda-line:after {
+      main.spaekers-page #agenda #agenda-line:after, main.staff-page #agenda #agenda-line:after {
         background: #b9cc54;
         content: '';
         display: inline-block;
         height: 1px;
         width: 100vw; }
+  main.spaekers-page article + article, main.staff-page article + article {
+    margin-top: 40px; }
 
 main.agenda-page #agenda-list .agenda-container #tabs ul li {
   border-radius: 4px;
@@ -1522,67 +1524,57 @@ main.agenda-page #agenda-list .agenda-container table.visible-xs tbody, main.age
       line-height: 1.5; }
 
 .sponsor {
-  padding: 20px 10px 0;
-  margin-bottom: 60px;
-  position: relative;
-  border: 5px solid #fafafa; }
-  .sponsor img {
+  padding: 20px;
+  margin-bottom: 20px; }
+  .sponsor h2 {
+    color: #555;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px; }
+  .sponsor p {
+    color: #777;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 0; }
+  .sponsor .image {
     display: block;
     margin: auto;
     margin-bottom: 20px; }
 
-.sponsor-gold {
-  padding: 80px 80px 30px;
-  border: 5px solid #ffc525; }
-  .sponsor-gold:before {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-color: #ffc525;
-    border-radius: 100%; }
-  .sponsor-gold img {
-    display: block;
-    margin: auto; }
+main.sponsors-page .sponsor-header {
+  text-align: center;
+  font-size: 28px; }
 
-.sponsor-silver {
-  padding: 80px 60px 30px;
-  border: 5px solid #a1a1a1; }
-  .sponsor-silver:before {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-color: #a1a1a1;
-    border-radius: 100%; }
-  .sponsor-silver img {
-    display: block;
-    margin: auto;
-    margin-bottom: 20px; }
+main.sponsors-page .sponsor-golden .sponsor-header {
+  color: #eeb414; }
 
-.sponsor-bronze {
-  padding: 80px 10px 30px;
-  border: 5px solid #c37141; }
-  .sponsor-bronze:before {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-color: #c37141;
-    border-radius: 100%; }
-  .sponsor-bronze img {
-    display: block;
-    margin: auto;
-    margin-bottom: 20px; }
+main.sponsors-page .sponsor-golden .sponsor {
+  border: 1px solid #ffc525;
+  border-radius: 4px; }
+
+main.sponsors-page .sponsor-sliver .sponsor-header {
+  color: #909090; }
+
+main.sponsors-page .sponsor-sliver .sponsor {
+  border: 1px solid #a1a1a1;
+  border-radius: 4px; }
+
+main.sponsors-page .sponsor-bronze .sponsor-header {
+  color: #b26030; }
+
+main.sponsors-page .sponsor-bronze .sponsor {
+  border: 1px solid #c37141;
+  border-radius: 4px; }
+
+main.sponsors-page .sponsor-thanks .sponsor-header {
+  color: #555; }
+
+main.sponsors-page .sponsor-thanks .sponsor {
+  border: 1px solid #777;
+  border-radius: 4px; }
+
+main.sponsors-page article + article {
+  margin-top: 40px; }
 
 @media (max-width: 425px) {
   .navbar .navbar-collapse {
@@ -1778,8 +1770,17 @@ main.agenda-page #agenda-list .agenda-container table.visible-xs tbody, main.age
   #speakers #agenda-line:after {
     height: 80px; }
   /* Sponsor */
-  #sponsor .major h2 {
-    font-size: 32px; }
+  #sponsor .sponsor {
+    padding: 40px; }
+  #sponsor .sponsor-golden .logo {
+    display: inline-block;
+    width: 30%; }
+  #sponsor .sponsor-golden .info {
+    display: inline-block;
+    width: 70%;
+    padding-left: 40px; }
+  #sponsor article + article {
+    margin-top: 60px; }
   /* Location */
   #location .major h2 {
     font-size: 32px; }
