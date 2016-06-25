@@ -170,14 +170,14 @@ body.is-loading {
     top: 0;
     width: 100%;
   }
-  
+
   .major{
     padding-top: 120px;
-    
+
     h2{
       text-shadow: 0 2px 5px rgba(#777, 0.5);
       color: white;
-      
+
       font-size: 36px;
       font-weight: bold;
     }
@@ -596,7 +596,7 @@ body.is-loading {
       content: '';
       display: inline-block;
       height: 1px;
-      width: 100vw;
+      width: 100%;
     }
   }
 
