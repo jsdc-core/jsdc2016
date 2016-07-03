@@ -1,0 +1,44 @@
+section#news
+  -
+    var news = [
+      {month: 'Apr', date: '01', year: 2016, title: '程式語言 20 萬教師，JSDC 解決需求',
+        paragraph: '因應程式語言融入課綱需求，JSDC 本著公開、開源、教育三位一體，將這兩年來打造的『JavaScript 教戰指導手冊』與教育部合 ...',
+        url: 'http://blog.jsdc.tw/2016/04/01/jsdc-course-edu'
+      },
+      {month: 'Oct', date: '03', year: 2015, title: '致 JSDC 2015 與會人員',
+        paragraph: '首先，感謝各位參與 JSDC 2015 ，今日 (10/3) 後陸續有會眾呈現嘔吐、腹瀉的狀況，當下立即請醫護站護理人員協助處理，且在第一時間派車 ...',
+        url: 'http://blog.jsdc.tw/2015/10/03/jsdc-event'
+      },
+      {month: 'Sep', date: '05', year: 2015, title: 'JSDC 2015 愛心 T-shirt 預售計畫',
+        paragraph: '每一年 JSDC　總是會有自己不同的主題，每一年都會有不同的風格與展現，在這次特別開放讓所有支持 JSDC 的朋友都能夠有機會購得每年度的限量設計款 ...',
+        url: 'http://blog.jsdc.tw/2015/09/05/jsdc-tshirt'
+      },
+      {month: 'Aug', date: '20', year: 2015, title: '程式語言 20 萬教師，JSDC 解決需求',
+        paragraph: '經過多年的發展，今年 HTML5 已制定完成，正式成為 W3C 推薦標準。加上 Mozilla 等組織付出的努力，open web 已經帶我們脫離了以往舊 IE 年代封閉的桎梏 ...',
+        url: 'http://blog.jsdc.tw/2015/08/26/enterprise-frontend-approach'
+      }
+    ]
+
+  #news-line
+  .container
+    .news-wrapper
+      .row
+        .col-xs-12
+          header.major.text-center
+            h2 最新消息
+          
+        .news-container
+          .row
+            each value in news
+              .col-xs-12.news
+                .date
+                  span.month= value.month
+                  | #{value.date}
+                  span.year= value.year
+                .news-content
+                  h5.news-title= value.title
+                  p.news-paragraph= value.paragraph
+                    a(href='#{value.url}', target='_blank')  閱讀更多
+
+        .col-xs-12
+          a.news-button.c-bold(href="http://blog.jsdc.tw/" target="_blank") 更多消息

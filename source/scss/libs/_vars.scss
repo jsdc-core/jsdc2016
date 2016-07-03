@@ -57,3 +57,25 @@
 			border2-bg:		rgba(255,255,255,0.25)
 		)
 	);
+
+// Custom
+
+	$jsdc-y: #FFD54F;
+	$jsdc-r: #ce4d40;
+	$jsdc-g: #b9cc54;
+	$jsdc-b: #3096b2;
+
+	$p_mobile: 60px 0;
+	$pt_mobile: 60px 0 0;
+	
+	$p_table: 80px 0;
+	$pt_table: 80px 0 0;
+	
+	$p_desktop: 80px 0;
+	
+	@mixin background() {
+		background-position: right top;
+  	background-repeat: no-repeat;
+  	background-size: contain;
+	}
+	

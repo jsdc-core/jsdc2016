@@ -2,72 +2,107 @@ $screen-xs: 425px;
 $screen-sm: 768px;
 $screen-md: 992px;
 
-/* mobile devices (mobile, 0px and 425px) */
-@media (min-width: 0px) and (max-width: $screen-xs) {
+@media (max-width: $screen-xs) {
 
-    /* Header */
-    #header {
-      padding: 13vh 0px 0;
-      .title {
-          h2 {
-            padding: 5% 0;
-          }
-          h5 {
-            font-size: 19px;
-            span{
-              font-size: 20px;
-              color: white;
-            }
-          }
-      }
-    }
+  .navbar{
+    .navbar-collapse{
+      z-index: 10;
+      background-color: rgba(#fff, 0.9);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      padding: 0;
 
-    #about{
-      .paragraph {
-        padding: 0;
-        p.text-center{
-          margin: 0;
+      .navbar-nav{
+        margin: 0;
+        width: 100%;
+        li:nth-child(2n) {
+          background-color: rgba(#ddd, 0.3)
+        }
+
+        &.navbar-right{
+          li:nth-child(2n + 1) {
+            background-color: rgba(#ddd, 0.3)
+          }
         }
       }
     }
-
-    /* Speaker *//* Sponsor */
-    #speaker, #sponsor{
-      .typeform-share {
-        padding: 0;
-        font-size: 18px;
-      }
-    }
+  }
 }
 
 /* Medium devices (tables, 425px and up) */
 @media (min-width: $screen-xs) {
 
-  /* Header */
+  /* Speaker */
+  #speakers{
+    .speakers-container{
+      padding: 40px;
+    }
+  }
+}
+
+/* Medium devices (tables, 768px and up) */
+@media (min-width: $screen-sm) {
+
   #header {
-    padding: 15vh 40px 0;
 
     .title {
-      height: 48vh;
+      height: 55vh;
+      padding-top: 15vh;
 
-      h2 {
-        padding: 5% 0;
+      h2, span {
+        font-size: 32px;
       }
     }
 
+    .cd-headline {
+      font-size: 20px;
+      margin-top: 0px;
+    }
+
+    .sub-title{
+      top: 70vh;
+    }
+
     .actions {
-      margin-top: 7%;
+      top: 85vh;
     }
   }
 
   /* News */
   #news{
-    padding: 80px 40px 0;
+    padding: $pt_table;
 
-    #news-wrapper{
-      padding: 40px;
+    .news-wrapper{
+      padding: 60px 40px 40px;
+
+      .news-container{
+        display: table;
+
+        .news{
+          display: table-row;
+          border-spacing: 5px;
+
+          .date{
+            display: table-cell;
+            vertical-align: middle;
+            width: 80px;
+            span{
+              display: block;
+            }
+          }
+
+          .news-content{
+            display: table-cell !important;
+            padding: 0 20px 5px 20px;
+
+            .news-title{
+              text-align: left !important;
+              line-height: 2;
+              padding: 0;
+            }
+          }
+        }
+      }
     }
-
     #news-line{
       &:after {
         height: 80px;
@@ -77,10 +112,10 @@ $screen-md: 992px;
 
   /* About */
   #about{
-    padding: 80px 40px 0;
+    padding: $p_table;
 
-    #about-jsdc{
-      padding: 60px 20px;
+    #what-is-jsdc{
+      padding: 60px 40px 40px;
     }
 
     #about-line{
@@ -90,122 +125,158 @@ $screen-md: 992px;
     }
   }
 
-  /* Speaker */
-  #speaker{
-    padding: 80px 60px;
+  /* Location */
+  #location{
+    padding: $p_table;
 
-    #speaker-line{
-      &:after {
-        height: 80px;
-      }
-    }
-  }
+    .info{
+      font-size: 24px;
 
-  /* Last JSDC */
-  #last-year{
-
-    .last-content{
-      padding: 15vh 8% 0;
-    }
-  }
-
-  /* Sponsor */
-  #sponsor{
-    padding: 80px 60px;
-    .major {
-      h2{
-        font-size: 28px;
-      }
-    }
-  }
-}
-
-/* Medium devices (tables, 768px and up) */
-@media (min-width: $screen-sm) {
-
-  #header {
-    padding: 12vh 0;
-
-    .title {
-      height: 50vh;
-    }
-
-    .actions {
-      margin-top: 7%;
-    }
-  }
-
-  /* News */
-  #news{
-    padding: 80px 0 0;
-
-    #news-wrapper{
-      padding: 40px 60px;
-    }
-
-    .date{
-      width: 60px;
-      height: 60px;
-      padding: 5px 0 0;
-      span{
-        display: block;
-      }
-    }
-    .news-container{
-      .news{
-        padding: 16px 0;
-
-        .news-title,{
-          text-align: left;
-          line-height: 1.6;
+      &.spot{
+        i{
+          margin: 0 22px 0 5px;
         }
       }
     }
 
-    #news-line{
-      &:after {
-        height: 80px;
-      }
-    }
-  }
-
-  /* About */
-  #about{
-    padding: 80px 0 0;
-
-    #about-jsdc{
-      padding: 60px 40px;
+    .address{
+      font-size: 18px;
     }
   }
 
   /* Speaker */
-  #speaker{
-    padding: 80px 0;
+  #speakers{
+    padding: $pt_table;
 
-    .typeform-button {
-      margin: 0 20px;
-    }
-
-    #speaker-line{
-      &:after {
-        height: 80px;
+    .speaker-nav{
+      .owl-prev, .owl-next{
+        width: 5% !important;
+      }
+      .speaker-button{
+        width: 90% !important;
       }
     }
   }
 
-  /* Last JSDC */
-  #last-year{
-    padding: 0;
-  }
-
   /* Sponsor */
   #sponsor{
-    padding: 80px 0;
+    padding: $pt_table;
+  }
 
-    .typeform-button {
-      margin: 0 20px;
+  /* Activity */
+  #activity{
+    padding: $pt_table;
+    padding-top: 60px;
+
+    .activity-container{
+      #activity-carousel{
+        .item{
+          padding: 40px;
+          width: 90%;
+          min-height: 600px;
+
+          .activity-img{
+            width: 100%;
+            height: 300px;
+          }
+          .activity-description{
+            .title{
+              font-size: 24px;
+            }
+            .content{
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .activity-nav{
+        .owl-prev{
+          left: 0;
+        }
+        .owl-next{
+          right: 0;
+        }
+      }
     }
   }
+
+  /* Staff */
+  #staffs{
+    padding: $p_table;
+
+    .staff-container{
+      padding: 0;
+      padding-top: 20px;
+
+      #tabs{
+
+        ul li{
+          width: 21%;
+          margin: 0 2%;
+
+          a{
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+          }
+          + li {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar{
+    .navbar-nav{
+      margin: 0 -15px;
+
+      li a{
+        padding: 20px 10px 0 !important;
+      }
+    }
+  }
+
+  #footer{
+    padding: 80px 0 40px;
+  }
+
+  main.agenda-page{
+
+    #agenda-list{
+
+      .agenda-container{
+
+        #tabs{
+
+          ul{
+            padding: 1em 1.4em 0;
+
+            li{
+              width: 49%;
+              margin: 20px 0;
+
+              &:nth-of-type(2){
+                margin-top: 20px;
+                margin-left: 2%;
+              }
+            }
+
+            a{
+              font-size: 20px;
+              padding: 15px 0;
+            }
+          }
+
+          .ui-tabs-panel{
+            padding: 1em 1.4em;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 
@@ -214,48 +285,34 @@ $screen-md: 992px;
 
   /* Header */
   #header {
-    padding: 12vh 0;
 
     .title{
-
-      h2 {
-        font-size: 32px;
-        padding: 40px 0;
-      }
-
-      h5 {
-        span{
-          font-size: 24px;
-          color: white;
-        }
-      }
+      height: 52vh;
+      padding-top: 15vh;
     }
 
-    p {
-      margin: 30px 0 0;
+    .sub-title{
+      top: 62vh;
       font-size: 24px;
-      line-height: 2;
-    }
-    span{
-      font-size: 22px;
+      line-height: 1.8;
     }
 
     .actions {
-      margin-top: 5%;
+      top: 80vh;
     }
   }
 
   /* News */
   #news{
-    padding: 120px 0 0;
+    padding-top: 120px;
 
-    #news-wrapper{
+    .news-wrapper{
       padding: 60px 80px;
-    }
 
-    .major{
-      h2{
-        font-size: 32px;
+      .major{
+        h2{
+          font-size: 32px;
+        }
       }
     }
 
@@ -268,10 +325,16 @@ $screen-md: 992px;
 
   /* About */
   #about{
-    padding: 120px 0 0;
+    padding-top: 120px;
 
-    #about-jsdc{
-      padding: 80px 60px;
+    p{
+      font-size: 18px;
+      margin-bottom: 0;
+      padding-right: 5%;
+    }
+
+    #what-is-jsdc{
+      padding: 80px;
 
       .major{
         text-align: left;
@@ -281,14 +344,8 @@ $screen-md: 992px;
       }
     }
 
-    p{
-      font-size: 18px;
-      margin-bottom: 0;
-      padding-right: 5%;
-    }
-
-    .row + .row{
-      padding-top: 80px;
+    #about-jsdc{
+      margin-top: 80px;
 
       .major {
         h2{
@@ -301,9 +358,6 @@ $screen-md: 992px;
         font-size: 20px;
         line-height: 2.5;
       }
-      .image{
-        padding-top: 60px;
-      }
     }
 
     #about-line{
@@ -314,37 +368,110 @@ $screen-md: 992px;
   }
 
   /* Speaker */
-  #speaker{
-    padding: 100px 0;
+  #speakers{
 
-    #speaker-line{
-      &:after {
-        height: 100px;
+    .major {
+      h2{
+        font-size: 32px;
       }
     }
-  }
+    .speakers-container{
+      padding: 40px;
+    }
 
-  /* Last JSDC */
-  #last-year{
-    padding: 0;
-
-    .last-content{
-      padding: 15vh 8% 0;
-      .major{
-        font-size: 36px;
-      }
-      .button{
-        font-size: 20px;
+    .agenda-button{
+      margin-top: 80px;
+    }
+    #agenda-line{
+      &:after {
+        height: 80px;
       }
     }
   }
 
   /* Sponsor */
   #sponsor{
-    padding: 80px 0;
+
+    .sponsor {
+      padding: 40px;
+    }
+
+    .sponsor-golden{
+      .logo{
+        display: inline-block;
+        width: 30%;
+      }
+      .info{
+        display: inline-block;
+        width: 70%;
+        padding-left: 40px;
+      }
+    }
+
+    article + article{
+      margin-top: 60px;
+    }
+  }
+
+  /* Location */
+  #location{
+
     .major {
       h2{
         font-size: 32px;
+      }
+    }
+  }
+
+  /* Activity */
+  #activity{
+
+    .major {
+      h2{
+        font-size: 32px;
+      }
+    }
+
+    .activity-container{
+      #activity-carousel{
+        .item{
+          min-height: 300px;
+
+          .activity-img{
+            width: 100%;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  /* Staff */
+  #staffs{
+
+    .major {
+      h2{
+        font-size: 32px;
+      }
+    }
+
+    .staff-container{
+
+      #staff-carousel{
+
+        .item{
+
+          .staff-img{
+            height: auto;
+            width: auto;
+            margin: 0 auto;
+
+            .staff{
+              width: 20%;
+
+            }
+          }
+        }
       }
     }
   }

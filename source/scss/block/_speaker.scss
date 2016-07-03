@@ -1,0 +1,157 @@
+main.spaekers-page, main.staff-page{
+
+  /* Header */
+  #speakers-header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    height: 250px;
+
+    .inner {
+      opacity: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      background-image: linear-gradient(135deg, #EDDE5D, #F09819);
+      content: '';
+      height: 100%;
+      left: 0;
+      opacity: 0.9;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .major{
+      padding-top: 90px;
+
+      h2{
+        text-shadow: 0 2px 5px rgba(#777, 0.5);
+        color: white;
+
+        font-size: 36px;
+        font-weight: bold;
+      }
+      &:after {
+        background: white;
+      }
+    }
+  }
+
+  #speakers-list, #staffs{
+    @include background();
+    background-image:url('images/overlay3.svg');
+    background-size: 55% auto;
+
+    padding-top: 80px;
+
+    .speaker{
+      width: 200px;
+      margin: 0 auto;
+      padding-bottom: 80px;
+
+      .avatar{
+        width: 200px;
+        margin: 0 auto;
+        img{
+          display: block;
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .introduction{
+        padding-top: 30px;
+        text-align: center;
+        color: #555;
+
+        .speaker-name{
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .project{
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+        .link{
+          a{
+            i{
+              font-size: 32px;
+              margin: 0 15px;
+
+              &.fa-link{
+                color: $jsdc-r;
+
+                &:hover{
+                  color: $jsdc-r - #111;
+                }
+              }
+
+              &.fa-github{
+                color: $jsdc-b;
+
+                &:hover{
+                  color: $jsdc-b - #111;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #agenda{
+    position: relative;
+
+    .agenda-button {
+      box-shadow: inset 0 0 0 1px $jsdc-g;
+      border-radius: _size(border-radius);
+      background-color: white;
+      transition: background 0.2s ease;
+      color: $jsdc-g - #222;
+      position: relative;
+      z-index: 1;
+      display: block;
+      font-size: 22px;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 20px;
+      padding: 10px 0;
+      margin-top: 40px;
+
+      i{
+        margin: 0 15px;
+      }
+
+      &:hover {
+        background-color: $jsdc-g - #222;
+        box-shadow: inset 0 0 0 0 $jsdc-g;
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    #agenda-line{
+      position: absolute;
+      top: 45%;
+      left: 0;
+      &:after {
+        background: $jsdc-g;
+        content: '';
+        display: inline-block;
+        height: 1px;
+        width: 100%;
+      }
+    }
+  }
+
+  article + article{
+    margin-top: 40px;
+  }
+}
