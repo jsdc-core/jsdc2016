@@ -1,151 +1,262 @@
-extends ../layout/_en-layout.jade
+extends ./layout/_layout.jade
 
 block content
-  - var slogan = 'JavaScript in essence and in action';
-  - var date = 'Oct 22-23 2016';
-  - var address = 'HSS Bldg. of Academia Sinica';
-  - var LatestNews = 'Latest News';
 
-  h1.hide #{title}
-  //- Header
-  section#header
-    .container
-      .lang.topbar-menu-item
-        a(href="/") 中文
-      .inner
-        .title
-          img.image.img-responsive.lazy(itemprop="image" data-original='http://2016.jsdc.tw/dist/images/jsdc-logo.png', alt='JSDC 2016')
-          h2 #{slogan}
-          h5.cd-headline.letters.type
-            span Build&nbsp;
-            span.cd-words-wrapper.waiting
-              b.is-visible Anything 
-              b Website 
-              b Webapp 
-              b Mobile App 
-              b Arduino 
-              b Raspberry Pi 
-              b Robot 
-            span with JavaScript
-        p.c-bold.c-font-white #{date}
-        span
-          i.fa.fa-map-marker
-          | #{address}
-        ul.actions
-          li
-            a.button(href='#news') Discover
-
-  section#news
-    #news-line
-    .container
-      .row#news-wrapper
-        .col-xs-12
-          header.major.text-center
-            h2 #{LatestNews}
-        .news-container
-          .row.news
-            .col-xs-12.col-sm-2.date
-              span.month Apr
-              | 01
-              span.year 2016
-            .col-xs-12.col-sm-10.news-content
-              h5.news-title 程式語言 20 萬教師，JSDC 解決需求
-              p.news-paragraph 因應程式語言融入課綱需求，JSDC 本著公開，開源，教育三位一體，將這兩年來打造的 『JavaScript 教戰指導手冊』與教育部合...
-                a(href='http://blog.jsdc.tw/2016/04/01/jsdc-course-edu', target='_blank') 閱讀更多
-          .row.news
-            .col-xs-12.col-sm-2.date
-              span.month Oct
-              | 03
-              span.year 2015
-            .col-xs-12.col-sm-10.news-content
-              h5.news-title 致 JSDC 2015 與會人員
-              p.news-paragraph 首先，感謝各位參與 JSDC 2015 ，今日 (10/3) 後陸續有會眾呈現嘔吐，腹瀉的狀況，當下立即請醫護站護理人員協助處理，且在第一時間派車...
-                a(href='http://blog.jsdc.tw/2015/10/03/jsdc-event', target='_blank') 閱讀更多
-          .row.news
-            .col-xs-12.col-sm-2.date
-              span.month Sep
-              | 05
-              span.year 2015
-            .col-xs-12.col-sm-10.news-content
-              h5.news-title JSDC 2015 愛心T-shirt預售計畫
-              p.news-paragraph 每一年 JSDC　總是會有自己不同的主題，每一年都會有不同的風格與展現，在這次特別開放讓所有支持 JSDC 的朋友都能夠有機會購得每年度的限量設計款...
-                a(href='http://blog.jsdc.tw/2015/09/05/jsdc-tshirt', target='_blank') 閱讀更多
-          .row.news
-            .col-xs-12.col-sm-2.date
-              span.month Aug
-              | 26
-              span.year 2015
-            .col-xs-12.col-sm-10.news-content
-              h5.news-title 企業開源前端框架整合
-              p.news-paragraph 經過多年的發展，今年HTML5已制定完成，正式成為W3C推薦標準。加上Mozilla等組織付出的努力，open web已經帶我們脫離了以往舊IE年代封閉的桎梏...
-                a(href='http://blog.jsdc.tw/2015/08/26/enterprise-frontend-approach', target='_blank') 閱讀更多
-          .row.news
-            .col-xs-12.col-sm-2.date
-              span.month Aug
-              | 23
-              span.year 2015
-            .col-xs-12.col-sm-10.news-content
-              h5.news-title JSDC 2015 研討會，工讀生招募
-              p.news-paragraph JSDC 研討會招募短期工讀生，歡迎有興趣協助活動的朋友們一起加入，投入當天研討會周邊項目事務投入。
-                a(href='http://blog.jsdc.tw/2015/08/23/jsdc-worker', target='_blank') 閱讀更多
-
-
-  section#about
-    #about-line
-    .container
-      .row#about-jsdc
-        .col-xs-12.col-md-7
-          header.major
-            h2 What's JSDC ?
-          p JSDC (JavaScript Developer Conference) is the only annual JavaScript conference in Taiwan. One goal of this conference is share and bring the greatest and latest JavaScript developments and technologies to various levels of JavaScript Developers.
-        .col-xs-12.col-md-5
-          img.image.img-responsive.lazy(data-original='http://2016.jsdc.tw/dist/images/jsdc-spot.jpg', alt='JSDC 2015 現場')
-
-      .row
-        .col-xs-12.paragraph
-          header.major.text-center
-            h2 JavaScript Developers Conference
-          p.text-center
-            | JSDC breaks the barrier, and integrates the power from 
-          p.text-center
-            | independent developers, enterprises, and organizations. 
-          p.text-center
-            | We constantly put our endeavor in the globalization of knowledge, 
-          p.text-center
-            | and help the attendees understand JavaScript in a different point of view.
-          .text-center
-            .fb-share-button(data-href='http://2016.jsdc.tw/zh_tw/' data-layout='button_count')
-            include ../partials/_fb-share
-        .col-xs-12
-          img.image.fit.lazy(data-original='http://2016.jsdc.tw/dist/images/jsdc.jpg', alt='JSDC 2015 工作人員')
-          
-  section#speaker
-    #speaker-line
-    .container
-      .row
-        .col.xs-12.text-center
-          h2.hide Become a speaker
-          a.typeform-share.typeform-button.c-bold(href="https://jsdc.typeform.com/to/kAQ0yC" data-mode="1" target="_blank") Become a speaker
-
-  section#last-year
-    .container
-      .row
-        .col-xs-12.col-sm-6
-          .last-photo.lazy(data-original='http://2016.jsdc.tw/dist/images/jsdc-last-photo.jpg')
-            .last-content
-              h1.major.text-center.c-font-white JSDC 2015
-              a.button.c-font-white(href='https://www.flickr.com/photos/jsdc2014/sets/72157659891046216' target='_blank') Photo
-        .col-xs-12.col-sm-6
-          .last-video.lazy(data-original='http://2016.jsdc.tw/dist/images/jsdc-last-video.jpg')
-            .last-content
-              h1.major.text-center.c-font-white Snapshots
-              a.button.c-font-white(href='https://www.youtube.com/playlist?list=PL8dIIwCMF-SNShGxmRZQQ2XKHIaI4IJCg' target='_blank') Video
+  main.main-page
   
-  section#sponsor
-    #sponsor-line
-    .container
-      .row
-        .col.xs-12.text-center
-          header.major
-            h2 JSDC 2016 Sponsorship
-          a.typeform-share.typeform-button.c-bold(href="https://jsdc.typeform.com/to/HFli5P" data-mode="1" target="_blank") Become a sponsor
+    section#header
+      .container
+        .inner
+          .title
+            img.image.img-responsive.lazy(itemprop="image" data-original='./dist/images/jsdc-logo.png', alt='JSDC 2016')
+            h2 JavaScript 
+              span 核心概念與整合實戰
+          
+          .sub-title
+            p 10 月 22 - 23 日，強勢登場
+            span
+              i.fa.fa-map-marker
+              | 中央研究院 人文社會科學館
+              
+          ul.actions
+            li
+              a.button#discover(href='#news') Discover
+
+    include ./partials/_nav
+
+    include ./partials/_news
+
+    //- TODO 拉出來一頁
+    //- section#about
+    //-   #about-line
+    //-   .container
+    //-     #what-is-jsdc
+    //-       .row
+    //-         .col-xs-12.col-md-7
+    //-           header.major
+    //-             h2 What's JSDC ?
+    //-           p JavaScript 開發者年會（JavaScript Developers Conference，簡稱 JSDC）是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。
+    //-         .col-xs-12.col-md-5
+    //-           img.image.img-responsive.lazy(data-original='./dist/images/jsdc-spot.jpg', alt='JSDC 2015 現場')
+    //- 
+    //-     #about-jsdc
+    //-       .row
+    //-         .col-xs-12.paragraph
+    //-           header.major.text-center
+    //-             h2 JavaScript 開發者年會
+    //-           p.text-center
+    //-             | JSDC 打破了壁壘，整合來自獨立開發者、企業、組織及機構的科技力量。
+    //-           p.text-center
+    //-             | 我們致力於知識全球化，並讓參與者重新認識 JavaScript。
+    //-           .text-center
+    //-             .fb-share-button(data-href='http://2016.jsdc.tw/zh_tw/' data-layout='button_count')
+    //-             include partials/_fb-share
+    //-         .col-xs-12
+    //-           img.image.fit.lazy(data-original='./dist/images/jsdc.jpg', alt='JSDC 2015 工作人員')
+    
+    //- TODO 拉出來一頁
+    //- section#location
+    //-   .container
+    //-     .row
+    //-       .col-xs-12.col-sm-6.col-md-4
+    //-         .information
+    //-           header.major
+    //-             h2 JSDC 2016
+    //-           h3.info.date
+    //-             i.fa.fa-calendar
+    //-             | 2016 / 10 / 22 - 23 
+    //-           h3.info.spot
+    //-             i.fa.fa-map-marker
+    //-             | 中央研究院
+    //-           p.address
+    //-             | 台北市南港區研究院路二段128號
+    //-             br
+    //-             | 人文社會科學館 國際會議廳
+    //-         
+    //-       .col-xs-12.col-sm-6.col-md-8
+    //-         #map
+    //-           .mask-map
+    //-           iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7913792829745!2d121.6118599!3d25.041153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab46b2f9a81f%3A0x74112a66e7796ca!2zMTE16Ie65YyX5biC5Y2X5riv5Y2A56CU56m26Zmi6Lev5LqM5q615Lit5aSu56CU56m26Zmi5Lq65paH56S-5pyD56eR5a246aSo!5e0!3m2!1szh-TW!2stw!4v1462977726575" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen)
+
+    section#speakers
+      #speakers-line
+      .container
+        .row
+          .col-xs-12.text-center
+            header.major
+              h2 講者陣容
+          .col-xs-12
+            .speakers-container
+              .owl-carousel#speaker-carousel
+                .item
+                  img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
+                  .introduction
+                    h4.speaker-name Amei Chi
+                    p.project 賣萌集團創辦人
+                    .link
+                      a(href="#" target="_blank")
+                        i.fa.fa-link.fa-2x
+                      a(href="#" target="_blank")
+                        i.fa.fa-github.fa-2x
+                        
+                .item
+                  img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
+                  .introduction
+                    h4.speaker-name Amei Chi
+                    p.project 賣萌集團創辦人
+                    .link
+                      a(href="#" target="_blank")
+                        i.fa.fa-link.fa-2x
+                      a(href="#" target="_blank")
+                        i.fa.fa-github.fa-2x
+                        
+                .item
+                  img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
+                  .introduction
+                    h4.speaker-name Amei Chi
+                    p.project 賣萌集團創辦人
+                    .link
+                      a(href="#" target="_blank")
+                        i.fa.fa-link.fa-2x
+                      a(href="#" target="_blank")
+                        i.fa.fa-github.fa-2x
+                        
+                .item
+                  img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
+                  .introduction
+                    h4.speaker-name Amei Chi
+                    p.project 賣萌集團創辦人
+                    .link
+                      a(href="#" target="_blank")
+                        i.fa.fa-link.fa-2x
+                      a(href="#" target="_blank")
+                        i.fa.fa-github.fa-2x
+                        
+                .item
+                  img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
+                  .introduction
+                    h4.speaker-name Amei Chi
+                    p.project 賣萌集團創辦人
+                    .link
+                      a(href="#" target="_blank")
+                        i.fa.fa-link.fa-2x
+                      a(href="#" target="_blank")
+                        i.fa.fa-github.fa-2x
+                        
+              .speaker-nav
+                a.speaker-button.c-bold(href="./speakers.html" target="_blank") 講者列表
+        
+          .col-xs-12
+            #agenda-line
+            a.agenda-button.c-bold(href="./agenda.html" target="_blank")
+              i.fa.fa-bolt 
+              | 議程表
+              i.fa.fa-bolt
+
+    section#sponsor
+      .container
+        .row
+          .col-xs-12.text-center
+            header.major
+              h2 合作夥伴
+          
+        .row
+          .part_1
+            .col-xs-12
+              .sponsor-title
+                h3 贊助
+            
+            .col-xs-12
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='LINE', data-balloon='LINE Corporation 總部位於日本。自2013年4月1日起，NHN Japan Corporation已將公司更名為「LINE Corporation」，並將負責「LINE」、「NAVER matome」及「livedoor」網頁服務業務的營運及供應。在2011年6月創立LINE的LINE Corporation，日後的業務核心將會著重於LINE服務上，除了會積極推動於全球各地進一步擴展服務，並會加快腳步發展LINE平台服務。')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+            .col-xs-12
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+            .col-xs-12.col-sm-6.col-md-4
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+            .col-xs-12.col-sm-6.col-md-4
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+            .col-xs-12.col-sm-6.col-md-4
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+          
+          .part_2
+            .col-xs-12
+              .sponsor-title
+                h3 合作
+            .col-xs-12.col-sm-6.col-md-4
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+            .col-xs-12.col-sm-6.col-md-4
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+            .col-xs-12.col-sm-6.col-md-4
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+          
+          .part_3
+            .col-xs-12
+              .sponsor-title
+                h3 特別感謝
+                
+            .col-xs-12.col-sm-6.col-md-3
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+            .col-xs-12.col-sm-6.col-md-3
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+            .col-xs-12.col-sm-6.col-md-3
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+            .col-xs-12.col-sm-6.col-md-3
+              .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                a(href="#", target='_blank')
+                  img(src="./dist/images/logo.png", alt="")
+
+
+    section#activity
+      .container
+        .row
+          .col-xs-12.text-center
+            header.major
+              h2 活動
+          .col-xs-12
+            .activity-container
+              .owl-carousel#activity-carousel
+                .item
+                  .row
+                    .col-xs-12.col-md-5
+                      .activity-img
+                        img.owl-lazy(data-src="./dist/images/jsdc-t-shirt.jpg", alt="JSDC T-Shirt")
+                    .col-xs-12.col-md-7
+                      .activity-description
+                        h4.title JSDC T-Shirt
+                        p.content 「Build anything with javascript」是JSDC2015的主題， 而「建構」就是此次主視覺的圖像核心， 具像與抽象的物件交錯，表達程式語言的無限可能，而中間的積木形，即是活動名稱JSDC字母的轉化， 它能夠組成亦能拆解，收放自如間建造世界。
+                
+                .item
+                  .row
+                    .col-xs-12.col-md-5
+                      .activity-img
+                        img.owl-lazy(data-src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
+                    .col-xs-12.col-md-7
+                      .activity-description
+                        h4.title JSDC 吉祥物登場！
+                        p.content 今年我們很榮幸請到傲嬌的 Amei 擔任本年度的吉祥物！和它打卡即可兌換精美贈品。
+                        
+              .activity-nav
+
+    //- TODO 拉出來一頁
+    //- include ./partials/_staffs

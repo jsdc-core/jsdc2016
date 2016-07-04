@@ -1,0 +1,62 @@
+extends ./layout/_layout.jade
+
+block title
+  title 關於｜JSDC 2016
+
+block content
+
+  include ./partials/_nav
+
+  main.about-page
+  
+    section#sub-header
+      .container
+        .inner
+          header.major.text-center
+            h2 關於 JSDC 2016 
+
+    section#about
+      #about-line
+      .container
+        #what-is-jsdc
+          .row
+            .col-xs-12.col-md-7
+              header.major
+                h2 What's JSDC ?
+              p JavaScript 開發者年會（JavaScript Developers Conference，簡稱 JSDC）是台灣最⼤的 JavaScript 年度性技術研討會，旨在提供台灣中⾼階 JavaScript 技術人才與世界最新 JavaScript 相關技術討論與分享。
+            .col-xs-12.col-md-5
+              img.image.img-responsive.lazy(data-original='./dist/images/jsdc-spot.jpg', alt='JSDC 2015 現場')
+
+        #about-jsdc
+          .row
+            .col-xs-12.paragraph
+              header.major.text-center
+                h2 JavaScript 開發者年會
+              p.text-center
+                | JSDC 打破了壁壘，整合來自獨立開發者、企業、組織及機構的科技力量。
+              p.text-center
+                | 我們致力於知識全球化，並讓參與者重新認識 JavaScript。
+              .text-center
+                .fb-share-button(data-href='http://2016.jsdc.tw/zh_tw/' data-layout='button_count')
+                include partials/_fb-share
+            .col-xs-12
+              img.image.fit.lazy(data-original='./dist/images/jsdc-2015.jpg', alt='JSDC 2015 工作人員')
+
+    script.
+      (function($) {
+        
+        $('#nav-about').addClass('active');
+
+        if ($('#about').length){
+          $(document).scroll(function () {
+            var dist = $('#about').offset().top;
+            var y = $(this).scrollTop();
+
+            if (y > dist) {
+                $('.navbar').addClass('block');
+            } else {
+                $('.navbar').removeClass('block');
+            }
+          });
+        }
+      })(jQuery);

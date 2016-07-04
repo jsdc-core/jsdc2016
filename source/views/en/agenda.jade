@@ -1,0 +1,488 @@
+extends ./layout/_layout.jade
+
+block title
+  title 議程｜JSDC 2016
+
+block content
+
+  include ./partials/_nav
+  
+  main.agenda-page
+  
+    section#sub-header
+      .container
+        .inner
+          header.major.text-center
+            h2 JSDC 2016 議程
+            
+    section#agenda-list
+      .container
+        .agenda-container
+          #tabs
+            ul
+              li
+                a(href='#day_1') Day 1 ( 10 / 22 )
+              li
+                a(href='#day_2') Day 2 ( 10 / 23 )
+                
+            #day_1
+            
+              table.table.table-hover.hidden-xs
+                thead
+                  tr
+                    th(style="width:10%; min-width:80px") 時間
+                    th(style="width:45%") 國際會議廳 R0
+                    th(style="width:45%") 第二會議廳 R2
+                    
+                tbody
+                  tr
+                    td
+                      | 09:00
+                      br
+                      | |
+                      br
+                      | 09:40
+                    td.colspan(colspan="2", data-balloon-pos='down', data-balloon-length='fit', data-title='簡介', data-balloon='文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字。')
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 React Navigation System
+                        p by Hedger Wang
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                  tr
+                    td
+                      | 09:40
+                      br
+                      | |
+                      br
+                      | 10:00
+                    td.break(colspan="2") 點心
+                    
+                  tr
+                    td
+                      | 10:00
+                      br
+                      | |
+                      br
+                      | 10:40
+                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='簡介', data-balloon='文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字。')
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 用 LINE Platform 打造有趣的 Javascript 應用
+                        p by George Duan
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 JavaScript 開發流程自動化懶人包
+                        p by Yuren Ju
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+
+                  tr
+                    td
+                      | 11:00
+                      br
+                      | |
+                      br
+                      | 11:40
+                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Turf.js 地圖資料分析與視覺化
+                        p by Kuro Hsu
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 用 JavaScript 實現微電腦自動控制不是夢！
+                        p by Cheton Wu
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+
+                  tr
+                    td
+                      | 11:40
+                      br
+                      | |
+                      br
+                      | 12:40
+                    td.break(colspan="2") 午餐
+                    
+                  tr
+                    td
+                      | 12:40
+                      br
+                      | |
+                      br
+                      | 13:20
+                    td.colspan(colspan="2")
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Building Single-Page Apps with Aurelia
+                        p by Matt
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+
+                  tr
+                    td
+                      | 13:30
+                      br
+                      | |
+                      br
+                      | 14:10
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 使用 Visual Studio Code 建構 JavaScript 應用程式
+                        p by Will 保哥
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 技術演進的大亂鬥
+                        p by Casear Chu
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+
+                  tr
+                    td
+                      | 14:30
+                      br
+                      | |
+                      br
+                      | 15:10
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Transducer
+                        p by othree
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 unidisk - Architecture of Web Storage filesystem
+                        p by Sean Lee
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+
+                  tr
+                    td
+                      | 15:10
+                      br
+                      | |
+                      br
+                      | 15:30
+                    td.break(colspan="2") 下午茶
+                    
+                  tr
+                    td
+                      | 15:30
+                      br
+                      | |
+                      br
+                      | 16:10
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 TDD 的開發哲學，以 nodejs 為例
+                        p by 謝宗穎
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 jQuery.component,一個javascript MVC
+                        p by 王唯達
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                  tr
+                    td
+                      | 16:30
+                      br
+                      | |
+                      br
+                      | 17:10
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Web Components & the next generation ADs
+                        p by Paul Li
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Web of Things Maker - Build WoT/IoT Applications with JavaScript
+                        p by Evan Tseng
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+
+              table.table.table-hover.visible-xs
+
+                tbody
+                  tr
+                    th 9:00 - 9:40
+                  tr
+                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='簡介', data-balloon='文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字。')
+                      span.label.label-default 國際會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 React Navigation System
+                        p by Hedger Wang
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+
+                  tr
+                    th 9:40 - 10:00
+                  tr
+                    td 點心
+                    
+                  tr
+                    th 10:00 - 10:40
+                  tr
+                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='簡介', data-balloon='文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字。')
+                      span.label.label-default 國際會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 用 LINE Platform 打造有趣的 Javascript 應用
+                        p by George Duan
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                  tr
+                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                      span.label.label-default 第二會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 JavaScript 開發流程自動化懶人包
+                        p by Yuren Ju
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+
+                  tr
+                    th 11:00 - 11:40
+                  tr
+                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                      span.label.label-default 國際會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Turf.js 地圖資料分析與視覺化
+                        p by Kuro Hsu
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                  tr
+                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
+                      span.label.label-default 第二會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 用 JavaScript 實現微電腦自動控制不是夢！
+                        p by Cheton Wu
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                        
+                  tr
+                    th 11:40 - 12:40
+                  tr
+                    td 午餐
+                    
+                  tr
+                    th 12:40 - 13:20
+                  tr
+                    td
+                      span.label.label-default 國際會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Building Single-Page Apps with Aurelia
+                        p by Matt
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                        
+                  tr
+                    th 13:30 - 14:10
+                  tr
+                    td
+                      span.label.label-default 國際會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 使用 Visual Studio Code 建構 JavaScript 應用程式
+                        p by Will 保哥
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                  tr
+                    td
+                      span.label.label-default 第二會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 技術演進的大亂鬥
+                        p by Casear Chu
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                        
+                  tr
+                    th 14:30 - 15:10
+                  tr
+                    td
+                      span.label.label-default 國際會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Transducer
+                        p by othree
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                  tr
+                    td
+                      span.label.label-default 第二會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 unidisk - Architecture of Web Storage filesystem
+                        p by Sean Lee
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                        
+                  tr
+                    th 15:10 - 15:30
+                  tr
+                    td 下午茶
+                    
+                  tr
+                    th 15:30 - 16:10
+                  tr
+                    td
+                      span.label.label-default 國際會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 TDD 的開發哲學，以 nodejs 為例
+                        p by 謝宗穎
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                  tr
+                    td
+                      span.label.label-default 第二會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 jQuery.component,一個javascript MVC
+                        p by 王唯達
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                        
+                  tr
+                    th 16:30 - 17:10
+                  tr
+                    td
+                      span.label.label-default 國際會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Web Components & the next generation ADs
+                        p by Paul Li
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                  tr
+                    td
+                      span.label.label-default 第二會議廳
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Web of Things Maker - Build WoT/IoT Applications with JavaScript
+                        p by Evan Tseng
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+
+
+            #day_2
+
+              table.table.table-striped.table-hover.hidden-xs
+                thead
+                  tr
+                    th(style="width:10%; min-width:80px") 時間
+                    th(style="width:45%") 國際會議廳
+                    th(style="width:45%") 第二會議廳
+                    
+                tbody
+                  tr
+                    td
+                      | 09:00
+                      br
+                      | |
+                      br
+                      | 09:40
+                    td.colspan(colspan="2")
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 React Navigation System
+                        p by Hedger Wang
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                  tr
+                    td
+                      | 09:40
+                      br
+                      | |
+                      br
+                      | 10:00
+                    td.break(colspan="2") 點心
+                    
+                  tr
+                    td
+                      | 10:00
+                      br
+                      | |
+                      br
+                      | 10:40
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 用 LINE Platform 打造有趣的 Javascript 應用
+                        p by George Duan
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 JavaScript 開發流程自動化懶人包
+                        p by Yuren Ju
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+
+                  tr
+                    td
+                      | 11:00
+                      br
+                      | |
+                      br
+                      | 11:40
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 Turf.js 地圖資料分析與視覺化
+                        p by Kuro Hsu
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                    td
+                      img.avatar.lazy(data-original="./dist/images/amei.jpg", alt="amei")
+                      .speaker
+                        h6 用 JavaScript 實現微電腦自動控制不是夢！
+                        p by Cheton Wu
+                        a(href="#" target='_blank').label.label-info Slider
+                        a(href="#" target='_blank').label.label-danger Youtube
+                    
+    script.
+      (function($) {
+        
+        $('#nav-agenda').addClass('active');
+
+        if ($('#agenda-list').length){
+          $(document).scroll(function () {
+            var dist = $('#agenda-list').offset().top;
+            var y = $(this).scrollTop();
+
+            if (y > dist) {
+                $('.navbar').addClass('block');
+            } else {
+                $('.navbar').removeClass('block');
+            }
+          });
+        }
+      })(jQuery);
