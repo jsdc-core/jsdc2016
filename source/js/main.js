@@ -46,11 +46,11 @@
 
     // backstretch
     $('#header').backstretch([
-      "./dist/images/jsdc-scenario-1.jpg",
-      "./dist/images/jsdc-scenario-2.jpg",
-      "./dist/images/jsdc-scenario-3.jpg",
-      "./dist/images/jsdc-scenario-4.jpg",
-      "./dist/images/jsdc-scenario-5.jpg",
+      "/dist/images/jsdc-scenario-1.jpg",
+      "/dist/images/jsdc-scenario-2.jpg",
+      "/dist/images/jsdc-scenario-3.jpg",
+      "/dist/images/jsdc-scenario-4.jpg",
+      "/dist/images/jsdc-scenario-5.jpg",
     ], {duration: 3000, fade: 1200, lazyload: true,});
 
     // lazyload
