@@ -8,7 +8,7 @@ block content
       .container
         .inner
           .title
-            img.image.img-responsive.lazy(itemprop="image" data-original='./dist/images/jsdc-logo.png', alt='JSDC 2016')
+            img.image.img-responsive.lazy(itemprop="image" data-original='/dist/images/jsdc-logo.png', alt='JSDC 2016')
             h2 JavaScript 
               span 核心概念與整合實戰
 
@@ -24,7 +24,8 @@ block content
 
     include ./partials/_nav
 
-    include ./partials/_news
+    //- 最新消息先關起來
+    //- include ./partials/_news
 
     section#speakers
       #speakers-line
@@ -37,7 +38,7 @@ block content
             .speakers-container
               .owl-carousel#speaker-carousel
                 .item
-                  img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
+                  img.avatar.owl-lazy(data-src="/dist/images/amei.jpg", alt="amei")
                   .introduction
                     h4.speaker-name Amei Chi
                     p.project 賣萌集團創辦人
@@ -48,7 +49,7 @@ block content
                         i.fa.fa-github.fa-2x
 
                 .item
-                  img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
+                  img.avatar.owl-lazy(data-src="/dist/images/amei.jpg", alt="amei")
                   .introduction
                     h4.speaker-name Amei Chi
                     p.project 賣萌集團創辦人
@@ -59,7 +60,7 @@ block content
                         i.fa.fa-github.fa-2x
 
                 .item
-                  img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
+                  img.avatar.owl-lazy(data-src="/dist/images/amei.jpg", alt="amei")
                   .introduction
                     h4.speaker-name Amei Chi
                     p.project 賣萌集團創辦人
@@ -70,7 +71,7 @@ block content
                         i.fa.fa-github.fa-2x
 
                 .item
-                  img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
+                  img.avatar.owl-lazy(data-src="/dist/images/amei.jpg", alt="amei")
                   .introduction
                     h4.speaker-name Amei Chi
                     p.project 賣萌集團創辦人
@@ -81,7 +82,7 @@ block content
                         i.fa.fa-github.fa-2x
 
                 .item
-                  img.avatar.owl-lazy(data-src="./dist/images/amei.jpg", alt="amei")
+                  img.avatar.owl-lazy(data-src="/dist/images/amei.jpg", alt="amei")
                   .introduction
                     h4.speaker-name Amei Chi
                     p.project 賣萌集團創辦人
@@ -117,23 +118,23 @@ block content
             .col-xs-12
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='LINE', data-balloon='LINE Corporation 總部位於日本。自2013年4月1日起，NHN Japan Corporation已將公司更名為「LINE Corporation」，並將負責「LINE」、「NAVER matome」及「livedoor」網頁服務業務的營運及供應。在2011年6月創立LINE的LINE Corporation，日後的業務核心將會著重於LINE服務上，除了會積極推動於全球各地進一步擴展服務，並會加快腳步發展LINE平台服務。')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
             .col-xs-12
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
             .col-xs-12.col-sm-6.col-md-4
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
             .col-xs-12.col-sm-6.col-md-4
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
             .col-xs-12.col-sm-6.col-md-4
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
 
           .part_2
             .col-xs-12
@@ -142,15 +143,15 @@ block content
             .col-xs-12.col-sm-6.col-md-4
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
             .col-xs-12.col-sm-6.col-md-4
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
             .col-xs-12.col-sm-6.col-md-4
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
 
           .part_3
             .col-xs-12
@@ -160,51 +161,23 @@ block content
             .col-xs-12.col-sm-6.col-md-3
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
             .col-xs-12.col-sm-6.col-md-3
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
             .col-xs-12.col-sm-6.col-md-3
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
             .col-xs-12.col-sm-6.col-md-3
               .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
                 a(href="#", target='_blank')
-                  img(src="./dist/images/logo.png", alt="")
+                  img(src="/dist/images/logo.png", alt="")
 
+    //- 暫時先關起來
+    //- include ./partials/_major
 
-    section#activity
-      .container
-        .row
-          .col-xs-12.text-center
-            header.major
-              h2 活動
-          .col-xs-12
-            .activity-container
-              .owl-carousel#activity-carousel
-                .item
-                  .row
-                    .col-xs-12.col-md-5
-                      .activity-img
-                        img.owl-lazy(data-src="./dist/images/jsdc-t-shirt.jpg", alt="JSDC T-Shirt")
-                    .col-xs-12.col-md-7
-                      .activity-description
-                        h4.title JSDC T-Shirt
-                        p.content 「Build anything with javascript」是JSDC2015的主題， 而「建構」就是此次主視覺的圖像核心， 具像與抽象的物件交錯，表達程式語言的無限可能，而中間的積木形，即是活動名稱JSDC字母的轉化， 它能夠組成亦能拆解，收放自如間建造世界。
-
-                .item
-                  .row
-                    .col-xs-12.col-md-5
-                      .activity-img
-                        img.owl-lazy(data-src="./dist/images/amei.jpg", alt="JSDC T-Shirt")
-                    .col-xs-12.col-md-7
-                      .activity-description
-                        h4.title JSDC 吉祥物登場！
-                        p.content 今年我們很榮幸請到傲嬌的 Amei 擔任本年度的吉祥物！和它打卡即可兌換精美贈品。
-
-              .activity-nav
     script.
       (function($) {
 

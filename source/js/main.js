@@ -46,11 +46,11 @@
 
     // backstretch
     $('#header').backstretch([
-      "/dist/images/jsdc-scenario-1.jpg",
-      "/dist/images/jsdc-scenario-2.jpg",
-      "/dist/images/jsdc-scenario-3.jpg",
-      "/dist/images/jsdc-scenario-4.jpg",
-      "/dist/images/jsdc-scenario-5.jpg",
+      '/dist/images/jsdc-scenario-1.jpg',
+      '/dist/images/jsdc-scenario-2.jpg',
+      '/dist/images/jsdc-scenario-3.jpg',
+      '/dist/images/jsdc-scenario-4.jpg',
+      '/dist/images/jsdc-scenario-5.jpg',
     ], {duration: 3000, fade: 1200, lazyload: true,});
 
     // lazyload
@@ -63,7 +63,7 @@
 
     // Tabs
     $('#tabs ul a').off('click'); // 不知道是哪個 lib 加入滑動的參數，因此先將之拿掉
-    $( "#tabs" ).tabs();
+    $( '#tabs' ).tabs();
 
     // Slider / owl-carousel
     $(document).ready(function(){
@@ -84,7 +84,7 @@
         autoplayTimeout: 2500,
         autoplayHoverPause: true,
         lazyLoad:true,
-      })
+      });
       $('#activity-carousel').owlCarousel({
         responsive:{
           0:{items:1}
@@ -96,7 +96,7 @@
         navText: ['<i class="fa fa-chevron-left fa-lg" aria-hidden="true"></i>','<i class="fa fa-chevron-right fa-lg" aria-hidden="true"></i>'],
         navSpeed: 800,
         lazyLoad: true,
-      })
+      });
     });
 
     // Back to Top
