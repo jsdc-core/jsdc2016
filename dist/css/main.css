@@ -2,7 +2,6 @@
 body {
   background: #fff; }
   body.is-loading *, body.is-loading *:before, body.is-loading *:after {
-    -webkit-animation: none !important;
     animation: none !important;
     transition: none !important; }
 
@@ -414,7 +413,6 @@ ul {
       padding: 2.5em;
       text-align: center; }
       ul.major-icons li .icon {
-        -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
         border-radius: 4px;
@@ -426,7 +424,6 @@ ul {
         text-align: center;
         width: 8em; }
         ul.major-icons li .icon:before {
-          -webkit-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
           display: inline-block;
@@ -790,22 +787,16 @@ a:focus, a:visited, button:focus, button:visited {
       top: 100%;
       width: 1px; }
   #header .inner {
-    transition: opacity 2s ease, -webkit-transform 1.5s ease;
     transition: transform 1.5s ease, opacity 2s ease;
-    transition: transform 1.5s ease, opacity 2s ease, -webkit-transform 1.5s ease;
     transition-delay: 0.25s;
-    -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
     opacity: 1;
     position: relative;
     z-index: 1; }
     #header .inner .actions {
-      transition: -webkit-transform 1.25s ease;
       transition: transform 1.25s ease;
-      transition: transform 1.25s ease, -webkit-transform 1.25s ease;
       transition-delay: 1s;
-      -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
       transform: translateY(0);
       opacity: 1; }
@@ -821,12 +812,10 @@ a:focus, a:visited, button:focus, button:visited {
     width: 100%; }
 
 body.is-loading #header .inner {
-  -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   opacity: 0; }
   body.is-loading #header .inner .actions {
-    -webkit-transform: translateY(30em);
     -ms-transform: translateY(30em);
     transform: translateY(30em);
     opacity: 0; }
@@ -1339,7 +1328,8 @@ main.spaekers-page, main.staff-page {
         margin: 0 auto; }
         main.spaekers-page #speakers-list .speaker .avatar img, main.spaekers-page #staffs .speaker .avatar img, main.staff-page #speakers-list .speaker .avatar img, main.staff-page #staffs .speaker .avatar img {
           display: block;
-          width: 100%;
+          max-width: 300px;
+          height: 200px;
           border-radius: 50%; }
       main.spaekers-page #speakers-list .speaker .introduction, main.spaekers-page #staffs .speaker .introduction, main.staff-page #speakers-list .speaker .introduction, main.staff-page #staffs .speaker .introduction {
         padding-top: 30px;
