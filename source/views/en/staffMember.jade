@@ -60,7 +60,7 @@ block content
                   .col-xs-12.col-sm-6
                     .speaker
                       .avatar
-                        img.lazy(data-original="#{staffInfo.photo === null?'./dist/images/jsdc-logo.png':staffInfo.photo}", alt="#{staffInfo.name}")
+                        img.lazy(data-original="#{staffInfo.photo === null?'/dist/images/jsdc-logo.png':staffInfo.photo}", alt="#{staffInfo.name}")
                       .introduction
                         h4.speaker-name= staffInfo.name
                         p.project #{staffInfo.jobLevel === 0?"總召":"副總召"}
@@ -70,7 +70,7 @@ block content
                     .speaker
                       .avatar
                         //- ./dist/images/jsdc-logo.png
-                        img.lazy(data-original="#{staffInfo.photo === null?'./dist/images/jsdc-logo.png':staffInfo.photo}", alt="#{staffInfo.name}")
+                        img.lazy(data-original="#{staffInfo.photo === null?'/dist/images/jsdc-logo.png':staffInfo.photo}", alt="#{staffInfo.name}")
                       .introduction
                         h4.speaker-name= staffInfo.name
                         p.project #{staffInfo.jobLevel === 0?"組長":"組員"}
