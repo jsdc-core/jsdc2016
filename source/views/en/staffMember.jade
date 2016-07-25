@@ -5,6 +5,36 @@ block title
 
 block content
 
+  //- jobLevel = 職稱 (0 = 組長，1 = 組員)
+  -
+    var staffs = {
+      "召集": [{name: "ALi", photo: null, jobLevel: 0, order: 0}],
+
+      "議程組": [
+        {name: "Simon Sun", photo: "http://i.imgur.com/t5BJCas.jpg", jobLevel: 0, order: 0},
+        {name: "Wayne Lin", photo: "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/22451_258750652320_1955604_n.jpg?oh=74d1fb10dfee50515a5df7d430097851&oe=580B78B1", jobLevel: 1, order: 0}
+      ],
+
+      "場務組": [
+        {name: "陳明正(Kevin)", photo: "https://photos-1.dropbox.com/t/2/AADIkvdaqKUYj4sKZM3ixt-2Uq6wnbpwaPrI9oLBDz4v4g/12/128133386/jpeg/32x32/3/1469484000/0/2/FB_IMG_1467036241392.jpg/EMTE1GIY08lQIAIoAg/ymP5o-5qW0sTFNvfIRrK1d3X03ee1qiiw5MRZup_sJc?size_mode=3&size=2048x1536&dl=0", jobLevel: 0, order: 0}
+      ],
+
+      "票務組": [
+        {name: "Ellis Chang", photo: "http://2015.jsdc.tw/images/record.jpg", jobLevel: 0, order: 0}
+      ],
+
+      "公關組": [
+        {name: "Howie Wang", photo: "https://scontent-tpe1-1.xx.fbcdn.net/t31.0-8/52805_164005803616014_913317_o.jpg", jobLevel: 0, order: 0}
+      ],
+
+      "網站組": [
+        {name: "Webber", photo: null, jobLevel: 0, order: 0},
+        {name: "張雅茵", photo: "https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/11226004_1103034406382123_9175355605217942269_n.jpg?oh=79b94bedfd80925ca1a9200584abd809&oe=57E9465D", jobLevel: 1, order: 0},
+        {name: "Ivan Wei", photo: "https://lh3.googleusercontent.com/FWpnAAAdd7MerXl_Rvb02AJAjNafue6WWEkK1zZdwk0xzd_fwNbLUu799oHWPKloofB4yAuCmZTS6gCZs6etVJuqZLHx1dAFQQpwoySr79WLAqVyiiSiwdn56N-a_Gajltov-RN9gN5MOJCCL74GnUv7XIcIxgPF9Bb5iCU8RUDpZXCns21NVDYb0f6rcjiECEjE-ArwLXGMnEfsPrDIG665sAMWTzucnXw7lIA-qaobI0p9saUYrs4Lq6pGf_9BWg7xK-vb4pZX1caOd9HFpsnGGQDbJoSxX63OFgGr5b-zS7QIlB6kSSjC6LKGkmImQ2mA9zcVuu0I49VCEyuidg93oMTT21tOs8EZ7mfwPVDJ1K-0NPktr8oJIEFLoOimMtC9CosJiP233Qy056_4D6P2CCK8mKkZq9m0AtlcmWziciE6KYI6kW9Llb2glck-9zbaIuh8khvvNfuBkCI1yt3EOimSN5xX7zJ9HV1jEP5ZP_lO72GW-dmJrrCxS4hM_0hVEfMaJARSK54AlmCVPgr10goquubi95oWHwSYYuc5n2-cehdREQ=s1280-w1280-h960-no", jobLevel: 1, order: 0}
+      ]
+    };
+
+
   include ./partials/_nav
 
   main.staff-page
@@ -17,147 +47,41 @@ block content
 
     section#staffs
       .container
-      
-        article
-          .row
-            .col-xs-12.text-center
-              header.major
-                h2 召集
 
-            .col-xs-12.col-sm-6
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
+        each staffInfos, jobTitle in staffs
+          article
+            .row
+              .col-xs-12.text-center
+                header.major
+                  h2= jobTitle
 
-            .col-xs-12.col-sm-6
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
+              each staffInfo in staffInfos
+                if jobTitle === "召集"
+                  .col-xs-12.col-sm-6
+                    .speaker
+                      .avatar
+                        img.lazy(data-original="#{staffInfo.photo === null?'./dist/images/jsdc-logo.png':staffInfo.photo}", alt="#{staffInfo.name}")
+                      .introduction
+                        h4.speaker-name= staffInfo.name
+                        p.project #{staffInfo.jobLevel === 0?"總召":"副總召"}
 
-        article
-          .row
-            .col-xs-12.text-center
-              header.major
-                h2 議程組
+                else
+                  .col-xs-12.col-sm-6.col-md-4
+                    .speaker
+                      .avatar
+                        //- ./dist/images/jsdc-logo.png
+                        img.lazy(data-original="#{staffInfo.photo === null?'./dist/images/jsdc-logo.png':staffInfo.photo}", alt="#{staffInfo.name}")
+                      .introduction
+                        h4.speaker-name= staffInfo.name
+                        p.project #{staffInfo.jobLevel === 0?"組長":"組員"}
 
-            .col-xs-12.col-sm-6.col-md-4
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
-
-            .col-xs-12.col-sm-6.col-md-4
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
-
-            .col-xs-12.col-sm-6.col-md-4
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
-
-        article
-          .row
-            .col-xs-12.text-center
-              header.major
-                h2 網站組
-
-            .col-xs-12.col-sm-6.col-md-4
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
-
-            .col-xs-12.col-sm-6.col-md-4
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
-
-            .col-xs-12.col-sm-6.col-md-4
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
-
-        article
-          .row
-            .col-xs-12.text-center
-              header.major
-                h2 公關組
-
-            .col-xs-12.col-sm-6.col-md-4
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
-
-            .col-xs-12.col-sm-6.col-md-4
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
-
-            .col-xs-12.col-sm-6.col-md-4
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
-
-        article
-          .row
-            .col-xs-12.text-center
-              header.major
-                h2 場務組
-
-            .col-xs-12.col-sm-6
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
-
-            .col-xs-12.col-sm-6
-              .speaker
-                .avatar
-                  img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-                .introduction
-                  h4.speaker-name Amei Chi
-                  p.project 賣萌集團創辦人
 
 
 
 
     script.
       (function($) {
-        
+
         $('#nav-staffMember').addClass('active');
 
         if ($('#staffs').length){
