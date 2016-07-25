@@ -16,137 +16,33 @@ block content
             h2 JSDC 2016 Speakers
 
     section#speakers-list
+      -
+        var speakers = [
+          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"},
+          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"},
+          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"},
+          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"},
+          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"},
+          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"}
+        ];
+
       .container
         .row
-          .col-xs-12.col-sm-6.col-md-4
-            .speaker
-              .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='Amei', data-balloon='史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。')
-                img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-              .introduction
-                h4.speaker-name Amei Chi
-                p.project 賣萌集團創辦人
-                .link
-                  a(href="#" target="_blank")
-                    i.fa.fa-link
-                  a(href="#" target="_blank")
-                    i.fa.fa-github
+          each speaker in speakers
 
-          .col-xs-12.col-sm-6.col-md-4
-            .speaker
-              .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='', data-balloon='')
-                img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-              .introduction
-                h4.speaker-name Amei Chi
-                p.project 賣萌集團創辦人
-                .link
-                  a(href="#" target="_blank")
-                    i.fa.fa-link
-                  a(href="#" target="_blank")
-                    i.fa.fa-github
+            .col-xs-12.col-sm-6.col-md-4
+              .speaker
+                .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='#{speaker.avatarTip}', data-balloon='#{speaker.description}')
+                  img.lazy(data-original="#{speaker.photo}", alt="#{speaker.avatarTip}")
+                .introduction
+                  h4.speaker-name #{speaker.name}
+                  p.project #{speaker.jobTitle}
+                  .link
+                    a(href="#{speaker.github}" target="_blank")
+                      i.fa.fa-link
+                    a(href="#{speaker.link}" target="_blank")
+                      i.fa.fa-github
 
-          .col-xs-12.col-sm-6.col-md-4
-            .speaker
-              .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='', data-balloon='')
-                img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-              .introduction
-                h4.speaker-name Amei Chi
-                p.project 賣萌集團創辦人
-                .link
-                  a(href="#" target="_blank")
-                    i.fa.fa-link
-                  a(href="#" target="_blank")
-                    i.fa.fa-github
-
-          .col-xs-12.col-sm-6.col-md-4
-            .speaker
-              .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='', data-balloon='')
-                img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-              .introduction
-                h4.speaker-name Amei Chi
-                p.project 賣萌集團創辦人
-                .link
-                  a(href="#" target="_blank")
-                    i.fa.fa-link
-                  a(href="#" target="_blank")
-                    i.fa.fa-github
-
-          .col-xs-12.col-sm-6.col-md-4
-            .speaker
-              .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='', data-balloon='')
-                img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-              .introduction
-                h4.speaker-name Amei Chi
-                p.project 賣萌集團創辦人
-                .link
-                  a(href="#" target="_blank")
-                    i.fa.fa-link
-                  a(href="#" target="_blank")
-                    i.fa.fa-github
-
-          .col-xs-12.col-sm-6.col-md-4
-            .speaker
-              .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='', data-balloon='')
-                img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-              .introduction
-                h4.speaker-name Amei Chi
-                p.project 賣萌集團創辦人
-                .link
-                  a(href="#" target="_blank")
-                    i.fa.fa-link
-                  a(href="#" target="_blank")
-                    i.fa.fa-github
-
-          .col-xs-12.col-sm-6.col-md-4
-            .speaker
-              .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='', data-balloon='')
-                img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-              .introduction
-                h4.speaker-name Amei Chi
-                p.project 賣萌集團創辦人
-                .link
-                  a(href="#" target="_blank")
-                    i.fa.fa-link
-                  a(href="#" target="_blank")
-                    i.fa.fa-github
-
-          .col-xs-12.col-sm-6.col-md-4
-            .speaker
-              .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='', data-balloon='')
-                img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-              .introduction
-                h4.speaker-name Amei Chi
-                p.project 賣萌集團創辦人
-                .link
-                  a(href="#" target="_blank")
-                    i.fa.fa-link
-                  a(href="#" target="_blank")
-                    i.fa.fa-github
-
-          .col-xs-12.col-sm-6.col-md-4
-            .speaker
-              .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='', data-balloon='')
-                img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-              .introduction
-                h4.speaker-name Amei Chi
-                p.project 賣萌集團創辦人
-                .link
-                  a(href="#" target="_blank")
-                    i.fa.fa-link
-                  a(href="#" target="_blank")
-                    i.fa.fa-github
-
-          .col-xs-12.col-sm-6.col-md-4
-            .speaker
-              .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='', data-balloon='')
-                img.lazy(data-original="/dist/images/amei.jpg", alt="amei")
-              .introduction
-                h4.speaker-name Amei Chi
-                p.project 賣萌集團創辦人
-                .link
-                  a(href="#" target="_blank")
-                    i.fa.fa-link
-                  a(href="#" target="_blank")
-                    i.fa.fa-github
 
     section#agenda
       #agenda-line
