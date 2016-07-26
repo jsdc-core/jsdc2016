@@ -1,14 +1,17 @@
 {
   "name": "jsdc2016",
   "version": "1.0.0",
-  "description": "jsdc2016",
+  "description": "JSDC 2016 Taiwan Website",
   "private": true,
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm i && ./node_modules/gulp/bin/gulp.js"
   },
-  "author": "webber0928",
+  "author": "webber0928 (https://github.com/webber0928)",
+  "contributors": [
+    { "name" : "irene84111", "url" : "https://github.com/irene84111" },
+    { "name" : "IvanWei", "url" : "https://github.com/IvanWei" }
+  ],
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.11.2",
