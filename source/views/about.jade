@@ -8,12 +8,12 @@ block content
   include ./partials/_nav
 
   main.about-page
-  
+
     section#sub-header
       .container
         .inner
           header.major.text-center
-            h2 關於 JSDC 2016 
+            h2 關於 JSDC 2016
 
     section#about
       #about-line
@@ -37,14 +37,14 @@ block content
               p.text-center
                 | 我們致力於知識全球化，並讓參與者重新認識 JavaScript。
               .text-center
-                .fb-share-button(data-href='http://2016.jsdc.tw/zh_tw/' data-layout='button_count')
+                .fb-share-button(data-href='http://2016.jsdc.tw/' data-layout='button_count')
                 include partials/_fb-share
             .col-xs-12
               img.image.fit.lazy(data-original='/dist/images/jsdc.jpg', alt='JSDC 2015 工作人員')
 
     script.
       (function($) {
-        
+
         $('#nav-about').addClass('active');
 
         if ($('#about').length){
