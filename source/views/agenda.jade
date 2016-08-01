@@ -180,7 +180,7 @@ block content
                               | #{speaker.endTime}
 
                             td.colspan
-                              img.avatar.lazy(data-original="#{imageA}", alt="#{nameA}")
+                              img.avatar.avatar-mutli.lazy(style="display: block; margin: 0 auto;", data-original="#{imageA}", alt="#{nameA}")
                               .speaker
                                 h6= speaker.agendaTitle_A
                                 //- if nameA !== ""
@@ -191,7 +191,7 @@ block content
                                 //-   a(href="#{youtubeA}" target='_blank').label.label-danger Youtube
 
                             td.colspan
-                              img.avatar.lazy(data-original="#{imageB}", alt="#{nameB}")
+                              img.avatar.lazy(style="display: block; margin: 0 auto;", data-original="#{imageB}", alt="#{nameB}")
                               .speaker
                                 h6= speaker.agendaTitle_B
                                 //- if nameB !== ""

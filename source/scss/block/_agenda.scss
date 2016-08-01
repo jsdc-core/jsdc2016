@@ -1,40 +1,40 @@
 main.agenda-page{
 
   #agenda-list{
-    
+
     .agenda-container{
-    
+
       #tabs{
-        
+
         ul{
-          
+
           li{
             border-radius: _size(border-radius);
             transition: background 0.2s ease;
             background-color: #777;
             width: 100%;
             margin: 10px 0;
-            
+
             &:nth-of-type(1){
               &:hover{
-                background-color: $jsdc-r;  
+                background-color: $jsdc-r;
               }
               &.ui-state-active{
               background-color: $jsdc-r;
-              } 
+              }
             }
-            
+
             &:nth-of-type(2){
               margin-top: 0;
               &:hover{
-                background-color: $jsdc-b;  
+                background-color: $jsdc-b;
               }
               &.ui-state-active{
               background-color: $jsdc-b;
-              } 
+              }
             }
           }
-          
+
           a{
             width: 100%;
             text-align: center;
@@ -43,49 +43,49 @@ main.agenda-page{
             padding: 10px 0;
           }
         }
-        
+
         .ui-tabs-panel{
           padding: 5px;
         }
       }
-      
+
       table{
-        
+
         thead{
           border-width: 0;
-          
+
           tr th{
             border-width: 0;
             background-color: #ddd;
             border-bottom: 5px solid white;
-            
+
             text-align: center;
             font-weight: bold;
             color: #555;
             font-size: 20px;
             padding: 15px 0;
-            
+
             &:nth-of-type(1){
               border-right: 5px solid white;
               border-radius: 4px 0 0 0;
             }
-            
+
             &:nth-of-type(3){
               border-left: 5px solid white;
               border-radius: 0 4px 0 0;
             }
-            
+
           }
         }
-        
-        tbody tr{ 
-        
+
+        tbody tr{
+
           td{
             text-align: center;
             padding: 30px 20px;
             border-width: 0;
-            
-            
+
+
             &:nth-of-type(1){
               text-align: center;
               vertical-align: middle;
@@ -93,18 +93,18 @@ main.agenda-page{
               font-weight: bold;
               color: #777;
             }
-            
+
             .avatar, .speaker{
-              
+
               &.avatar{
                 width: 120px;
                 border-radius: 50%;
                 margin: 0 20px 10px;
               }
-              
+
               &.speaker{
                 vertical-align: middle;
-                
+
                 h6, p{
                   margin: 0;
                   font-size: 18px;
@@ -112,7 +112,7 @@ main.agenda-page{
                   color: #555;
                   font-weight: 400;
                 }
-                
+
                 h6{
                   font-size: 20px;
                   font-weight: bold;
@@ -120,59 +120,59 @@ main.agenda-page{
                 }
               }
             }
-            
+
             .label{
               margin-right: 10px;
               font-size: 14px;
             }
-            
+
             i{
               margin: 0 10px;
             }
-            
+
             &.colspan{
-              
+
               &:nth-of-type(2){
                 border-right: 0px solid white;
               }
-              
+
               .avatar, .speaker{
                 display: inline-block;
-                
+
                 &.speaker{
                   margin-top: 0;
                   text-align: left;
                 }
               }
             }
-            
+
             &.break{
               vertical-align: middle;
             }
-            
+
             &:nth-of-type(1), &:nth-of-type(2){
               border-right: 5px solid white;
             }
           }
         }
-      
+
         &.hidden-xs{
-          
+
           tr:hover{
             background-color: rgba($jsdc-y, 0.1);
           }
-          
+
         }
-        
+
         &.visible-xs{
-          
+
           tbody, tr{
             display: block;
-            
+
             &:nth-child(2n + 1) {
               background-color: white;
             }
-            
+
             th{
               display: block;
               background-color: #ddd;
@@ -181,19 +181,19 @@ main.agenda-page{
               font-weight: bold;
               color: #777;
             }
-            
+
             td{
               display: block;
               padding: 25px 0;
-              
+
               &:nth-of-type(1){
                 border-right: 0px solid white;
               }
-              
+
               &:hover{
                 background-color: rgba($jsdc-y, 0.1);
               }
-              
+
               .label-default{
                 display: block;
                 width: 80%;
@@ -201,18 +201,18 @@ main.agenda-page{
                 line-height: 1.5;
                 font-size: 16px;
               }
-              
+
               .avatar, .speaker{
-                
+
                 &.speaker{
-                  
+
                   h6, p{
                     margin: 0;
                     font-size: 16px;
                     line-height: 2;
                     color: #555;
                   }
-                  
+
                   h6{
                     font-size: 18px;
                     line-height: 1.5;
