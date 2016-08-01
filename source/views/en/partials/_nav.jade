@@ -3,7 +3,7 @@ nav.navbar
     .navbar-header
       button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-mobile', aria-expanded='false')
         i.fa.fa-bars
-        
+
       a.navbar-brand(href='./index.html')
         img.image.img-responsive.lazy(itemprop="image" src='/dist/images/jsdc-logo-125-35.png', alt='JSDC 2016')
 
@@ -23,7 +23,11 @@ nav.navbar
           a(href='/en/staffMember.html') MEMBER
         li#nav-blog
           a(href='http://blog.jsdc.tw/' target="_blank") BLOG
+        li(style="margin-top: 8px;")
+          .fb-share-button(data-href='http://2016.jsdc.tw/' data-layout='button_count')
 
       ul.nav.navbar-nav.navbar-right
         li
           a(href='/') 中文
+
+include ./_fb-share
