@@ -4,18 +4,107 @@ block title
   title 議程｜JSDC 2016
 
 block content
-
   include ./partials/_nav
-  
+
   main.agenda-page
-  
+
     section#sub-header
       .container
         .inner
           header.major.text-center
             h2 JSDC 2016 議程
-            
+
     section#agenda-list
+      -
+        var agendas = {
+          "day_1": [
+            {type: "break", startTime: "09:00", endTime: "09:30", agendaTitle: "報到"},
+            {type: "break", startTime: "09:30", endTime: "09:40", agendaTitle: "大會開場"},
+            {type: "single", startTime: "09:40", endTime: "10:30",
+              name: undefined, image: undefined, youtube: undefined, slider: undefined, agendaTitle: "TBD"},
+            // {type: "single", startTime: "09:40", endTime: "10:30",
+            //   name: undefined, image: undefined, youtube: undefined, slider: undefined, agendaTitle: "Anglar 2 Universal"},
+
+            {type: "break", startTime: "10:30", endTime: "10:50", agendaTitle: "點心"},
+            {type: "multiple", startTime: "10:50", endTime: "11:30",
+              name_A: "TonyQ", image_A: undefined, youtube_A: undefined, slider_A: undefined, agendaTitle_A: "專案技術挑選案例探討",
+              name_B: "XP Steven", image_B: undefined, youtube_B: undefined, slider_B: undefined, agendaTitle_B: "超融合 React"
+            },
+
+            {type: "break", startTime: "11:30", endTime: "12:20", agendaTitle: "午餐"},
+            {type: "single", startTime: "12:20", endTime: "13:10",
+              name: undefined, image: undefined, youtube: undefined, slider: undefined, agendaTitle: "TBD"},
+            // {type: "single", startTime: "12:20", endTime: "13:10",
+            //   name: undefined, image: undefined, youtube: undefined, slider: undefined, agendaTitle: "Thinkjs"},
+
+            {type: "break", startTime: "13:10", endTime: "13:30", agendaTitle: "休息"},
+            {type: "multiple", startTime: "13:30", endTime: "14:10",
+              name_A: "Isken Huang", image_A: undefined, youtube_A: undefined, slider_A: undefined, agendaTitle_A: "Weex 輕量級高性能跨終端框架",
+              name_B: "Tomas Lin", image_B: undefined, youtube_B: undefined, slider_B: undefined, agendaTitle_B: "React Native - dispatch route like web uri"
+            },
+
+            {type: "break", startTime: "14:10", endTime: "14:40", agendaTitle: "下午茶"},
+            {type: "multiple", startTime: "14:40", endTime: "15:20",
+              name_A: "劉艾霖", image_A: undefined, youtube_A: undefined, slider_A: undefined, agendaTitle_A: "淺談使用 webdriverIO 開發 Web Test 網站自動化測試",
+              name_B: undefined, image_B: undefined, youtube_B: undefined, slider_B: undefined, agendaTitle_B: "TBD"
+            },
+
+            {type: "break", startTime: "15:20", endTime: "15:40", agendaTitle: "休息"},
+            {type: "multiple", startTime: "15:40", endTime: "16:20",
+              name_A: "洪名辰", image_A: undefined, youtube_A: undefined, slider_A: undefined, agendaTitle_A: "Universal JavaScript?",
+              name_B: undefined, image_B: undefined, youtube_B: undefined, slider_B: undefined, agendaTitle_B: "TBD"
+            },
+
+            {type: "break", startTime: "16:20", endTime: "16:40", agendaTitle: "休息"},
+            {type: "single", startTime: "16:40", endTime: "17:20",
+              name: undefined, image: undefined, youtube: undefined, slider: undefined, agendaTitle: "Panel"},
+            {type: "break", startTime: "17:20", endTime: "18:00", agendaTitle: "散場"}
+          ],
+          "day_2": [
+            {type: "break", startTime: "09:00", endTime: "09:30", agendaTitle: "報到"},
+            {type: "break", startTime: "09:30", endTime: "09:40", agendaTitle: "大會開場"},
+            {type: "single", startTime: "09:40", endTime: "10:30",
+              name: "Blake Newman", image: undefined, youtube: undefined, slider: undefined, agendaTitle: "TBD"},
+            // {type: "single", startTime: "09:40", endTime: "10:30",
+            //   name: "Blake Newman", image: undefined, youtube: undefined, slider: undefined, agendaTitle: "How to adapt to change & exploring Vue.js"},
+
+            {type: "break", startTime: "10:30", endTime: "10:50", agendaTitle: "點心"},
+            {type: "multiple", startTime: "10:50", endTime: "11:30",
+              name_A: "Sam Lee", image_A: undefined, youtube_A: undefined, slider_A: undefined, agendaTitle_A: "React Native + Redux 簡單也不簡單",
+              name_B: undefined, image_B: undefined, youtube_B: undefined, slider_B: undefined, agendaTitle_B: "TBD"
+            },
+
+            {type: "break", startTime: "11:30", endTime: "12:20", agendaTitle: "午餐"},
+            {type: "single", startTime: "12:20", endTime: "13:10",
+              name: undefined, image: undefined, youtube: undefined, slider: undefined, agendaTitle: "TBD"},
+            // {type: "single", startTime: "12:20", endTime: "13:10",
+            //   name: undefined, image: undefined, youtube: undefined, slider: undefined, agendaTitle: "Netflix"},
+
+            {type: "break", startTime: "13:10", endTime: "13:30", agendaTitle: "休息"},
+            {type: "multiple", startTime: "13:30", endTime: "14:10",
+              name_A: "Jim", image_A: undefined, youtube_A: undefined, slider_A: undefined, agendaTitle_A: "Date Visualization performance optmazation",
+              name_B: undefined, image_B: undefined, youtube_B: undefined, slider_B: undefined, agendaTitle_B: "TBD"
+            },
+
+            {type: "break", startTime: "14:10", endTime: "14:40", agendaTitle: "下午茶"},
+            {type: "multiple", startTime: "14:40", endTime: "15:20",
+              name_A: undefined, image_A: undefined, youtube_A: undefined, slider_A: undefined, agendaTitle_A: "開發 Angular 2 網站好簡單之推坑就對了",
+              name_B: undefined, image_B: undefined, youtube_B: undefined, slider_B: undefined, agendaTitle_B: "TBD"
+            },
+
+            {type: "break", startTime: "15:20", endTime: "15:40", agendaTitle: "休息"},
+            {type: "multiple", startTime: "15:40", endTime: "16:20",
+              name_A: "Lee", image_A: undefined, youtube_A: undefined, slider_A: undefined, agendaTitle_A: "NIME: 使用 nodejs 快快樂樂開發輸入法",
+              name_B: undefined, image_B: undefined, youtube_B: undefined, slider_B: undefined, agendaTitle_B: "TBD"
+            },
+
+            {type: "break", startTime: "16:20", endTime: "16:40", agendaTitle: "休息"},
+            {type: "single", startTime: "16:40", endTime: "17:20",
+              name: undefined, image: undefined, youtube: undefined, slider: undefined, agendaTitle: "Lighting Talk"},
+            {type: "break", startTime: "17:20", endTime: "18:00", agendaTitle: "散場"}
+          ]
+        };
+
       .container
         .agenda-container
           #tabs
@@ -24,639 +113,97 @@ block content
                 a(href='#day_1') Day 1 ( 10 / 22 )
               li
                 a(href='#day_2') Day 2 ( 10 / 23 )
-                
-            #day_1
-            
-              table.table.table-hover.hidden-xs
-                thead
-                  tr
-                    th(style="width:10%; min-width:80px") 時間
-                    th(style="width:45%") 國際會議廳 R0
-                    th(style="width:45%") 第二會議廳 R2
-                    
-                tbody
-                  tr
-                    td
-                      | 09:00
-                      br
-                      | |
-                      br
-                      | 9:30
-                    td.break(colspan="2") 報到
-                  
-                  tr
-                    td
-                      | 09:30
-                      br
-                      | |
-                      br
-                      | 9:40
-                    td.break(colspan="2") 大會開場
-                  
-                  tr
-                    td
-                      | 09:40
-                      br
-                      | |
-                      br
-                      | 10:30
-                    td.colspan(colspan="2", data-balloon-pos='down', data-balloon-length='fit', data-title='Anglar2_Universal', data-balloon='')
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 Anglar 2 Universal
-                        //- p by Hedger Wang
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                  tr
-                    td
-                      | 10:30
-                      br
-                      | |
-                      br
-                      | 10:50
-                    td.break(colspan="2") 點心
-                    
-                  tr
-                    td
-                      | 10:50
-                      br
-                      | |
-                      br
-                      | 11:30
-                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='超融合React', data-balloon='')
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 超融合 React 
-                        //- p by George Duan
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                    //- td(data-balloon-pos='down', data-balloon-length='fit', data-title='專案技術挑選案例探討', data-balloon='')
-                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='專案技術挑選案例探討', data-balloon='')
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 JavaScript 專案技術挑選案例探討(TONYQ)
-                        //- p by Yuren Ju
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
 
-                  tr
-                    td
-                      | 11:30
-                      br
-                      | |
-                      br
-                      | 12:20
-                    td.break(colspan="2") 午餐
-                    
-                  tr
-                    td
-                      | 12:20
-                      br
-                      | |
-                      br
-                      | 13:10
-                    td.colspan(colspan="2")
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 Thinkjs
-                        //- p by Matt
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                  
-                  tr
-                    td
-                      | 13:10
-                      br
-                      | |
-                      br
-                      | 13:30
-                    td.break(colspan="2") 休息
-                  
-                  tr
-                    td
-                      | 13:30
-                      br
-                      | |
-                      br
-                      | 14:10
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 Weex 輕量級高性能跨終端框架
-                        //- p by Will 保哥
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 TBD
-                        //- p by Casear Chu
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
+            each speakers, dayIndex in agendas
+              div(id="#{dayIndex}")
 
-                  tr
-                    td
-                      | 14:10
-                      br
-                      | |
-                      br
-                      | 14:40
-                    td.break(colspan="2") 下午茶
-                    
-                  tr
-                    td
-                      | 14:40
-                      br
-                      | |
-                      br
-                      | 15:20
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 淺談使用 webdriverIO 開發 Web Test 網站自動化測試
-                        //- p by 謝宗穎
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 TBD
-                        //- p by 王唯達
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
+                table.table.table-hover.hidden-xs
+                  thead
+                    tr
+                      th(style="width:10%; min-width:80px") 時間
+                      th(style="width:45%") 國際會議廳 R0
+                      th(style="width:45%") 第二會議廳 R2
 
-                  tr
-                    td
-                      | 15:20
-                      br
-                      | |
-                      br
-                      | 15:40
-                    td.break(colspan="2") 休息
+                  tbody
+                    each speaker in speakers
+                      case speaker.type
+                        when "break"
+                          tr
+                            td
+                              | #{speaker.startTime}
+                              br
+                              | |
+                              br
+                              | #{speaker.endTime}
+                            td.break(colspan="2") #{speaker.agendaTitle}
 
-                  tr
-                    td
-                      | 15:40
-                      br
-                      | |
-                      br
-                      | 16:20
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 Universal JavaScript
-                        //- p by Paul Li
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 TBD
-                        //- p by Evan Tseng
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
+                        when "single"
+                          - var name = speaker.name?speaker.name:"";
+                          - var image = speaker.image?speaker.image:"/dist/images/jsdc-mascot-150.jpg";
+                          // - var slider = speaker.slider?speaker.name:"";
+                          // - var youtube = speaker.youtube?speaker.youtube:"";
 
-                  tr
-                    td
-                      | 16:20
-                      br
-                      | |
-                      br
-                      | 16:40
-                    td.break(colspan="2") 休息
+                          tr
+                            td
+                              | #{speaker.startTime}
+                              br
+                              | |
+                              br
+                              | #{speaker.endTime}
+                            td.colspan(colspan="2")
+                              img.avatar.lazy(data-original="#{image}", alt="#{name}")
+                              .speaker
+                                h6= speaker.agendaTitle
+                                //- if name !== ""
+                                //-   p by #{name}
+                                //- if slider !== ""
+                                //-   a(href="#{slider}" target='_blank').label.label-info Slider
+                                //- if youtube !== ""
+                                //-   a(href="#{youtube}" target='_blank').label.label-danger Youtube
 
-                  tr
-                    td
-                      | 16:40
-                      br
-                      | |
-                      br
-                      | 17:20
-                    td(colspan="2")
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 panal
-                        //- p by Paul Li
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                    //- td
-                    //-   img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                    //-   .speaker
-                    //-     h6 TBD
-                        //- p by Evan Tseng
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                  tr
-                    td
-                      | 17:20
-                      br
-                      | |
-                      br
-                      | 18:00
-                    td.break(colspan="2") 散場
+                        when "multiple"
+                          - var nameA = speaker.name_A?speaker.name_A:"";
+                          - var nameB = speaker.name_B?speaker.name_B:"";
+                          - var imageA = speaker.image_A?speaker.image_A:"/dist/images/jsdc-mascot-150.jpg";
+                          - var imageB = speaker.image_B?speaker.image_B:"/dist/images/jsdc-mascot-150.jpg";
+                          // - var sliderA = speaker.slider_A?speaker.slider_A:"";
+                          // - var sliderB = speaker.slider_B?speaker.name_B:"";
+                          // - var youtubeA = speaker.youtube_A?speaker.youtube_A:"";
+                          // - var youtubeB = speaker.youtube_B?speaker.youtube_B:"";
 
-            //-   table.table.table-hover.visible-xs
-              //- 
-            //-     tbody
-            //-       tr
-            //-         th 9:00 - 9:40
-            //-       tr
-            //-         td(data-balloon-pos='down', data-balloon-length='fit', data-title='簡介', data-balloon='文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字。')
-            //-           span.label.label-default 國際會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 React Navigation System
-            //-             p by Hedger Wang
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-              //- 
-            //-       tr
-            //-         th 9:40 - 10:00
-            //-       tr
-            //-         td 點心
-            //-         
-            //-       tr
-            //-         th 10:00 - 10:40
-            //-       tr
-            //-         td(data-balloon-pos='down', data-balloon-length='fit', data-title='簡介', data-balloon='文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字。')
-            //-           span.label.label-default 國際會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 用 LINE Platform 打造有趣的 Javascript 應用
-            //-             p by George Duan
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-       tr
-            //-         td(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-            //-           span.label.label-default 第二會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 JavaScript 開發流程自動化懶人包
-            //-             p by Yuren Ju
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-              //- 
-            //-       tr
-            //-         th 11:00 - 11:40
-            //-       tr
-            //-         td(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-            //-           span.label.label-default 國際會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 Turf.js 地圖資料分析與視覺化
-            //-             p by Kuro Hsu
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-       tr
-            //-         td(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-            //-           span.label.label-default 第二會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 用 JavaScript 實現微電腦自動控制不是夢！
-            //-             p by Cheton Wu
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-             
-            //-       tr
-            //-         th 11:40 - 12:40
-            //-       tr
-            //-         td 午餐
-            //-         
-            //-       tr
-            //-         th 12:40 - 13:20
-            //-       tr
-            //-         td
-            //-           span.label.label-default 國際會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 Building Single-Page Apps with Aurelia
-            //-             p by Matt
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-             
-            //-       tr
-            //-         th 13:30 - 14:10
-            //-       tr
-            //-         td
-            //-           span.label.label-default 國際會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 使用 Visual Studio Code 建構 JavaScript 應用程式
-            //-             p by Will 保哥
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-       tr
-            //-         td
-            //-           span.label.label-default 第二會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 技術演進的大亂鬥
-            //-             p by Casear Chu
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-             
-            //-       tr
-            //-         th 14:30 - 15:10
-            //-       tr
-            //-         td
-            //-           span.label.label-default 國際會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 Transducer
-            //-             p by othree
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-       tr
-            //-         td
-            //-           span.label.label-default 第二會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 unidisk - Architecture of Web Storage filesystem
-            //-             p by Sean Lee
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-             
-            //-       tr
-            //-         th 15:10 - 15:30
-            //-       tr
-            //-         td 下午茶
-            //-         
-            //-       tr
-            //-         th 15:30 - 16:10
-            //-       tr
-            //-         td
-            //-           span.label.label-default 國際會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 TDD 的開發哲學，以 nodejs 為例
-            //-             p by 謝宗穎
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-       tr
-            //-         td
-            //-           span.label.label-default 第二會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 jQuery.component,一個javascript MVC
-            //-             p by 王唯達
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-             
-            //-       tr
-            //-         th 16:30 - 17:10
-            //-       tr
-            //-         td
-            //-           span.label.label-default 國際會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 Web Components & the next generation ADs
-            //-             p by Paul Li
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
-            //-       tr
-            //-         td
-            //-           span.label.label-default 第二會議廳
-            //-           img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-            //-           .speaker
-            //-             h6 Web of Things Maker - Build WoT/IoT Applications with JavaScript
-            //-             p by Evan Tseng
-            //-             a(href="#" target='_blank').label.label-info Slider
-            //-             a(href="#" target='_blank').label.label-danger Youtube
+                          tr
+                            td
+                              | #{speaker.startTime}
+                              br
+                              | |
+                              br
+                              | #{speaker.endTime}
 
+                            td.colspan
+                              img.avatar.lazy(data-original="#{imageA}", alt="#{nameA}")
+                              .speaker
+                                h6= speaker.agendaTitle_A
+                                //- if nameA !== ""
+                                //-   p by #{nameA}
+                                //- if sliderA !== ""
+                                //-   a(href="#{sliderA}" target='_blank').label.label-info Slider
+                                //- if youtubeA !== ""
+                                //-   a(href="#{youtubeA}" target='_blank').label.label-danger Youtube
 
-            #day_2
+                            td.colspan
+                              img.avatar.lazy(data-original="#{imageB}", alt="#{nameB}")
+                              .speaker
+                                h6= speaker.agendaTitle_B
+                                //- if nameB !== ""
+                                //-   p by #{nameB}
+                                //- if sliderB !== ""
+                                //-   a(href="#{sliderB}" target='_blank').label.label-info Slider
+                                //- if youtubeB !== ""
+                                //-   a(href="#{youtubeB}" target='_blank').label.label-danger Youtube
 
-              table.table.table-striped.table-hover.hidden-xs
-                thead
-                  tr
-                    th(style="width:10%; min-width:80px") 時間
-                    th(style="width:45%") 國際會議廳 R0
-                    th(style="width:45%") 第二會議廳 R2
-                    
-                tbody
-                  tr
-                    td
-                      | 09:00
-                      br
-                      | |
-                      br
-                      | 9:30
-                    td.break(colspan="2") 報到
-                  
-                  tr
-                    td
-                      | 09:30
-                      br
-                      | |
-                      br
-                      | 9:40
-                    td.break(colspan="2") 大會開場
-                  
-                  tr
-                    td
-                      | 09:40
-                      br
-                      | |
-                      br
-                      | 10:30
-                    td.colspan(colspan="2", data-balloon-pos='down', data-balloon-length='fit', data-title='Anglar2_Universal', data-balloon='')
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 Vue.js
-                        //- p by Hedger Wang
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                  tr
-                    td
-                      | 10:30
-                      br
-                      | |
-                      br
-                      | 10:50
-                    td.break(colspan="2") 點心
-                    
-                  tr
-                    td
-                      | 10:50
-                      br
-                      | |
-                      br
-                      | 11:30
-                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='超融合React', data-balloon='')
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 React Native + Redux 簡單也不簡單
-                        //- p by George Duan
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                    //- td(data-balloon-pos='down', data-balloon-length='fit', data-title='專案技術挑選案例探討', data-balloon='')
-                    td(data-balloon-pos='down', data-balloon-length='fit', data-title='專案技術挑選案例探討', data-balloon='')
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 TBD
-                        //- p by Yuren Ju
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-
-                  tr
-                    td
-                      | 11:30
-                      br
-                      | |
-                      br
-                      | 12:20
-                    td.break(colspan="2") 午餐
-                    
-                  tr
-                    td
-                      | 12:20
-                      br
-                      | |
-                      br
-                      | 13:10
-                    td.colspan(colspan="2")
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 Netflix
-                        //- p by Matt
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                  
-                  tr
-                    td
-                      | 13:10
-                      br
-                      | |
-                      br
-                      | 13:30
-                    td.break(colspan="2") 休息
-                  
-                  tr
-                    td
-                      | 13:30
-                      br
-                      | |
-                      br
-                      | 14:10
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 Date Visualization performance optmazation
-                        //- p by Will 保哥
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 TBD
-                        //- p by Casear Chu
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-
-                  tr
-                    td
-                      | 14:10
-                      br
-                      | |
-                      br
-                      | 14:40
-                    td.break(colspan="2") 下午茶
-                    
-                  tr
-                    td
-                      | 14:40
-                      br
-                      | |
-                      br
-                      | 15:20
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 開發 Angular 2 網站好簡單之推坑就對了
-                        //- p by 謝宗穎
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 TBD
-                        //- p by 王唯達
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-
-                  tr
-                    td
-                      | 15:20
-                      br
-                      | |
-                      br
-                      | 15:40
-                    td.break(colspan="2") 休息
-
-                  tr
-                    td
-                      | 15:40
-                      br
-                      | |
-                      br
-                      | 16:20
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 NIME: 使用 nodejs 快快樂樂開發輸入法
-                        //- p by Paul Li
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                    td
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 TBD
-                        //- p by Evan Tseng
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-
-                  tr
-                    td
-                      | 16:20
-                      br
-                      | |
-                      br
-                      | 16:40
-                    td.break(colspan="2") 休息
-
-                  tr
-                    td
-                      | 16:40
-                      br
-                      | |
-                      br
-                      | 17:20
-                    td(colspan="2")
-                      img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                      .speaker
-                        h6 Lighting Talk
-                        //- p by Paul Li
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                    //- td
-                    //-   img.avatar.lazy(data-original="/dist/images/head.png", alt="amei")
-                    //-   .speaker
-                    //-     h6 TBD
-                        //- p by Evan Tseng
-                        //- a(href="#" target='_blank').label.label-info Slider
-                        //- a(href="#" target='_blank').label.label-danger Youtube
-                  tr
-                    td
-                      | 17:20
-                      br
-                      | |
-                      br
-                      | 18:00
-                    td.break(colspan="2") 散場
-                    
     script.
       (function($) {
-        
+
         $('#nav-agenda').addClass('active');
 
         if ($('#agenda-list').length){
