@@ -15,6 +15,7 @@ block content
             h2 JSDC 2016 議程
 
     section#agenda-list
+      //- 大 session 先註解且以 TBD 表示
       -
         var agendas = {
           "day_1": [
@@ -140,8 +141,8 @@ block content
                         when "single"
                           - var name = speaker.name?speaker.name:"";
                           - var image = speaker.image?speaker.image:"/dist/images/jsdc-mascot-150.jpg";
-                          // - var slider = speaker.slider?speaker.name:"";
-                          // - var youtube = speaker.youtube?speaker.youtube:"";
+                          - var slider = speaker.slider?speaker.name:"";
+                          - var youtube = speaker.youtube?speaker.youtube:"";
 
                           tr
                             td
@@ -154,22 +155,22 @@ block content
                               img.avatar.lazy(data-original="#{image}", alt="#{name}")
                               .speaker
                                 h6= speaker.agendaTitle
-                                //- if name !== ""
-                                //-   p by #{name}
-                                //- if slider !== ""
-                                //-   a(href="#{slider}" target='_blank').label.label-info Slider
-                                //- if youtube !== ""
-                                //-   a(href="#{youtube}" target='_blank').label.label-danger Youtube
+                                if name !== ""
+                                  p by #{name}
+                                if slider !== ""
+                                  a(href="#{slider}" target='_blank').label.label-info Slider
+                                if youtube !== ""
+                                  a(href="#{youtube}" target='_blank').label.label-danger Youtube
 
                         when "multiple"
                           - var nameA = speaker.name_A?speaker.name_A:"";
                           - var nameB = speaker.name_B?speaker.name_B:"";
                           - var imageA = speaker.image_A?speaker.image_A:"/dist/images/jsdc-mascot-150.jpg";
                           - var imageB = speaker.image_B?speaker.image_B:"/dist/images/jsdc-mascot-150.jpg";
-                          // - var sliderA = speaker.slider_A?speaker.slider_A:"";
-                          // - var sliderB = speaker.slider_B?speaker.name_B:"";
-                          // - var youtubeA = speaker.youtube_A?speaker.youtube_A:"";
-                          // - var youtubeB = speaker.youtube_B?speaker.youtube_B:"";
+                          - var sliderA = speaker.slider_A?speaker.slider_A:"";
+                          - var sliderB = speaker.slider_B?speaker.name_B:"";
+                          - var youtubeA = speaker.youtube_A?speaker.youtube_A:"";
+                          - var youtubeB = speaker.youtube_B?speaker.youtube_B:"";
 
                           tr
                             td
@@ -183,23 +184,23 @@ block content
                               img.avatar.avatar-mutli.lazy(style="display: block; margin: 0 auto;", data-original="#{imageA}", alt="#{nameA}")
                               .speaker
                                 h6= speaker.agendaTitle_A
-                                //- if nameA !== ""
-                                //-   p by #{nameA}
-                                //- if sliderA !== ""
-                                //-   a(href="#{sliderA}" target='_blank').label.label-info Slider
-                                //- if youtubeA !== ""
-                                //-   a(href="#{youtubeA}" target='_blank').label.label-danger Youtube
+                                if nameA !== ""
+                                  p by #{nameA}
+                                if sliderA !== ""
+                                  a(href="#{sliderA}" target='_blank').label.label-info Slider
+                                if youtubeA !== ""
+                                  a(href="#{youtubeA}" target='_blank').label.label-danger Youtube
 
                             td.colspan
                               img.avatar.lazy(style="display: block; margin: 0 auto;", data-original="#{imageB}", alt="#{nameB}")
                               .speaker
                                 h6= speaker.agendaTitle_B
-                                //- if nameB !== ""
-                                //-   p by #{nameB}
-                                //- if sliderB !== ""
-                                //-   a(href="#{sliderB}" target='_blank').label.label-info Slider
-                                //- if youtubeB !== ""
-                                //-   a(href="#{youtubeB}" target='_blank').label.label-danger Youtube
+                                if nameB !== ""
+                                  p by #{nameB}
+                                if sliderB !== ""
+                                  a(href="#{sliderB}" target='_blank').label.label-info Slider
+                                if youtubeB !== ""
+                                  a(href="#{youtubeB}" target='_blank').label.label-danger Youtube
 
     script.
       (function($) {
