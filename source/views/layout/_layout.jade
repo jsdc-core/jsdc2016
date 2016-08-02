@@ -7,7 +7,7 @@ doctype html
 - var lang = 'zh-hant';
 
 html(lang='#{lang}')
-  head    
+  head
     block title
       title #{title}
 
@@ -31,7 +31,7 @@ html(lang='#{lang}')
     meta(property='og:image', content='#{coverImage}')
     meta(property='og:url', content='http://2016.jsdc.tw/')
     meta(property='og:site_name', content='#{title}')
-    
+
     //- twitter 設定
     meta(name='twitter:card' content='summary_large_image')
     meta(name='twitter:site' content='@jsdc_tw')
@@ -67,6 +67,7 @@ html(lang='#{lang}')
     script(src='#{jsPath}/elevator.min.min.js')
     script(src='#{jsPath}/main.min.js')
     include ../partials/_google-analytics
+    include ../partials/_fb-share
 
   body#h5o-1
 

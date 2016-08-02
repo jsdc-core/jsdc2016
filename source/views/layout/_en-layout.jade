@@ -30,7 +30,7 @@ html(lang='#{lang}')
     meta(property='og:image', content='#{coverImage}')
     meta(property='og:url', content='http://2016.jsdc.tw/')
     meta(property='og:site_name', content='JSDC 2016')
-    
+
     // twitter 設定
     meta(name='twitter:card' content='summary_large_image')
     meta(name='twitter:site' content='@jsdc_tw')
@@ -39,15 +39,6 @@ html(lang='#{lang}')
     meta(property='twitter:image', content='#{coverImage}')
     meta(property='twitter:creator', content='@jsdc_tw')
     link(href='#{coverImage}' rel='image_src' type='image/jpeg')
-
-    // Google Analytics
-    script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-76574910-1', 'auto');
-      ga('send', 'pageview');
 
     // css 設定
     link(rel='shortcut icon', href='../dist/favicons/favicon.ico')
@@ -67,6 +58,8 @@ html(lang='#{lang}')
     script(src='#{jsPath}/util.min.js')
     script(src='#{jsPath}/main.min.js')
     script(src='#{jsPath}/headline.min.js')
+    include ../en/partials/_google-analytics
+    include ../en/partials/_fb-share
 
   body#h5o-1
 
