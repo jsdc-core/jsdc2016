@@ -66,7 +66,7 @@ block content
             {type: "break", startTime: "09:00", endTime: "09:30", agendaTitle: "報到"},
             {type: "break", startTime: "09:30", endTime: "09:40", agendaTitle: "大會開場"},
             {type: "single", startTime: "09:40", endTime: "10:30",
-              name: "Blake Newman", image: undefined, youtube: undefined, slider: undefined, agendaTitle: "TBD"},
+              name: undefined, image: undefined, youtube: undefined, slider: undefined, agendaTitle: "TBD"},
             // {type: "single", startTime: "09:40", endTime: "10:30",
             //   name: "Blake Newman", image: undefined, youtube: undefined, slider: undefined, agendaTitle: "How to adapt to change & exploring Vue.js"},
 
@@ -182,7 +182,7 @@ block content
                               | #{speaker.endTime}
 
                             td.colspan
-                              img.avatar.lazy(data-original="#{imageA}", alt="#{nameA}")
+                              img.avatar.lazy(style="display: block; margin: 0 auto;", data-original="#{imageA}", alt="#{nameA}")
                               .speaker
                                 h6= speaker.agendaTitle_A
                                 if nameA !== ""
@@ -193,7 +193,7 @@ block content
                                   a(href="#{youtubeA}" target='_blank').label.label-danger Youtube
 
                             td.colspan
-                              img.avatar.lazy(data-original="#{imageB}", alt="#{nameB}")
+                              img.avatar.lazy(style="display: block; margin: 0 auto;", data-original="#{imageB}", alt="#{nameB}")
                               .speaker
                                 h6= speaker.agendaTitle_B
                                 if nameB !== ""
