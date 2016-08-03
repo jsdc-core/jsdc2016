@@ -119,7 +119,7 @@ block content
             each speakers, dayIndex in agendas
               div(id="#{dayIndex}")
 
-                table.table.table-hover.hidden-xs
+                table.table.table-hover.hidden-xs.agendas
                   thead
                     tr
                       th(style="width:10%; min-width:80px") Time
@@ -153,7 +153,7 @@ block content
                               br
                               | #{speaker.endTime}
                             td.colspan(colspan="2")
-                              img.avatar.lazy(data-original="#{image}", alt="#{name}")
+                              img.avatar(src="#{image}", alt="#{name}")
                               .speaker
                                 h6= speaker.agendaTitle
                                 if name !== ""
@@ -182,7 +182,7 @@ block content
                               | #{speaker.endTime}
 
                             td.colspan
-                              img.avatar.lazy(style="display: block; margin: 0 auto;", data-original="#{imageA}", alt="#{nameA}")
+                              img.avatar(style="display: block; margin: 0 auto;", src="#{imageA}", alt="#{nameA}")
                               .speaker
                                 h6= speaker.agendaTitle_A
                                 if nameA !== ""
@@ -193,7 +193,7 @@ block content
                                   a(href="#{youtubeA}" target='_blank').label.label-danger Youtube
 
                             td.colspan
-                              img.avatar.lazy(style="display: block; margin: 0 auto;", data-original="#{imageB}", alt="#{nameB}")
+                              img.avatar(style="display: block; margin: 0 auto;", src="#{imageB}", alt="#{nameB}")
                               .speaker
                                 h6= speaker.agendaTitle_B
                                 if nameB !== ""
@@ -202,6 +202,21 @@ block content
                                   a(href="#{sliderB}" target='_blank').label.label-info Slider
                                 if youtubeB !== ""
                                   a(href="#{youtubeB}" target='_blank').label.label-danger Youtube
+
+  style.
+    @media (max-width: 767px){
+      html, body {
+        min-width: 500px;
+        width: 500px;
+      }
+      main.agenda-page #agenda-list .agenda-container table tbody tr td .speaker.speaker h6 {
+        line-height: 110%;
+      }
+      .agendas.hidden-xs {
+        display: block !important;
+      //-   min-width: 250px;
+      }
+    }
 
     script.
       (function($) {
