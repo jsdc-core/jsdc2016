@@ -3,6 +3,31 @@ extends ./layout/_layout.jade
 block content
 
   main.main-page
+    //- 
+      name： 講者名字, title: 頭銜, image: 照片
+    -
+      var speakers = [
+        {name: 'Blake Newman', title: undefined, image: undefined,
+          personalPageUrl: undefined, github: undefined},
+        {name: 'XP Steven', title: undefined, image: undefined,
+          personalPageUrl: undefined, github: undefined},
+        {name: 'TonyQ', title: undefined, image: undefined,
+          personalPageUrl: undefined, github: undefined},
+        {name: 'Isken Huang', title: undefined, image: undefined,
+          personalPageUrl: undefined, github: undefined},
+        {name: 'Tomas Lin', title: undefined, image: undefined,
+          personalPageUrl: undefined, github: undefined},
+        {name: 'Jim', title: undefined, image: undefined,
+          personalPageUrl: undefined, github: undefined},
+        {name: '劉艾霖', title: undefined, image: undefined,
+          personalPageUrl: undefined, github: undefined},
+        {name: '保哥', title: undefined, image: undefined,
+          personalPageUrl: undefined, github: undefined},
+        {name: '洪名辰', title: undefined, image: undefined,
+          personalPageUrl: undefined, github: undefined},
+        {name: 'Lee', title: undefined, image: undefined,
+          personalPageUrl: undefined, github: undefined},
+      ]
 
     section#header
       .container
@@ -31,69 +56,35 @@ block content
       #speakers-line
       .container
         .row
-          //- .col-xs-12.text-center
-          //-   header.major
-          //-     h2 講者陣容
-          //- .col-xs-12
-          //-   .speakers-container
-          //-     .owl-carousel#speaker-carousel
-          //-       .item
-          //-         img.avatar.owl-lazy(data-src="/dist/images/amei.jpg", alt="amei")
-          //-         .introduction
-          //-           h4.speaker-name Amei Chi
-          //-           p.project 賣萌集團創辦人
-          //-           .link
-          //-             a(href="#" target="_blank")
-          //-               i.fa.fa-link.fa-2x
-          //-             a(href="#" target="_blank")
-          //-               i.fa.fa-github.fa-2x
-          //-
-          //-       .item
-          //-         img.avatar.owl-lazy(data-src="/dist/images/amei.jpg", alt="amei")
-          //-         .introduction
-          //-           h4.speaker-name Amei Chi
-          //-           p.project 賣萌集團創辦人
-          //-           .link
-          //-             a(href="#" target="_blank")
-          //-               i.fa.fa-link.fa-2x
-          //-             a(href="#" target="_blank")
-          //-               i.fa.fa-github.fa-2x
-          //-
-          //-       .item
-          //-         img.avatar.owl-lazy(data-src="/dist/images/amei.jpg", alt="amei")
-          //-         .introduction
-          //-           h4.speaker-name Amei Chi
-          //-           p.project 賣萌集團創辦人
-          //-           .link
-          //-             a(href="#" target="_blank")
-          //-               i.fa.fa-link.fa-2x
-          //-             a(href="#" target="_blank")
-          //-               i.fa.fa-github.fa-2x
-          //-
-          //-       .item
-          //-         img.avatar.owl-lazy(data-src="/dist/images/amei.jpg", alt="amei")
-          //-         .introduction
-          //-           h4.speaker-name Amei Chi
-          //-           p.project 賣萌集團創辦人
-          //-           .link
-          //-             a(href="#" target="_blank")
-          //-               i.fa.fa-link.fa-2x
-          //-             a(href="#" target="_blank")
-          //-               i.fa.fa-github.fa-2x
-          //-
-          //-       .item
-          //-         img.avatar.owl-lazy(data-src="/dist/images/amei.jpg", alt="amei")
-          //-         .introduction
-          //-           h4.speaker-name Amei Chi
-          //-           p.project 賣萌集團創辦人
-          //-           .link
-          //-             a(href="#" target="_blank")
-          //-               i.fa.fa-link.fa-2x
-          //-             a(href="#" target="_blank")
-          //-               i.fa.fa-github.fa-2x
-          //-
-          //-     .speaker-nav
-          //-       a.speaker-button.c-bold(href="./speakers.html" target="_blank") 講者列表
+          .col-xs-12.text-center
+            header.major
+              h2 講者陣容
+          
+          .col-xs-12
+            .speakers-container
+              .owl-carousel#speaker-carousel
+                each speaker in speakers
+                  .item
+                    - var name = speaker.name;
+                    - var image = speaker.image?speaker.image:'/dist/images/jsdc-mascot-250.jpg';
+                    - var personalPageUrl = speaker.personalPageUrl?speaker.personalPageUrl:'';
+                    - var github = speaker.github?speaker.github:'';
+
+                    img.avatar.owl-lazy(data-src="#{image}", alt="#{name}")
+                    .introduction
+                      h4.speaker-name #{name}
+                      p.project.limit #{speaker.title}
+                      if personalPageUrl !== '' || github !== ''
+                        .link
+                          if personalPageUrl
+                            a(href="#{personalPageUrl}" target="_blank")
+                              i.fa.fa-link.fa-2x
+                          if github
+                            a(href="#{github}" target="_blank")
+                              i.fa.fa-github.fa-2x
+          
+              .speaker-nav
+                a.speaker-button.c-bold(href="./speakers.html" target="_blank") 講者列表
 
           .col-xs-12
             //- #agenda-line
@@ -196,5 +187,3 @@ block content
           });
         }
       })(jQuery);
-    //- TODO 拉出來一頁
-    //- include ./partials/_staffs

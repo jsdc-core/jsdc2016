@@ -16,14 +16,39 @@ block content
             h2 JSDC 2016 講者
 
     section#speakers-list
+      //- 定義和 index.jade 講師部分相同
       -
         var speakers = [
-          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"},
-          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"},
-          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"},
-          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"},
-          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"},
-          {name: "Amei Chi", description: "史上最強碼貓，會刪資料庫還會關機，平常最喜歡賣萌。", photo: "/dist/images/amei.jpg", jobTitle: "賣萌集團創辦人", github: "#", link: "#", avatarTip: "Amei"}
+          {name: "Blake Newman", description: undefined,
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: undefined},
+          {name: "Isken Huang", description: undefined,
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: undefined},
+          {name: "Jim", description: undefined,
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: undefined},
+          {name: "Lee", description: undefined,
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: undefined},
+          {name: "Tomas Lin", description: undefined,
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: undefined},
+          {name: "TonyQ", description: undefined,
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: undefined},
+          {name: "XP Steven", description: undefined,
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: undefined},
+          {name: "洪名辰", description: undefined,
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: undefined},
+          {name: "保哥", description: undefined,
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: undefined},
+          {name: "劉艾霖", description: undefined,
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: undefined}
         ];
 
       .container
@@ -33,16 +58,21 @@ block content
 
             .col-xs-12.col-sm-6.col-md-4
               .speaker
-                .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='#{speaker.avatarTip}', data-balloon='#{speaker.description}')
-                  img.lazy(data-original="#{speaker.photo}", alt="#{speaker.avatarTip}")
+                - var image = speaker.image?speaker.image:'/dist/images/jsdc-mascot-250.jpg';
+                //- data-balloon-pos='down', data-balloon-length='large', data-title='#{speaker.avatarTip}', data-balloon='#{speaker.description}'
+                .avatar()
+                  img.lazy(data-original="#{image}", alt="#{speaker.avatarTip}")
                 .introduction
                   h4.speaker-name #{speaker.name}
-                  p.project #{speaker.jobTitle}
-                  .link
-                    a(href="#{speaker.github}" target="_blank")
-                      i.fa.fa-link
-                    a(href="#{speaker.link}" target="_blank")
-                      i.fa.fa-github
+                  p.project #{speaker.title}
+                  if speaker.link || speaker.github
+                    .link
+                      if speaker.link
+                        a(href="#{speaker.link}" target="_blank")
+                          i.fa.fa-link
+                      if speaker.github
+                        a(href="#{speaker.github}" target="_blank")
+                          i.fa.fa-github
 
 
     section#agenda

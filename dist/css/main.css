@@ -1098,6 +1098,11 @@ body.is-loading #header:after {
         #speakers .speakers-container #speaker-carousel .item .introduction .project {
           font-size: 18px;
           color: #666666; }
+          #speakers .speakers-container #speaker-carousel .item .introduction .project.limit {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; }
         #speakers .speakers-container #speaker-carousel .item .introduction .link a {
           color: rgba(69, 90, 100, 0.5);
           padding: 0 10px; }

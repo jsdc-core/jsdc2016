@@ -551,6 +551,13 @@ body.is-loading {
           .project{
             font-size: 18px;
             color: #555 + #111;
+
+            &.limit {
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
           }
           .link{
             a{
