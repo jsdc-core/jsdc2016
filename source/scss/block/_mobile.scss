@@ -24,6 +24,10 @@ $screen-md: 992px;
           }
         }
       }
+
+      li#nav-fb-share {
+        display: none;
+      }
     }
   }
 }
@@ -41,6 +45,14 @@ $screen-md: 992px;
 
 /* Medium devices (tables, 768px and up) */
 @media (min-width: $screen-sm) {
+
+  /* Navbar */
+  .navbar {
+    .navbar-header,
+    li#nav-fb-share {
+      display: none;
+    }
+  }
 
   #header {
 
