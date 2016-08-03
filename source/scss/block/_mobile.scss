@@ -48,7 +48,9 @@ $screen-md: 992px;
 
   /* Navbar */
   .navbar {
-    .navbar-header,
+    // height: 110px;
+    display: table;
+
     li#nav-fb-share {
       display: none;
     }

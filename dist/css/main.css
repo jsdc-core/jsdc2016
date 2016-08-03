@@ -1599,9 +1599,10 @@ main.sponsors-page article + article {
 /* Medium devices (tables, 768px and up) */
 @media (min-width: 768px) {
   /* Navbar */
-  .navbar .navbar-header,
-  .navbar li#nav-fb-share {
-    display: none; }
+  .navbar {
+    display: table; }
+    .navbar li#nav-fb-share {
+      display: none; }
   #header .title {
     height: 55vh;
     padding-top: 15vh; }
