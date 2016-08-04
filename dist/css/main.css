@@ -1397,6 +1397,9 @@ main.spaekers-page, main.staff-page {
   main.spaekers-page article + article, main.staff-page article + article {
     margin-top: 40px; }
 
+main.agenda-page #agenda-list .agenda-container .mobile-visible {
+  display: none; }
+
 main.agenda-page #agenda-list .agenda-container #tabs ul li {
   border-radius: 4px;
   transition: background 0.2s ease;
@@ -1806,5 +1809,26 @@ main.sponsors-page article + article {
     margin: 0 auto; }
     #staffs .staff-container #staff-carousel .item .staff-img .staff {
       width: 20%; } }
+
+@media (max-width: 767px) {
+  main.agenda-page > #agenda-list .agenda-container .mobile-visible {
+    display: table; }
+  main.agenda-page > #agenda-list .agenda-container table tbody tr > td .avatar.avatar-mobile {
+    width: 100px; }
+  main.agenda-page > #agenda-list .agenda-container table tbody tr > td .mobile-room {
+    font-size: 18px;
+    margin: 10px -16px 0; }
+  main.agenda-page > #agenda-list .agenda-container table tbody tr > td.colspan {
+    font-size: 16px; }
+    main.agenda-page > #agenda-list .agenda-container table tbody tr > td.colspan .speaker h6 {
+      font-size: 18px; }
+    main.agenda-page > #agenda-list .agenda-container table tbody tr > td.colspan .dividing-line {
+      background-color: #fff;
+      height: 3px;
+      margin: 10px -22px; }
+  main.agenda-page > #agenda-list .agenda-container #day_1 table tbody .mobile-room .fa {
+    color: #ce4d40; }
+  main.agenda-page > #agenda-list .agenda-container #day_2 table tbody .mobile-room .fa {
+    color: #3096b2; } }
 
 /*# sourceMappingURL=main.css.map */

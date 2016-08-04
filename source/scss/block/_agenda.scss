@@ -4,6 +4,10 @@ main.agenda-page{
 
     .agenda-container{
 
+      .mobile-visible {
+        display: none;
+      }
+
       #tabs{
 
         ul{

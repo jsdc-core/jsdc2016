@@ -490,3 +490,52 @@ $screen-md: 992px;
     }
   }
 }
+
+// Mobile 議程限定，平板顯示與 Desktop，調整 Table
+@media (max-width: $screen-sm - 1) {
+  main.agenda-page > #agenda-list .agenda-container {
+    .mobile-visible {
+      display: table;
+    }
+
+    table {
+      tbody {
+        tr > td {
+          .avatar.avatar-mobile {
+            width: 100px;
+          }
+
+          .mobile-room {
+            font-size: 18px;
+            margin: 10px -16px 0;
+
+            // .fa {
+            //   color: $jsdc-r;
+            // }
+          }
+
+          &.colspan {
+            font-size: 16px;
+
+            .speaker h6 {
+              font-size: 18px;
+            }
+
+            .dividing-line {
+              background-color: #fff;
+              height: 3px;
+              margin: 10px -22px;
+            }
+          }
+        }
+      }
+    }
+
+    #day_1 table tbody .mobile-room .fa{
+      color: $jsdc-r;
+    }
+    #day_2 table tbody .mobile-room .fa{
+      color: $jsdc-b;
+    }
+  }
+}
