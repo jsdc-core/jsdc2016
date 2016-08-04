@@ -2,36 +2,6 @@ $screen-xs: 425px;
 $screen-sm: 768px;
 $screen-md: 992px;
 
-@media (max-width: $screen-xs) {
-
-  .navbar{
-    .navbar-collapse{
-      z-index: 10;
-      background-color: rgba(#fff, 0.9);
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      padding: 0;
-
-      .navbar-nav{
-        margin: 0;
-        width: 100%;
-        li:nth-child(2n) {
-          background-color: rgba(#ddd, 0.3)
-        }
-
-        &.navbar-right{
-          li:nth-child(2n + 1) {
-            background-color: rgba(#ddd, 0.3)
-          }
-        }
-      }
-
-      li#nav-fb-share {
-        display: none;
-      }
-    }
-  }
-}
-
 /* Medium devices (tables, 425px and up) */
 @media (min-width: $screen-xs) {
 
@@ -48,7 +18,6 @@ $screen-md: 992px;
 
   /* Navbar */
   .navbar {
-    // height: 110px;
     display: table;
 
     li#nav-fb-share {
@@ -491,8 +460,35 @@ $screen-md: 992px;
   }
 }
 
-// Mobile 議程限定，平板顯示與 Desktop，調整 Table
+// Mobile 限定，平板顯示與 Desktop 保持原樣
 @media (max-width: $screen-sm - 1) {
+  .navbar{
+    .navbar-collapse{
+      z-index: 10;
+      background-color: rgba(#fff, 0.9);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      padding: 0;
+
+      .navbar-nav{
+        margin: 0;
+        width: 100%;
+        li:nth-child(2n) {
+          background-color: rgba(#ddd, 0.3)
+        }
+
+        &.navbar-right{
+          li:nth-child(2n + 1) {
+            background-color: rgba(#ddd, 0.3)
+          }
+        }
+      }
+
+      li#nav-fb-share {
+        display: none;
+      }
+    }
+  }
+
   main.agenda-page > #agenda-list .agenda-container {
     .mobile-visible {
       display: table;

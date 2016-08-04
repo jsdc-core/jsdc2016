@@ -1577,22 +1577,6 @@ main.sponsors-page .sponsor-thanks .sponsor {
 main.sponsors-page article + article {
   margin-top: 40px; }
 
-@media (max-width: 425px) {
-  .navbar .navbar-collapse {
-    z-index: 10;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    padding: 0; }
-    .navbar .navbar-collapse .navbar-nav {
-      margin: 0;
-      width: 100%; }
-      .navbar .navbar-collapse .navbar-nav li:nth-child(2n) {
-        background-color: rgba(221, 221, 221, 0.3); }
-      .navbar .navbar-collapse .navbar-nav.navbar-right li:nth-child(2n + 1) {
-        background-color: rgba(221, 221, 221, 0.3); }
-    .navbar .navbar-collapse li#nav-fb-share {
-      display: none; } }
-
 /* Medium devices (tables, 425px and up) */
 @media (min-width: 425px) {
   /* Speaker */
@@ -1811,6 +1795,20 @@ main.sponsors-page article + article {
       width: 20%; } }
 
 @media (max-width: 767px) {
+  .navbar .navbar-collapse {
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 0; }
+    .navbar .navbar-collapse .navbar-nav {
+      margin: 0;
+      width: 100%; }
+      .navbar .navbar-collapse .navbar-nav li:nth-child(2n) {
+        background-color: rgba(221, 221, 221, 0.3); }
+      .navbar .navbar-collapse .navbar-nav.navbar-right li:nth-child(2n + 1) {
+        background-color: rgba(221, 221, 221, 0.3); }
+    .navbar .navbar-collapse li#nav-fb-share {
+      display: none; }
   main.agenda-page > #agenda-list .agenda-container .mobile-visible {
     display: table; }
   main.agenda-page > #agenda-list .agenda-container table tbody tr > td .avatar.avatar-mobile {
