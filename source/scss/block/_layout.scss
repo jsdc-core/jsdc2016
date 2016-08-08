@@ -680,6 +680,12 @@ body.is-loading {
   padding: $pt_mobile;
   padding-top: 40px;
 
+  .kktix {
+    height: 285px;
+    border: 1px solid $jsdc-g;
+    border-radius: 4px;
+  }
+
   .major {
     h2{
       color: $jsdc-g - #111;

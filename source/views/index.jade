@@ -7,27 +7,43 @@ block content
       name： 講者名字, title: 頭銜, image: 照片
     -
       var speakers = [
-        {name: 'Blake Newman', title: undefined, image: undefined,
-          personalPageUrl: undefined, github: undefined},
-        {name: 'XP Steven', title: undefined, image: undefined,
-          personalPageUrl: undefined, github: undefined},
-        {name: 'TonyQ', title: undefined, image: undefined,
-          personalPageUrl: undefined, github: undefined},
-        {name: 'Isken Huang', title: undefined, image: undefined,
-          personalPageUrl: undefined, github: undefined},
-        {name: 'Tomas Lin', title: undefined, image: undefined,
-          personalPageUrl: undefined, github: undefined},
-        {name: 'Jim', title: undefined, image: undefined,
-          personalPageUrl: undefined, github: undefined},
-        {name: '劉艾霖', title: undefined, image: undefined,
-          personalPageUrl: undefined, github: undefined},
-        {name: '保哥', title: undefined, image: undefined,
-          personalPageUrl: undefined, github: undefined},
-        {name: '洪名辰', title: undefined, image: undefined,
-          personalPageUrl: undefined, github: undefined},
-        {name: 'Lee', title: undefined, image: undefined,
-          personalPageUrl: undefined, github: undefined},
-      ]
+        {name: "Alex Liu",
+          image: "/dist/images/speakers/alex-liu.png", title: undefined,
+          github: undefined, link: undefined},
+        {name: "Blake Newman",
+          image: "/dist/images/speakers/blake-newman-render.png", title: undefined,
+          github: undefined, link: undefined},
+        {name: "Isken Huang",
+          image: undefined, title: undefined,
+          github: undefined, link: undefined},
+        {name: "Jim",
+          image: undefined, title: undefined,
+          github: undefined, link: undefined},
+        {name: "Lee",
+          image: undefined, title: undefined,
+          github: undefined, link: undefined},
+        {name: "Tomas Lin",
+          image: undefined, title: undefined,
+          github: undefined, link: undefined},
+        {name: "TonyQ",
+          image: undefined, title: undefined,
+          github: undefined, link: undefined},
+        {name: "XP Steven",
+          image: undefined, title: undefined,
+          github: undefined, link: undefined},
+        {name: "李成銀",
+          image: "/dist/images/speakers/li-cheng-yin.png", title: undefined,
+          github: undefined, link: undefined},
+        {name: "洪名辰",
+          image: undefined, title: undefined,
+          github: undefined, link: undefined},
+        {name: "保哥",
+          image: undefined, title: undefined,
+          github: undefined, link: undefined},
+        {name: "劉艾霖",
+          image: undefined, title: undefined,
+          github: undefined, link: undefined}
+      ];
 
     section#header
       .container
@@ -77,17 +93,17 @@ block content
                   .item
                     - var name = speaker.name;
                     - var image = speaker.image?speaker.image:'/dist/images/jsdc-mascot-250.jpg';
-                    - var personalPageUrl = speaker.personalPageUrl?speaker.personalPageUrl:'';
+                    - var link = speaker.link?speaker.link:'';
                     - var github = speaker.github?speaker.github:'';
 
                     img.avatar.owl-lazy(data-src="#{image}", alt="#{name}")
                     .introduction
                       h4.speaker-name #{name}
                       p.project.limit #{speaker.title}
-                      if personalPageUrl !== '' || github !== ''
+                      if link !== '' || github !== ''
                         .link
-                          if personalPageUrl
-                            a(href="#{personalPageUrl}" target="_blank")
+                          if link
+                            a(href="#{link}" target="_blank")
                               i.fa.fa-link.fa-2x
                           if github
                             a(href="#{github}" target="_blank")

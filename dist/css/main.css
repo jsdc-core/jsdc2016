@@ -1187,6 +1187,10 @@ body.is-loading #header:after {
 #activity {
   padding: 60px 0 0;
   padding-top: 40px; }
+  #activity .kktix {
+    height: 285px;
+    border: 1px solid #b9cc54;
+    border-radius: 4px; }
   #activity .major h2 {
     color: #a8bb43;
     font-size: 28px;
