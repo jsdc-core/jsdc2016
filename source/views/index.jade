@@ -200,9 +200,11 @@ block content
     script.
       (function($) {
         var kktix = document.getElementsByClassName('kktix')[0];
-        if (kktix) {
-          setTimeout(function(){ kktix.src = 'https://kktix.com/tickets_widget?slug=jsdc2016'; }, 0);
-        }
+        $(window).on('load', function() {
+          if (kktix) {
+            setTimeout(function(){ kktix.src = 'https://kktix.com/tickets_widget?slug=jsdc2016'; }, 0);
+          }
+        })
 
         if ($('#speakers').length){
           $(document).scroll(function () {
