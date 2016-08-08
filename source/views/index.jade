@@ -75,7 +75,7 @@ block content
               h2 購買票券
         .row
           .col-xs-12.text-center
-            iframe.kktix(src="https://kktix.com/tickets_widget?slug=jsdc2016" frameborder="0" height="100%" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true")
+            iframe.kktix(frameborder="0" height="100%" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true")
 
 
     section#speakers
@@ -199,6 +199,10 @@ block content
 
     script.
       (function($) {
+        var kktix = document.getElementsByClassName('kktix')[0];
+        if (kktix) {
+          setTimeout(function(){ kktix.src = 'https://kktix.com/tickets_widget?slug=jsdc2016'; }, 0);
+        }
 
         if ($('#speakers').length){
           $(document).scroll(function () {
