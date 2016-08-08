@@ -44,12 +44,23 @@ block content
 
           ul.actions
             li
-              a.button#discover(href='#speakers') Discover
+              a.button#discover(href='#activity') Buy tickets
 
     include ./partials/_nav
 
     //- 最新消息先關起來
     //- include ./partials/_news
+
+    section#activity
+      .container
+        .row
+          .col-xs-12.text-center
+            header.major
+              h2 Buy Tickets
+        .row
+          .col-xs-12.text-center
+            iframe.kktix(src="https://kktix.com/tickets_widget?slug=jsdc2016" frameborder="0" height="100%" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true")
+
 
     section#speakers
       #speakers-line
