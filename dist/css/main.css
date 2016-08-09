@@ -1593,7 +1593,7 @@ main.sponsors-page article + article {
   .navbar {
     display: table; }
     .navbar li#nav-fb-share {
-      display: none; }
+      margin-top: 8px; }
   #header .title {
     height: 55vh;
     padding-top: 15vh; }
