@@ -19,40 +19,46 @@ block content
       //- 定義和 index.jade 講師部分相同
       -
         var speakers = [
-          {name: "Alex Liu", description: undefined,
+          {name: "Alex Liu", description: "",
             image: "/dist/images/speakers/alex-liu.png", title: undefined,
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "Blake Newman", description: undefined,
+            github: undefined, link: undefined, avatarTip: "Netflix"},
+          {name: "Blake Newman", description: "",
             image: "/dist/images/speakers/blake-newman-render.png", title: undefined,
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "李成銀", description: undefined,
+            github: undefined, link: undefined, avatarTip: "Sainsbury's"},
+          {name: "李成銀", description: "",
             image: "/dist/images/speakers/li-cheng-yin.png", title: undefined,
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "Isken Huang", description: undefined,
+            github: undefined, link: undefined, avatarTip: "奇舞團"},
+          {name: "Isken Huang", description: "",
             image: undefined, title: undefined,
             github: undefined, link: undefined, avatarTip: undefined},
-          {name: "Jim", description: undefined,
+          {name: "Jim", description: "",
             image: undefined, title: undefined,
             github: undefined, link: undefined, avatarTip: undefined},
-          {name: "Lee", description: undefined,
+          {name: "Jose", description: "",
+            image: undefined, title: undefined,
+            github: undefined, link: undefined, avatarTip: "awoo台灣前進"},
+          {name: "Lee", description: "",
             image: undefined, title: undefined,
             github: undefined, link: undefined, avatarTip: undefined},
-          {name: "Tomas Lin", description: undefined,
+          {name: "Tomas Lin", description: "",
             image: undefined, title: undefined,
             github: undefined, link: undefined, avatarTip: undefined},
-          {name: "TonyQ", description: undefined,
+          {name: "TonyQ", description: "",
             image: undefined, title: undefined,
             github: undefined, link: undefined, avatarTip: undefined},
-          {name: "XP Steven", description: undefined,
+          {name: "Wildcat", description: "",
+            image: "/dist/images/speakers/wildcat.png", title: undefined,
+            github: undefined, link: undefined, avatarTip: "awoo台灣前進"},
+          {name: "XP Steven", description: "",
             image: undefined, title: undefined,
             github: undefined, link: undefined, avatarTip: undefined},
-          {name: "洪名辰", description: undefined,
+          {name: "洪名辰", description: "",
             image: undefined, title: undefined,
             github: undefined, link: undefined, avatarTip: undefined},
-          {name: "保哥", description: undefined,
+          {name: "保哥", description: "",
             image: undefined, title: undefined,
             github: undefined, link: undefined, avatarTip: undefined},
-          {name: "劉艾霖", description: undefined,
+          {name: "劉艾霖", description: "",
             image: undefined, title: undefined,
             github: undefined, link: undefined, avatarTip: undefined}
         ];
@@ -65,20 +71,36 @@ block content
             .col-xs-12.col-sm-6.col-md-4
               .speaker
                 - var image = speaker.image?speaker.image:'/dist/images/jsdc-mascot-250.jpg';
-                //- data-balloon-pos='down', data-balloon-length='large', data-title='#{speaker.avatarTip}', data-balloon='#{speaker.description}'
-                .avatar()
-                  img.lazy(data-original="#{image}", alt="#{speaker.avatarTip}")
-                .introduction
-                  h4.speaker-name #{speaker.name}
-                  p.project #{speaker.title}
-                  if speaker.link || speaker.github
-                    .link
-                      if speaker.link
-                        a(href="#{speaker.link}" target="_blank")
-                          i.fa.fa-link
-                      if speaker.github
-                        a(href="#{speaker.github}" target="_blank")
-                          i.fa.fa-github
+
+                if speaker.avatarTip !== undefined
+                  .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='#{speaker.avatarTip}', data-balloon='#{speaker.description}')
+                    img.lazy(data-original="#{image}", alt="#{speaker.avatarTip}")
+                  .introduction
+                    h4.speaker-name #{speaker.name}
+                    p.project #{speaker.title}
+                    if speaker.link || speaker.github
+                      .link
+                        if speaker.link
+                          a(href="#{speaker.link}" target="_blank")
+                            i.fa.fa-link
+                        if speaker.github
+                          a(href="#{speaker.github}" target="_blank")
+                            i.fa.fa-github
+
+                else
+                  .avatar
+                    img.lazy(data-original="#{image}", alt="#{speaker.avatarTip}")
+                  .introduction
+                    h4.speaker-name #{speaker.name}
+                    p.project #{speaker.title}
+                    if speaker.link || speaker.github
+                      .link
+                        if speaker.link
+                          a(href="#{speaker.link}" target="_blank")
+                            i.fa.fa-link
+                        if speaker.github
+                          a(href="#{speaker.github}" target="_blank")
+                            i.fa.fa-github
 
 
     section#agenda

@@ -3,24 +3,27 @@ extends ./layout/_layout.jade
 block content
 
   main.main-page
-    //- 
+    //-
       name： 講者名字, title: 頭銜, image: 照片
     -
       var speakers = [
         {name: "Alex Liu",
-          image: "/dist/images/speakers/alex-liu.png", title: undefined,
+          image: "/dist/images/speakers/alex-liu.png", title: "Netflix",
           github: undefined, link: undefined},
         {name: "Blake Newman",
-          image: "/dist/images/speakers/blake-newman-render.png", title: undefined,
+          image: "/dist/images/speakers/blake-newman-render.png", title: "Sainsbury's",
           github: undefined, link: undefined},
         {name: "李成銀",
-          image: "/dist/images/speakers/li-cheng-yin.png", title: undefined,
+          image: "/dist/images/speakers/li-cheng-yin.png", title: "奇舞團",
           github: undefined, link: undefined},
         {name: "Isken Huang",
           image: undefined, title: undefined,
           github: undefined, link: undefined},
         {name: "Jim",
           image: undefined, title: undefined,
+          github: undefined, link: undefined},
+        {name: "Jose",
+          image: undefined, title: "awoo台灣前進有限公司",
           github: undefined, link: undefined},
         {name: "Lee",
           image: undefined, title: undefined,
@@ -30,6 +33,9 @@ block content
           github: undefined, link: undefined},
         {name: "TonyQ",
           image: undefined, title: undefined,
+          github: undefined, link: undefined},
+        {name: "Wildcat",
+          image: "/dist/images/speakers/wildcat.png", title: "awoo台灣前進有限公司",
           github: undefined, link: undefined},
         {name: "XP Steven",
           image: undefined, title: undefined,
@@ -85,7 +91,7 @@ block content
           .col-xs-12.text-center
             header.major
               h2 講者陣容
-          
+
           .col-xs-12
             .speakers-container
               .owl-carousel#speaker-carousel
@@ -108,7 +114,7 @@ block content
                           if github
                             a(href="#{github}" target="_blank")
                               i.fa.fa-github.fa-2x
-          
+
               .speaker-nav
                 a.speaker-button.c-bold(href="./speakers.html" target="_blank") 講者列表
 
