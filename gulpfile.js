@@ -14,7 +14,7 @@ gulp.task('scss', function() {
   return gulp.src('./source/scss/**/*[".scss",".css"]')
     .pipe(plugins.plumber())
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.sass())
+    .pipe(plugins.sass({outputStyle: 'compressed'}).on('error', plugins.sass.logError))
     .pipe(plugins.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
