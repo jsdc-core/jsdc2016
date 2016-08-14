@@ -43,7 +43,7 @@ gulp.task('clean', function() {
   return del(['./dist/css/*.css', './dist/css/*.map', './dist/js/*.js']);
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', ['build'], function() {
   browserSync({
     open: !!argv.open,
     notify: !!argv.notify,
