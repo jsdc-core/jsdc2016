@@ -22,8 +22,14 @@ block content
         {name: "Jim",
           image: undefined, title: undefined,
           github: undefined, link: undefined},
+        {name: "Jong-Shian Wu",
+          image: "/dist/images/speakers/jong-shian-wu.jpg", title: ["臺灣大學快速密碼學實驗室"],
+          github: undefined, link: "https://jong.sh/"},
         {name: "Jose",
-          image: "/dist/images/speakers/jose.jpg", title: ["林思吾，阿物。從大學開始創業的連續創業者，現任台灣SEO領導品牌awoo台灣前進創辦人，多次代表台灣擔任SES與SMX中國站演講人，亦是台北市政府資訊局的市政顧問。他善於結合SEO與UX的策略，替客戶不僅帶來精準的流量，並且讓流量能更實際轉換成營收，進而創造出許多投資報酬率超過10的電商案例。除了在商業場域之外，他也將網路專業運用在公民參政，陸續參與了改變台灣的318學運與2014年的台灣臺北市長選舉。"],
+          image: "/dist/images/speakers/jose.jpg", title: ["台灣SEO領導品牌 awoo 台灣前進創辦人"],
+          github: undefined, link: undefined},
+        {name: "kidwm",
+          image: "/dist/images/speakers/kidwm.jpeg", title: undefined,
           github: undefined, link: undefined},
         {name: "Lee",
           image: undefined, title: undefined,
@@ -48,7 +54,10 @@ block content
           github: undefined, link: undefined},
         {name: "劉艾霖",
           image: undefined, title: undefined,
-          github: undefined, link: undefined}
+          github: undefined, link: undefined},
+        {name: "劉俊彥 Vincent",
+          image: "/dist/images/speakers/vincent.png", title: ["Terminal 1"],
+          github: "https://github.com/vincentlaucy", link: "https://twitter.com/vincent_lcy"}
       ];
 
     section#header
@@ -99,7 +108,7 @@ block content
                     - var name = speaker.name;
                     - var titles = speaker.title;
                     - var image = speaker.image?speaker.image:'/dist/images/jsdc-mascot-250.jpg';
-                    - var personalPageUrl = speaker.personalPageUrl?speaker.personalPageUrl:'';
+                    - var link = speaker.link?speaker.link:'';
                     - var github = speaker.github?speaker.github:'';
 
                     img.avatar.owl-lazy(data-src="#{image}", alt="#{name}")
@@ -114,10 +123,10 @@ block content
                             if index !== titles.length - 1
                               br
 
-                      if personalPageUrl !== '' || github !== ''
+                      if link !== '' || github !== ''
                         .link
-                          if personalPageUrl
-                            a(href="#{personalPageUrl}" target="_blank")
+                          if link
+                            a(href="#{link}" target="_blank")
                               i.fa.fa-link.fa-2x
                           if github
                             a(href="#{github}" target="_blank")

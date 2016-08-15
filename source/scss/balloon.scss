@@ -101,7 +101,7 @@ $balloon-arrow-height:   6px;
 
         content: attr(data-title);
         color: #fff;
-        font-size: 24px;
+        font-size: 20px;
         padding-top: 20px;
         position: absolute;
         z-index: 11;
@@ -122,7 +122,7 @@ $balloon-arrow-height:   6px;
             white-space: normal;
         }
     }
-    
+
 
 
     &[data-balloon-pos="up"] {
@@ -156,7 +156,7 @@ $balloon-arrow-height:   6px;
 
     &[data-balloon-pos='down'] {
         &:after {
-            left: 50%;
+            left: 70%;
             margin-top: 5px + $balloon-arrow-height;
             top: 100%;
             @include transform(translate(-50%, -10px));
@@ -257,7 +257,8 @@ $balloon-arrow-height:   6px;
     &[data-balloon-length='large'] {
         &:after {
             white-space: normal;
-            width: 260px;
+            width: 300px;
+            text-align: justify;
         }
     }
 
