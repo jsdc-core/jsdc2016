@@ -26,7 +26,8 @@ gulp.task('scss', function() {
 gulp.task('jade', function() {
   return gulp.src([
       '!source/views/layout/*',
-      '!source/views/partials/*',
+      '!source/views/**/partials/*',
+      '!source/views/data.jade',
       'source/views/**/*.jade'
     ])
     .pipe(plugins.jade())
