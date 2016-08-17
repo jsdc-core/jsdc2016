@@ -14,64 +14,11 @@ block content
         .inner
           header.major.text-center
             h2 JSDC 2016 Speakers
-
     section#speakers-list
+
       //- 定義和 index.jade 講師部分相同
-      -
-        var speakers = [
-          {name: "Alex Liu", description: "",
-            image: "/dist/images/speakers/alex-liu.png", title: "Netflix",
-            github: undefined, link: undefined, avatarTip: "Netflix"},
-          {name: "Blake Newman", description: "",
-            image: "/dist/images/speakers/blake-newman-render.png", title: "Sainsbury's",
-            github: undefined, link: undefined, avatarTip: "Sainsbury's"},
-          {name: "李成銀", description: "",
-            image: "/dist/images/speakers/li-cheng-yin.png", title: "奇舞團",
-            github: undefined, link: undefined, avatarTip: "奇舞團"},
-          {name: "Isken Huang", description: "",
-            image: undefined, title: "---",
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "Jim", description: "",
-            image: undefined, title: "---",
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "Jong-Shian Wu", description: "一位隨處可見的碼農。對密碼學、資訊安全、程式語言、軟體工程等主題有很深的興趣。",
-            image: "/dist/images/speakers/jong-shian-wu.jpg", title: "臺灣大學快速密碼學實驗室",
-            github: undefined, link: "https://jong.sh/", avatarTip: "臺灣大學快速密碼學實驗室"},
-          {name: "Jose", description: "林思吾，阿物。從大學開始創業的連續創業者，現任台灣SEO領導品牌awoo台灣前進創辦人，多次代表台灣擔任SES與SMX中國站演講人，亦是台北市政府資訊局的市政顧問。他善於結合SEO與UX的策略，替客戶不僅帶來精準的流量，並且讓流量能更實際轉換成營收，進而創造出許多投資報酬率超過10的電商案例。除了在商業場域之外，他也將網路專業運用在公民參政，陸續參與了改變台灣的318學運與2014年的台灣臺北市長選舉。",
-            image: "/dist/images/speakers/jose.jpg", title: "awoo 台灣前進有限公司",
-            github: undefined, link: undefined, avatarTip: "awoo台灣前進有限公司"},
-          {name: "kidwm", description: "",
-            image: "/dist/images/speakers/kidwm.jpeg", title: "---",
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "Lee", description: "",
-            image: undefined, title: "---",
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "Tomas Lin", description: "",
-            image: undefined, title: "---",
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "TonyQ", description: "",
-            image: undefined, title: "---",
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "Wildcat", description: "awoo 台灣前進顧問、ContentParty 合夥人、資策會 SER API 協力者",
-            image: "/dist/images/speakers/wildcat.png", title: "awoo 台灣前進有限公司",
-            github: undefined, link: undefined, avatarTip: "awoo台灣前進有限公司"},
-          {name: "XP Steven", description: "",
-            image: undefined, title: "---",
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "洪名辰", description: "",
-            image: undefined, title: "---",
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "保哥", description: "",
-            image: undefined, title: "---",
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "劉艾霖", description: "",
-            image: undefined, title: "---",
-            github: undefined, link: undefined, avatarTip: undefined},
-          {name: "劉俊彥 Vincent", description: "香港工程師，現旅居於台。熱衷於把科技應用於人文、樂於參與開源文化和公民開發社群。Code for Hong Kong和Javascript@HK創辦人、從銀行離職後在不同Startup如OneSky、端傳媒當各種工程師，前端後端、數據分析和NLP都感興趣。會點日文德文，閒時寫點文章。",
-            image: "/dist/images/speakers/vincent.png", title: "Terminal 1",
-            github: "https://github.com/vincentlaucy", link: "https://twitter.com/vincent_lcy",
-            link2: "https://www.linkedin.com/in/chun-yin-vincent-lau-45347610", avatarTip: "Terminal1"}
-        ];
+
+      include ../data
 
       .container
         .row
@@ -81,7 +28,7 @@ block content
               .speaker
                 - var image = speaker.image?speaker.image:'/dist/images/jsdc-mascot-250.jpg';
 
-                if speaker.avatarTip !== undefined
+                if speaker.description !== ""
                   .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='#{speaker.avatarTip}', data-balloon='#{speaker.description}')
                     img.lazy(data-original="#{image}", alt="#{speaker.avatarTip}")
                   .introduction
@@ -98,7 +45,12 @@ block content
                         if speaker.github
                           a(href="#{speaker.github}" target="_blank")
                             i.fa.fa-github
-
+                        if speaker.twitter
+                          a(href="#{speaker.twitter}" target="_blank")
+                            i.fa.fa-twitter
+                        if speaker.linkedin
+                          a(href="#{speaker.linkedin}" target="_blank")
+                            i.fa.fa-linkedin
                 else
                   .avatar
                     img.lazy(data-original="#{image}", alt="#{speaker.avatarTip}")
@@ -116,7 +68,12 @@ block content
                         if speaker.github
                           a(href="#{speaker.github}" target="_blank")
                             i.fa.fa-github
-
+                        if speaker.twitter
+                          a(href="#{speaker.twitter}" target="_blank")
+                            i.fa.fa-twitter
+                        if speaker.linkedin
+                          a(href="#{speaker.linkedin}" target="_blank")
+                            i.fa.fa-linkedin
 
     section#agenda
       #agenda-line

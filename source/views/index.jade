@@ -3,62 +3,7 @@ extends ./layout/_layout.jade
 block content
 
   main.main-page
-    //-
-      name： 講者名字, title: 頭銜, image: 照片
-    -
-      var speakers = [
-        {name: "Alex Liu",
-          image: "/dist/images/speakers/alex-liu.png", title: ["Netflix"],
-          github: undefined, link: undefined},
-        {name: "Blake Newman",
-          image: "/dist/images/speakers/blake-newman-render.png", title: ["Sainsbury's"],
-          github: undefined, link: undefined},
-        {name: "李成銀",
-          image: "/dist/images/speakers/li-cheng-yin.png", title: ["奇舞團"],
-          github: undefined, link: undefined},
-        {name: "Isken Huang",
-          image: undefined, title: undefined,
-          github: undefined, link: undefined},
-        {name: "Jim",
-          image: undefined, title: undefined,
-          github: undefined, link: undefined},
-        {name: "Jong-Shian Wu",
-          image: "/dist/images/speakers/jong-shian-wu.jpg", title: ["臺灣大學快速密碼學實驗室"],
-          github: undefined, link: "https://jong.sh/"},
-        {name: "Jose",
-          image: "/dist/images/speakers/jose.jpg", title: ["台灣SEO領導品牌 awoo 台灣前進創辦人"],
-          github: undefined, link: undefined},
-        {name: "kidwm",
-          image: "/dist/images/speakers/kidwm.jpeg", title: undefined,
-          github: undefined, link: undefined},
-        {name: "Lee",
-          image: undefined, title: undefined,
-          github: undefined, link: undefined},
-        {name: "Tomas Lin",
-          image: undefined, title: undefined,
-          github: undefined, link: undefined},
-        {name: "TonyQ",
-          image: undefined, title: undefined,
-          github: undefined, link: undefined},
-        {name: "Wildcat",
-          image: "/dist/images/speakers/wildcat.png", title: ["awoo 台灣前進顧問", "ContentParty 合夥人", "資策會 SER API 協力者"],
-          github: undefined, link: undefined},
-        {name: "XP Steven",
-          image: undefined, title: undefined,
-          github: undefined, link: undefined},
-        {name: "洪名辰",
-          image: undefined, title: undefined,
-          github: undefined, link: undefined},
-        {name: "保哥",
-          image: undefined, title: undefined,
-          github: undefined, link: undefined},
-        {name: "劉艾霖",
-          image: undefined, title: undefined,
-          github: undefined, link: undefined},
-        {name: "劉俊彥 Vincent",
-          image: "/dist/images/speakers/vincent.png", title: ["Terminal 1"],
-          github: "https://github.com/vincentlaucy", link: "https://twitter.com/vincent_lcy"}
-      ];
+    include ./data
 
     section#header
       .container

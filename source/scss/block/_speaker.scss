@@ -93,11 +93,27 @@ main.spaekers-page, main.staff-page{
                 }
               }
 
-              &.fa-github{
-                color: $jsdc-b;
+              &.fa-twitter{
+                color: $twitter;
 
                 &:hover{
-                  color: $jsdc-b - #111;
+                  color: $twitter - #111;
+                }
+              }
+
+              &.fa-linkedin{
+                color: $linkedin;
+
+                &:hover{
+                  color: $linkedin - #111;
+                }
+              }
+
+              &.fa-github{
+                color: $github;
+
+                &:hover{
+                  color: $github - #111;
                 }
               }
             }

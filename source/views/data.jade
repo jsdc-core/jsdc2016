@@ -1,0 +1,438 @@
+-
+  //- name: 講者名字, description: 作者介紹, image: 照片
+  // ## option ##
+  //- title: 公司/組織, avatarTip: title 去空白
+  //- 額外連結們: github, twitter, link, linkedin
+
+  var speakers = [
+    {
+      name: "Alex Liu",
+      description: "",
+      image: "/dist/images/speakers/alex-liu.png",
+      title: "Netflix",
+      github: undefined,
+      link: undefined,
+      avatarTip: "Netflix"
+    }, {
+      name: "Blake Newman",
+      description: "",
+      image: "/dist/images/speakers/blake-newman-render.png",
+      title: "Sainsbury's",
+      github: undefined,
+      link: undefined,
+      avatarTip: "Sainsbury's"
+    }, {
+      name: "李成銀",
+      description: "",
+      image: "/dist/images/speakers/li-cheng-yin.png",
+      title: "奇舞團",
+      github: undefined,
+      link: undefined,
+      avatarTip: "奇舞團"
+    }, {
+      name: "Isken Huang",
+      description: "",
+      image: undefined,
+      title: "---",
+      github: undefined,
+      link: undefined,
+      avatarTip: undefined
+    }, {
+      name: "Jim",
+      description: "",
+      image: undefined,
+      title: "---",
+      github: undefined,
+      link: undefined,
+      avatarTip: undefined
+    }, {
+      name: "Jong-Shian Wu",
+      description: "一位隨處可見的碼農。對密碼學、資訊安全、程式語言、軟體工程等主題有很深的興趣。",
+      image: "/dist/images/speakers/jong-shian-wu.jpg",
+      title: "臺灣大學快速密碼學實驗室",
+      github: undefined,
+      link: "https://jong.sh/",
+      avatarTip: "臺灣大學快速密碼學實驗室"
+    }, {
+      name: "Jose",
+      description: "林思吾，阿物。從大學開始創業的連續創業者，現任台灣SEO領導品牌awoo台灣前進創辦人，多次代表台灣擔任SES與SMX中國站演講人，亦是台北市政府資訊局的市政顧問。他善於結合SEO與UX的策略，替客戶不僅帶來精準的流量，並且讓流量能更實際轉換成營收，進而創造出許多投資報酬率超過10的電商案例。除了在商業場域之外，他也將網路專業運用在公民參政，陸續參與了改變台灣的318學運與2014年的台灣臺北市長選舉。",
+      image: "/dist/images/speakers/jose.jpg",
+      title: "awoo 台灣前進有限公司",
+      github: undefined,
+      link: "http://www.awoo.com.tw/",
+      avatarTip: "awoo台灣前進有限公司"
+    }, {
+      name: "kidwm",
+      description: "待在廣告產業的前端工程師，常出沒於 MozTW 與 f2eTW 以及 React 社群",
+      image: "/dist/images/speakers/kidwm.jpeg",
+      title: "---",
+      github: "https://github.com/kidwm",
+      avatarTip: "---"
+    }, {
+      name: "Sam Lee",
+      description: "",
+      image: undefined,
+      title: "---",
+      github: "https://github.com/leeabc",
+      link: undefined,
+      avatarTip: undefined
+    }, {
+      name: "Tomas Lin",
+      description: "",
+      image: undefined,
+      title: "---",
+      github: undefined,
+      link: undefined,
+      avatarTip: undefined
+    }, {
+      name: "TonyQ",
+      description: "",
+      image: undefined,
+      title: "---",
+      github: undefined,
+      link: undefined,
+      avatarTip: undefined
+    }, {
+      name: "Wildcat",
+      description: "awoo 台灣前進顧問、ContentParty 合夥人、資策會 SER API 協力者",
+      image: "/dist/images/speakers/wildcat.png",
+      title: "awoo 台灣前進有限公司",
+      github: undefined,
+      link: undefined,
+      avatarTip: "awoo台灣前進有限公司"
+    }, {
+      name: "XP Steven",
+      description: "",
+      image: undefined,
+      title: "---",
+      github: undefined,
+      link: undefined,
+      avatarTip: undefined
+    }, {
+      name: "洪名辰",
+      description: "",
+      image: undefined,
+      title: "---",
+      github: undefined,
+      link: undefined,
+      avatarTip: undefined
+    }, {
+      name: "保哥",
+      description: "",
+      image: undefined,
+      title: "---",
+      github: undefined,
+      link: undefined,
+      avatarTip: undefined
+    }, {
+      name: "劉艾霖",
+      description: "平常寫後端的程式居多，偶而會去前端打打雜，近年深受 clean code 所感化，致力於寫出可讀性高且易維護的 code。覺得興趣跟工作相符的我是很幸運的人，但在有趣的事也無法跳脫邊際效用遞減法則，除了 coding 之外也是一個初級班的背包客，努力追求生活與工作平衡的遠端工程師 / 遊牧工程師，希望未來台灣可以有越來越多的遠端工作。",
+      image: "/dist/images/speakers/alin.jpg",
+      title: "VMFive",
+      github: "http://www.github.com/alincode",
+      linkedin: "https://www.linkedin.com/in/alincode",
+      avatarTip: "VMFive"
+    }, {
+      name: "劉俊彥 Vincent",
+      description: "香港工程師，現旅居於台。熱衷於把科技應用於人文、樂於參與開源文化和公民開發社群。Code for Hong Kong和Javascript@HK創辦人、從銀行離職後在不同Startup如OneSky、端傳媒當各種工程師，前端後端、數據分析和NLP都感興趣。會點日文德文，閒時寫點文章。",
+      image: "/dist/images/speakers/vincent.png",
+      title: "Terminal 1",
+      github: "https://github.com/vincentlaucy",
+      twitter: "https://twitter.com/vincent_lcy",
+      linkedin: "https://www.linkedin.com/in/chun-yin-vincent-lau-45347610",
+      avatarTip: "Terminal1"
+    }
+  ];
+
+
+  //- 大 session 先註解且以 TBD 表示
+  var agendas = {
+    "day_1": [
+      {
+        type: "break",
+        startTime: "09:00",
+        endTime: "09:30",
+        agendaTitle: "報到"
+      }, {
+        type: "break",
+        startTime: "09:30",
+        endTime: "09:40",
+        agendaTitle: "大會開場"
+      }, {
+        type: "single",
+        startTime: "09:40",
+        endTime: "10:30",
+        name: undefined,
+        image: undefined,
+        youtube: undefined,
+        slider: undefined,
+        agendaTitle: "TBD"
+      },
+      //- {type: "single", startTime: "09:40", endTime: "10:30",
+      //-   name: undefined, image: undefined, youtube: undefined, slider: undefined, agendaTitle: "Anglar 2 Universal"},
+
+      {
+        type: "break",
+        startTime: "10:30",
+        endTime: "10:50",
+        agendaTitle: "點心"
+      }, {
+        type: "multiple",
+        startTime: "10:50",
+        endTime: "11:30",
+        name_A: "XP Steven",
+        image_A: undefined,
+        youtube_A: undefined,
+        slider_A: undefined,
+        agendaTitle_A: "超融合 React",
+        name_B: "Jose & Wildcat",
+        image_B: "/dist/images/speakers/jose-and-wildcat.png",
+        youtube_B: undefined,
+        slider_B: undefined,
+        agendaTitle_B: "JavaScript 的 SEO 奧義"
+      },
+
+      {
+        type: "break",
+        startTime: "11:30",
+        endTime: "12:20",
+        agendaTitle: "午餐"
+      }, {
+        type: "single",
+        startTime: "12:20",
+        endTime: "13:10",
+        name: "李成銀 (奇舞團)",
+        image: "/dist/images/speakers/li-cheng-yin.png",
+        youtube: undefined,
+        slider: undefined,
+        agendaTitle: "ThinkJS - 使用 ES2015+ 特性開發 Node.js 項目"
+      },
+
+      {
+        type: "break",
+        startTime: "13:10",
+        endTime: "13:30",
+        agendaTitle: "休息"
+      }, {
+        type: "multiple",
+        startTime: "13:30",
+        endTime: "14:10",
+        name_A: "Isken Huang",
+        image_A: undefined,
+        youtube_A: undefined,
+        slider_A: undefined,
+        agendaTitle_A: "Weex 輕量級高性能跨終端框架",
+        name_B: "Jong-Shian Wu",
+        image_B: "/dist/images/speakers/jong-shian-wu.jpg",
+        youtube_B: undefined,
+        slider_B: undefined,
+        agendaTitle_B: "OTP 已死 U2F 永存：JavaScript U2F 兩步驟驗證實戰"
+      },
+
+      {
+        type: "break",
+        startTime: "14:10",
+        endTime: "14:40",
+        agendaTitle: "下午茶"
+      }, {
+        type: "multiple",
+        startTime: "14:40",
+        endTime: "15:20",
+        name_A: "劉艾霖",
+        image_A: "/dist/images/speakers/alin.jpg",
+        youtube_A: undefined,
+        slider_A: undefined,
+        agendaTitle_A: "淺談網站自動化測試 - 以 WebdriverIO 框架為例",
+        name_B: "劉俊彥 Vincent",
+        image_B: "/dist/images/speakers/vincent.png",
+        youtube_B: undefined,
+        slider_B: undefined,
+        agendaTitle_B: "fbreactions.io - 用AWS Lambda 爬數據視覺化"
+      },
+
+      {
+        type: "break",
+        startTime: "15:20",
+        endTime: "15:40",
+        agendaTitle: "休息"
+      }, {
+        type: "multiple",
+        startTime: "15:40",
+        endTime: "16:20",
+        name_A: "洪名辰",
+        image_A: undefined,
+        youtube_A: undefined,
+        slider_A: undefined,
+        agendaTitle_A: "Universal JavaScript?",
+        name_B: "Tomas Lin",
+        image_B: undefined,
+        youtube_B: undefined,
+        slider_B: undefined,
+        agendaTitle_B: "React Native - dispatch route like web uri"
+      },
+
+      {
+        type: "break",
+        startTime: "16:20",
+        endTime: "16:40",
+        agendaTitle: "休息"
+      }, {
+        type: "single",
+        startTime: "16:40",
+        endTime: "17:20",
+        name: undefined,
+        image: undefined,
+        youtube: undefined,
+        slider: undefined,
+        agendaTitle: "Panel"
+      }, {
+        type: "break",
+        startTime: "17:20",
+        endTime: "18:00",
+        agendaTitle: "散場"
+      }
+    ],
+    "day_2": [
+      {
+        type: "break",
+        startTime: "09:00",
+        endTime: "09:30",
+        agendaTitle: "報到"
+      }, {
+        type: "break",
+        startTime: "09:30",
+        endTime: "09:40",
+        agendaTitle: "大會開場"
+      }, {
+        type: "single",
+        startTime: "09:40",
+        endTime: "10:30",
+        name: "Blake Newman (Sainsbury's)",
+        image: "/dist/images/speakers/blake-newman-render.png",
+        youtube: undefined,
+        slider: undefined,
+        agendaTitle: "How to adapt to change & exploring Vue.js"
+      },
+
+      {
+        type: "break",
+        startTime: "10:30",
+        endTime: "10:50",
+        agendaTitle: "點心"
+      }, {
+        type: "multiple",
+        startTime: "10:50",
+        endTime: "11:30",
+        name_A: "TonyQ",
+        image_A: undefined,
+        youtube_A: undefined,
+        slider_A: undefined,
+        agendaTitle_A: "專案技術挑選案例探討",
+        name_B: "Sam Lee",
+        image_B: undefined,
+        youtube_B: undefined,
+        slider_B: undefined,
+        agendaTitle_B: "React Native + Redux 簡單也不簡單"
+      },
+
+      {
+        type: "break",
+        startTime: "11:30",
+        endTime: "12:20",
+        agendaTitle: "午餐"
+      }, {
+        type: "single",
+        startTime: "12:20",
+        endTime: "13:10",
+        name: "Alex Liu (Netflix)",
+        image: "/dist/images/speakers/alex-liu.png",
+        youtube: undefined,
+        slider: undefined,
+        agendaTitle: "CodexJS: a conditional module bundler"
+      },
+
+      {
+        type: "break",
+        startTime: "13:10",
+        endTime: "13:30",
+        agendaTitle: "休息"
+      }, {
+        type: "multiple",
+        startTime: "13:30",
+        endTime: "14:10",
+        name_A: "Jim",
+        image_A: undefined,
+        youtube_A: undefined,
+        slider_A: undefined,
+        agendaTitle_A: "Data Visualization performance optimization",
+        name_B: undefined,
+        image_B: undefined,
+        youtube_B: undefined,
+        slider_B: undefined,
+        agendaTitle_B: "TBD"
+      },
+
+      {
+        type: "break",
+        startTime: "14:10",
+        endTime: "14:40",
+        agendaTitle: "下午茶"
+      }, {
+        type: "multiple",
+        startTime: "14:40",
+        endTime: "15:20",
+        name_A: "保哥",
+        image_A: undefined,
+        youtube_A: undefined,
+        slider_A: undefined,
+        agendaTitle_A: "開發 Angular 2 網站好簡單之推坑就對了",
+        name_B: "kidwm",
+        image_B: "/dist/images/speakers/kidwm.jpeg",
+        youtube_B: undefined,
+        slider_B: undefined,
+        agendaTitle_B: "Metaprogramming in ES2015"
+      },
+
+      {
+        type: "break",
+        startTime: "15:20",
+        endTime: "15:40",
+        agendaTitle: "休息"
+      }, {
+        type: "multiple",
+        startTime: "15:40",
+        endTime: "16:20",
+        name_A: "Lee",
+        image_A: undefined,
+        youtube_A: undefined,
+        slider_A: undefined,
+        agendaTitle_A: "NIME: 使用 nodejs 快快樂樂開發輸入法",
+        name_B: undefined,
+        image_B: undefined,
+        youtube_B: undefined,
+        slider_B: undefined,
+        agendaTitle_B: "TBD"
+      },
+
+      {
+        type: "break",
+        startTime: "16:20",
+        endTime: "16:40",
+        agendaTitle: "休息"
+      }, {
+        type: "single",
+        startTime: "16:40",
+        endTime: "17:20",
+        name: undefined,
+        image: undefined,
+        youtube: undefined,
+        slider: undefined,
+        agendaTitle: "Lighting Talk"
+      }, {
+        type: "break",
+        startTime: "17:20",
+        endTime: "18:00",
+        agendaTitle: "散場"
+      }
+    ]
+  };
