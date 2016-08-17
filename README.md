@@ -2,8 +2,9 @@
 
 ### :: Step 1
 
-`npm start`
+- `npm start`
+    + 執行既會做 watch files 、 compile 和 start server
 
 ### :: Step2
 
-`open http://localhost:3000/`
+Open `http://localhost:3000/`
