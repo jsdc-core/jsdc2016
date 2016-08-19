@@ -34,7 +34,7 @@ block content
                   .introduction
                     h4.speaker-name #{speaker.name}
                     p.project #{speaker.title}
-                    if speaker.link || speaker.github
+                    if speaker.link || speaker.github || speaker.twitter
                       .link
                         if speaker.link
                           a(href="#{speaker.link}" target="_blank")
@@ -51,6 +51,9 @@ block content
                         if speaker.linkedin
                           a(href="#{speaker.linkedin}" target="_blank")
                             i.fa.fa-linkedin
+                    //- 為了撐高度
+                    if speaker.notSet
+                      .empty-link
                 else
                   .avatar
                     img.lazy(data-original="#{image}", alt="#{speaker.avatarTip}")
@@ -74,6 +77,9 @@ block content
                         if speaker.linkedin
                           a(href="#{speaker.linkedin}" target="_blank")
                             i.fa.fa-linkedin
+                    //- 為了撐高度
+                    if speaker.notSet
+                      .empty-link
 
     section#agenda
       #agenda-line
