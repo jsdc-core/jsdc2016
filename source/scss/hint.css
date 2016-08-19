@@ -70,7 +70,9 @@
     line-height: 12px;
     white-space: nowrap; }
   [class*="hint--"][aria-label]:after {
-    content: attr(aria-label); }
+    content: attr(aria-label);
+    text-align: justify;
+    font-size: 14px; }
   [class*="hint--"][data-hint]:after {
     content: attr(data-hint); }
 

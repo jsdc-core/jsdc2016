@@ -149,6 +149,7 @@ block content
                           - var image = speaker.image?speaker.image:"/dist/images/jsdc-mascot-150.jpg";
                           - var slider = speaker.slider?speaker.name:"";
                           - var youtube = speaker.youtube?speaker.youtube:"";
+                          - var description = speaker.description?speaker.description:"";
 
                           tr
                             td
@@ -157,7 +158,7 @@ block content
                               | |
                               br
                               | #{speaker.endTime}
-                            td.colspan(colspan="2")
+                            td.colspan.hint--top.hint--large(colspan="2" aria-label="#{description}")
                               img.avatar(src="#{image}", alt="#{name}")
                               .speaker
                                 h6= speaker.agendaTitle
@@ -177,6 +178,8 @@ block content
                           - var sliderB = speaker.slider_B?speaker.name_B:"";
                           - var youtubeA = speaker.youtube_A?speaker.youtube_A:"";
                           - var youtubeB = speaker.youtube_B?speaker.youtube_B:"";
+                          - var descriptionA = speaker.description_A?speaker.description_A:"";
+                          - var descriptionB = speaker.description_B?speaker.description_B:"";
 
                           tr
                             td
@@ -186,7 +189,7 @@ block content
                               br
                               | #{speaker.endTime}
 
-                            td.colspan
+                            td.colspan.hint--top.hint--large(aria-label="#{descriptionA}")
                               img.avatar(style="display: block; margin: 0 auto;", src="#{imageA}", alt="#{nameA}")
                               .speaker
                                 h6= speaker.agendaTitle_A
@@ -197,7 +200,7 @@ block content
                                 if youtubeA !== ""
                                   a(href="#{youtubeA}" target='_blank').label.label-danger Youtube
 
-                            td.colspan
+                            td.colspan.hint--top.hint--large.aaa(aria-label="#{descriptionB}")
                               img.avatar(style="display: block; margin: 0 auto;", src="#{imageB}", alt="#{nameB}")
                               .speaker
                                 h6= speaker.agendaTitle_B

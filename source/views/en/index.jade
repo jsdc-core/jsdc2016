@@ -60,14 +60,7 @@ block content
                     img.avatar.owl-lazy(data-src="#{image}", alt="#{name}")
                     .introduction
                       h4.speaker-name #{name}
-                      p.project
-                        unless titles
-                          | #{titles}
-                        else
-                          each title, index in titles
-                            | #{title}
-                            if index !== titles.length - 1
-                              br
+                      p.project(style="margin: 0 0 1em 0;")= titles
 
                       if link !== '' || github !== ''
                         .link
