@@ -100,7 +100,7 @@ block content
               unless level === "thanks"
                 each sponsor in sponsorData
                   .col-xs-12.col-sm-6.col-md-4
-                    .logo.hint--right.hint--large.hidden-xs(aria-label="sponsor.description")
+                    .logo.hint--right.hint--large.hidden-xs(aria-label="#{sponsor.description}")
                       a(href="../sponsors.html", target='_blank')
                         img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
