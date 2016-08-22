@@ -82,6 +82,8 @@ block content
               i.fa.fa-bolt
 
     section#sponsor
+      include ./data
+
       .container
         .row
           .col-xs-12.text-center
@@ -94,73 +96,53 @@ block content
               .sponsor-title
                 h3 贊助
 
-            .col-xs-12
-              .logo.hint--right.hint--large.hidden-xs(aria-label="合勤基金會希望將合勤投資控股公司及旗下子公司合勤科技、盟創科技等公司之共同信念─「推動創新與創業」及「力行社會公益」藉由合勤基金會的成立向外拓展，持續努力。合勤基金會主要關注「跨界創新」，與青年學子與創業家接軌，期以開拓的視野與無框架的創意思考，激發突破自我的能量與火花；並深耕「創新思維」、「創業育成」與「友善環境」三大面向，期望自己成為火種，拋磚引玉的展現回饋社會的企業精神")
-                a(href="../sponsors.html#sponsor-unizyx", target='_blank')
-                  img(style="width: 100%;" src="/dist/images/sponsors/unizyx.jpg", alt="")
+            each sponsorData, level in sponsors
+              unless level === "thanks"
+                each sponsor in sponsorData
+                  .col-xs-12.col-sm-6.col-md-4
+                    .logo.hint--right.hint--large.hidden-xs(aria-label="sponsor.description")
+                      a(href="../sponsors.html", target='_blank')
+                        img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
-              .logo.visible-xs
-                a(href="../sponsors.html#sponsor-unizyx", target='_blank')
-                  img(style="width: 100%;" src="/dist/images/sponsors/unizyx.jpg", alt="")
-            .col-xs-12
-              .logo.hint--right.hint--large.hidden-xs(aria-label="我們想要建立一個＂活＂的電子商務平台，並執行一場電子商務的革命。我們熱愛開發、創新，喜歡做出有趣令人驚豔的服務，meepShop 朝向發展「全球化」的公司邁進，目標是成為一個國際級的品牌，如同 Google、Dropbox 等服務，這個目標需要大家團結起來支持一整個團隊。 我們希望與各界最優秀的人才一同工作，並用聰明、有效率的工作模式，與加入的夥伴一同成長。團隊擁有聰明、快速、及執行力，由比利時的 CTO 帶領程式團隊，使用最好的工具和建立高品質的程式架構。")
-                a(href="../sponsors.html#sponsor-meepshop", target='_blank')
-                  img(style="width: 100%;" src="/dist/images/sponsors/meepShop.png", alt="")
+                    .logo.visible-xs
+                      a(href="../sponsors.html", target='_blank')
+                        img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
-              .logo.visible-xs
-                a(href="../sponsors.html#sponsor-meepshop", target='_blank')
-                  img(style="width: 100%;" src="/dist/images/sponsors/meepShop.png", alt="")
-          //-   .col-xs-12.col-sm-6.col-md-4
-          //-     .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-          //-       a(href="#", target='_blank')
-          //-         img(src="/dist/images/logo.png", alt="")
-          //-   .col-xs-12.col-sm-6.col-md-4
-          //-     .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-          //-       a(href="#", target='_blank')
-          //-         img(src="/dist/images/logo.png", alt="")
-          //-   .col-xs-12.col-sm-6.col-md-4
-          //-     .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-          //-       a(href="#", target='_blank')
-          //-         img(src="/dist/images/logo.png", alt="")
-          //-
+          //- 合作，沒有定義類別，暫時都放進贊助；特別感謝，類別 = thanks
+
           //- .part_2
           //-   .col-xs-12
           //-     .sponsor-title
           //-       h3 合作
-          //-   .col-xs-12.col-sm-6.col-md-4
-          //-     .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-          //-       a(href="#", target='_blank')
-          //-         img(src="/dist/images/logo.png", alt="")
-          //-   .col-xs-12.col-sm-6.col-md-4
-          //-     .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-          //-       a(href="#", target='_blank')
-          //-         img(src="/dist/images/logo.png", alt="")
-          //-   .col-xs-12.col-sm-6.col-md-4
-          //-     .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-          //-       a(href="#", target='_blank')
-          //-         img(src="/dist/images/logo.png", alt="")
-          //-
+
+          //-   each sponsorData, level in sponsors
+          //-     unless level === "thanks"
+          //-       each sponsor in sponsorData
+          //-         .col-xs-12.col-sm-6.col-md-4
+          //-           .logo.hint--right.hint--large.hidden-xs(aria-label="sponsor.description")
+          //-             a(href="../sponsors.html", target='_blank')
+          //-               img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
+
+          //-           .logo.visible-xs
+          //-             a(href="../sponsors.html", target='_blank')
+          //-               img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
+
           //- .part_3
           //-   .col-xs-12
           //-     .sponsor-title
           //-       h3 特別感謝
-          //-
-          //-   .col-xs-12.col-sm-6.col-md-3
-          //-     .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-          //-       a(href="#", target='_blank')
-          //-         img(src="/dist/images/logo.png", alt="")
-          //-   .col-xs-12.col-sm-6.col-md-3
-          //-     .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-          //-       a(href="#", target='_blank')
-          //-         img(src="/dist/images/logo.png", alt="")
-          //-   .col-xs-12.col-sm-6.col-md-3
-          //-     .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-          //-       a(href="#", target='_blank')
-          //-         img(src="/dist/images/logo.png", alt="")
-          //-   .col-xs-12.col-sm-6.col-md-3
-          //-     .logo(data-balloon-pos='down', data-balloon-length='fit', data-title='', data-balloon='')
-          //-       a(href="#", target='_blank')
-          //-         img(src="/dist/images/logo.png", alt="")
+
+          //-   each sponsorData, level in sponsors
+          //-     if level === "thanks"
+          //-       each sponsor in sponsorData
+          //-         .col-xs-12.col-sm-6.col-md-4
+          //-           .logo.hint--right.hint--large.hidden-xs(aria-label="sponsor.description")
+          //-             a(href="../sponsors.html", target='_blank')
+          //-               img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
+
+          //-           .logo.visible-xs
+          //-             a(href="../sponsors.html", target='_blank')
+          //-               img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
     //- 暫時先關起來
     //- include ./partials/_major
