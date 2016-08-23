@@ -1,27 +1,34 @@
-#footer {  
+#footer {
   @include background();
   background-position: left bottom;
   background-image:url('images/overlay4.svg');
-  
+
   padding: 60px 0 40px;
-  
-  #elevator-btn{
-    margin: 0 auto;
+
+
+  .elevator-area {
     text-align: center;
-    a{
-      color: #777;
-      font-size: 18px;
-      font-weight: 500;
-      i{
-        display: block;
-        line-height: 0.2;
-      }
-      &:hover{
-        text-decoration: none;
+
+    #elevator-btn{
+      margin: 0 auto;
+      width: 100px;
+      cursor: pointer;
+
+      a{
+        color: #777;
+        font-size: 18px;
+        font-weight: 500;
+        i{
+          display: block;
+          line-height: 0.2;
+        }
+        &:hover{
+          text-decoration: none;
+        }
       }
     }
   }
-  
+
   .copyright {
     font-size: 18px;
     color: #777;

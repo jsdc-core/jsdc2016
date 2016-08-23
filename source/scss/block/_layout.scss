@@ -661,6 +661,12 @@ body.is-loading {
     }
   }
 
+  .sponsor-content {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+  }
+
   .logo{
     max-width: 280px;
     margin: 0 auto 20px;
