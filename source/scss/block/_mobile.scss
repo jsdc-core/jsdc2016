@@ -497,17 +497,10 @@ $screen-md: 992px;
     table {
       tbody {
         tr > td {
-          .avatar.avatar-mobile {
-            width: 100px;
-          }
 
           .mobile-room {
             font-size: 18px;
             margin: 10px -16px 0;
-
-            // .fa {
-            //   color: $jsdc-r;
-            // }
           }
 
           &.colspan {
