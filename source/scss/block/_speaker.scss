@@ -97,6 +97,14 @@ main.spaekers-page, main.staff-page{
                 }
               }
 
+              &.fa-facebook-official {
+                color: $facebook;
+
+                &:hover{
+                  color: $facebook - #111;
+                }
+              }
+
               &.fa-twitter{
                 color: $twitter;
 
