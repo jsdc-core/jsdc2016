@@ -34,7 +34,7 @@ block content
                   .introduction
                     h4.speaker-name #{speaker.name}
                     p.project #{speaker.title}
-                    if speaker.link || speaker.github || speaker.twitter
+                    if speaker.link || speaker.github || speaker.twitter || speaker.linkedin
                       .link
                         if speaker.link
                           a(href="#{speaker.link}" target="_blank")
@@ -60,7 +60,7 @@ block content
                   .introduction
                     h4.speaker-name #{speaker.name}
                     p.project #{speaker.title}
-                    if speaker.link || speaker.github
+                    if speaker.link || speaker.github || speaker.twitter || speaker.linkedin
                       .link
                         if speaker.link
                           a(href="#{speaker.link}" target="_blank")
