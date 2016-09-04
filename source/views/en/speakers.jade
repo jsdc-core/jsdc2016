@@ -29,7 +29,7 @@ block content
                 - var image = speaker.image?speaker.image:'/dist/images/jsdc-mascot-250.jpg';
 
                 if speaker.description !== ""
-                  .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='#{speaker.avatarTip}', data-balloon='#{speaker.description}')
+                  .avatar(data-balloon-pos='down', data-balloon-length='large', data-title='#{speaker.avatarTip}', data-balloon='#{ speaker.description_E || speaker.description}')
                     img.lazy(data-original="#{image}", alt="#{speaker.avatarTip}")
                   .introduction
                     h4.speaker-name #{speaker.name}
