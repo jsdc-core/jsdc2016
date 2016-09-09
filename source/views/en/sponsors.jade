@@ -29,10 +29,22 @@ block content
               div(class="col-xs-#{sponsor.col}")
                 .sponsor
                   .logo
-                    img.image.lazy(style="width: 100%;" data-original="#{sponsor.image}", alt="#{sponsor.name}")
+                    img.image.lazy(style="width: 100%;" target="_blank" href="#{sponsor.url}" data-original="#{sponsor.image}", alt="#{sponsor.name}")
                   .info
                     h2#sponsor-meepshop= sponsor.name
                     p= sponsor.description
+                    if sponsor.name == '趨勢科技'
+                      p [趨勢科技是全球雲端資安領航者]
+                      p [趨勢科技企業版圖橫跨全球五大洲]
+                      p [趨勢科技為亞洲與台灣最大的純軟體公司]
+                      p [趨勢科技全球研發基地在台灣]
+                      p [趨勢科技致力於實現更安全的數位世界]
+                      p [趨勢科技致力技術創新，引領世界級技術潮流]
+                      p 
+                        | 想成為世界級英雄團隊一員嗎? 想為數位世界安全盡一份力量嗎? 趨勢科技 是你最佳的選擇! 歡迎加入
+                        a.text-info(target="_blank" href="#{sponsor.url}") 趨勢人
+                        | 行列 
+
 
     script.
       (function($) {
