@@ -26,7 +26,7 @@ block content
                 h2.sponsor-header= sponsorLevels[level].zh
 
             each sponsor in sponsorData
-              div(class="col-xs-#{sponsor.col}")
+              div(class="col-sm-#{sponsor.col}")
                 .sponsor
                   .logo
                     img.image.lazy(style="width: 100%;" target="_blank" href="#{sponsor.url}" data-original="#{sponsor.image}", alt="#{sponsor.name}")
