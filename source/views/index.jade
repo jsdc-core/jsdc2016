@@ -119,7 +119,7 @@ block content
               if level === "partner"
                 each sponsor in sponsorData
                   .col-xs-12.col-sm-6.col-md-4
-                    .logo.hint--top.hint--large.hidden-xs(aria-label="sponsor.description")
+                    .logo.hint--top.hint--large.hidden-xs(aria-label="#{sponsor.description}")
                       a(href="../sponsors.html", target='_blank')
                         img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
@@ -136,7 +136,7 @@ block content
               if level === "thanks"
                 each sponsor in sponsorData
                   .col-xs-12.col-sm-6.col-md-4
-                    .logo.hint--top.hint--large.hidden-xs(aria-label="sponsor.description")
+                    .logo.hint--top.hint--large.hidden-xs(aria-label="#{sponsor.description}")
                       a(href="../sponsors.html", target='_blank')
                         img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
