@@ -97,7 +97,7 @@ block content
                 h3 Sponsors
 
             each sponsorData, level in sponsors
-              unless level === "thanks"
+              unless level === "thanks" || level === "partner"
                 each sponsor in sponsorData
                   .col-xs-12.col-sm-6.col-md-4.sponsor-content
                     .logo.hint--top.hint--large.hidden-xs(aria-label="#{sponsor.description}")
@@ -110,39 +110,39 @@ block content
 
           //- 合作，沒有定義類別，暫時都放進贊助；特別感謝，類別 = thanks
 
-          //- .part_2
-          //-   .col-xs-12
-          //-     .sponsor-title
-          //-       h3 Our Partners
+          .part_2
+            .col-xs-12
+              .sponsor-title
+                h3 Our Partners
 
-          //-   each sponsorData, level in sponsors
-          //-     unless level === "thanks"
-          //-       each sponsor in sponsorData
-          //-         .col-xs-12.col-sm-6.col-md-4
-          //-           .logo.hint--top.hint--large.hidden-xs(aria-label="sponsor.description")
-          //-             a(href="../sponsors.html", target='_blank')
-          //-               img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
+            each sponsorData, level in sponsors
+              if level === "partner"
+                each sponsor in sponsorData
+                  .col-xs-12.col-sm-6.col-md-4
+                    .logo.hint--top.hint--large.hidden-xs(aria-label="#{sponsor.description}")
+                      a(href="../sponsors.html", target='_blank')
+                        img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
-          //-           .logo.visible-xs
-          //-             a(href="../sponsors.html", target='_blank')
-          //-               img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
+                    .logo.visible-xs
+                      a(href="../sponsors.html", target='_blank')
+                        img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
-          //- .part_3
-          //-   .col-xs-12
-          //-     .sponsor-title
-          //-       h3 Special Thanks
+          .part_3
+            .col-xs-12
+              .sponsor-title
+                h3 Special Thanks
 
-          //-   each sponsorData, level in sponsors
-          //-     if level === "thanks"
-          //-       each sponsor in sponsorData
-          //-         .col-xs-12.col-sm-6.col-md-4
-          //-           .logo.hint--top.hint--large.hidden-xs(aria-label="sponsor.description")
-          //-             a(href="../sponsors.html", target='_blank')
-          //-               img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
+            each sponsorData, level in sponsors
+              if level === "thanks"
+                each sponsor in sponsorData
+                  .col-xs-12.col-sm-6.col-md-4
+                    .logo.hint--top.hint--large.hidden-xs(aria-label="#{sponsor.description}")
+                      a(href="../sponsors.html", target='_blank')
+                        img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
-          //-           .logo.visible-xs
-          //-             a(href="../sponsors.html", target='_blank')
-          //-               img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
+                    .logo.visible-xs
+                      a(href="../sponsors.html", target='_blank')
+                        img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
     //- 暫時先關起來
     //- include ./partials/_major

@@ -32,7 +32,8 @@ block content
                     img.image.lazy(style="width: 100%;" target="_blank" href="#{sponsor.url}" data-original="#{sponsor.image}", alt="#{sponsor.name}")
                   .info
                     h2= sponsor.name
-                    p= sponsor.description
+                    unless sponsor.name === sponsor.description
+                      p= sponsor.description
                     if sponsor.name === '趨勢科技'
                       p [趨勢科技是全球雲端資安領航者]
                       p [趨勢科技企業版圖橫跨全球五大洲]
