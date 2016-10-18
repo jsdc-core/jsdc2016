@@ -29,7 +29,13 @@ block content
               div(class="col-sm-#{sponsor.col}")
                 .sponsor
                   .logo
-                    img.image.lazy(style="width: 100%;" target="_blank" href="#{sponsor.url}" data-original="#{sponsor.image}", alt="#{sponsor.name}")
+                    if sponsor.image
+                      img.image.lazy(style="width: 100%;" target="_blank" href="#{sponsor.url}" data-original="#{sponsor.image}", alt="#{sponsor.name}")
+                    if sponsor.image1
+                      img.multi.image.lazy(style="width: 100%;" target="_blank" href="#{sponsor.url1}" data-original="#{sponsor.image1}", alt="#{sponsor.name1}")
+                    if sponsor.image2
+                      img.multi.image.lazy(style="width: 100%;" target="_blank" href="#{sponsor.url2}" data-original="#{sponsor.image2}", alt="#{sponsor.name2}")
+
                   .info
                     unless sponsor.name === sponsor.description
                       h2#sponsor-meepshop= sponsor.name
@@ -46,6 +52,16 @@ block content
                         a.text-info(target="_blank" href="#{sponsor.url}") 趨勢人
                         | 行列 
 
+                    if sponsor.name === '感覺不錯'
+                      label FuVision 敢覺視界
+                      p 全台灣第一間以 VR 作為唯一主題的娛樂空間，讓大家以最輕鬆的方式，體驗這新型態的科技。我們打造一個開心、安全、通用化的空間，男女老少一起同遊，讓高科技不再只侷限在科技人的圈圈中。除了空間經營更積極的與本土 VR 內容開發團隊合作，包含內容租賃抽成、早期項目育成、以及 VR Hackathon 競賽舉辦，希望在這一次的 VR 崛起中，台灣可以領先全球！
+                      br
+                      p 另外 2016 年底有個 VR 內容開發的重要大事，有興趣的夥伴們快把握機會！現場體驗並填寫資料，我們將在第一時間告知相關訊息，VR 新秀就是你了！！
+                      br
+                      label MyBigDay 我的大日子
+                      p 一個跨足華人圈婚禮市場的雲端服務平台，提供新人們一個好用的婚禮籌備工具，包含籌備網站、秘書 APP、現場播放器、婚禮 Kiosk 互動機，確保婚禮一切都在掌控之中，流程可以順暢執行，就算是不熟悉 3C 產品的雙方父母也能輕鬆參與籌備，協助新人完成這一生一次的完美演出。 MyBigDay 每年服務超過 3000 對的新人，目前正與台灣婚禮龍頭『典華幸福機構』深度合作，一同打造下一個世代的婚禮體驗。
+                      br
+                      p 那這又和 JSDC 有什麼關係呢？我們自豪的講本團隊只用 Javascript!並且積極的參與 Open Source 貢獻，如果也相同熱血的你，歡迎來與我們聊聊唷！
 
     script.
       (function($) {
