@@ -37,9 +37,10 @@ block content
                       img.multi.image.lazy(style="width: 100%;" target="_blank" href="#{sponsor.url2}" data-original="#{sponsor.image2}", alt="#{sponsor.name2}")
 
                   .info
+                    h2= sponsor.name
+
                     unless sponsor.name === sponsor.description
-                      h2#sponsor-meepshop= sponsor.name
-                    p= sponsor.description
+                      p= sponsor.description
                     if sponsor.name == '趨勢科技'
                       p [趨勢科技是全球雲端資安領航者]
                       p [趨勢科技企業版圖橫跨全球五大洲]
