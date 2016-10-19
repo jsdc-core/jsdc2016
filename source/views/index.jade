@@ -100,13 +100,31 @@ block content
               unless level === "thanks" || level === "partner"
                 each sponsor in sponsorData
                   .col-xs-12.col-sm-6.col-md-4.sponsor-content
-                    .logo.hint--top.hint--large.hidden-xs(aria-label="#{sponsor.description}")
-                      a(href="../sponsors.html", target='_blank')
-                        img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
+                    if sponsor.image
+                      .logo.hint--top.hint--large.hidden-xs(aria-label="#{sponsor.description}")
+                        a(href="../sponsors.html", target='_blank')
+                          img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
 
-                    .logo.visible-xs
-                      a(href="../sponsors.html", target='_blank')
-                        img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
+                      .logo.visible-xs
+                        a(href="../sponsors.html", target='_blank')
+                          img(style="width: 100%;" src="#{sponsor.image}", alt="#{sponsor.name}")
+                    else
+
+                      .logo.hint--top.hint--large.hidden-xs(aria-label="#{sponsor.name}")
+                        a(href="../sponsors.html", target='_blank')
+                          img(style="width: 100%;" src="#{sponsor.image1}", alt="#{sponsor.name}")
+
+                      .logo.visible-xs
+                        a(href="../sponsors.html", target='_blank')
+                          img(style="width: 100%;" src="#{sponsor.image1}", alt="#{sponsor.name}")
+
+                      .logo.hint--top.hint--large.hidden-xs(aria-label="#{sponsor.name}")
+                        a(href="../sponsors.html", target='_blank')
+                          img(style="width: 100%;" src="#{sponsor.image2}", alt="#{sponsor.name}")
+
+                      .logo.visible-xs
+                        a(href="../sponsors.html", target='_blank')
+                          img(style="width: 100%;" src="#{sponsor.image2}", alt="#{sponsor.name}")
 
           //- 合作，沒有定義類別，暫時都放進贊助；特別感謝，類別 = thanks
 
