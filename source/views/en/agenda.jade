@@ -53,7 +53,7 @@ block content
                         when "single"
                           - var name = speaker.name?speaker.name:"";
                           - var image = speaker.image?speaker.image:"/dist/images/jsdc-mascot-150.jpg";
-                          - var slider = speaker.slider?speaker.slider:"";
+                          - var slide = speaker.slide?speaker.slide:"";
                           - var youtube = speaker.youtube?speaker.youtube:"";
 
                           tr
@@ -72,8 +72,8 @@ block content
                                 h6= speaker.agendaTitle
                                 if name !== ""
                                   p by #{name}
-                                if slider !== ""
-                                  a(href="#{slider}" target='_blank').label.label-info Slider
+                                if slide !== ""
+                                  a(href="#{slide}" target='_blank').label.label-info Slide
                                 if youtube !== ""
                                   a(href="#{youtube}" target='_blank').label.label-danger Youtube
 
@@ -82,8 +82,8 @@ block content
                           - var nameB = speaker.name_B?speaker.name_B:"";
                           - var imageA = speaker.image_A?speaker.image_A:"/dist/images/jsdc-mascot-150.jpg";
                           - var imageB = speaker.image_B?speaker.image_B:"/dist/images/jsdc-mascot-150.jpg";
-                          - var sliderA = speaker.slider_A?speaker.slider_A:"";
-                          - var sliderB = speaker.slider_B?speaker.slider_B:"";
+                          - var slideA = speaker.slide_A?speaker.slide_A:"";
+                          - var slideB = speaker.slide_B?speaker.slide_B:"";
                           - var youtubeA = speaker.youtube_A?speaker.youtube_A:"";
                           - var youtubeB = speaker.youtube_B?speaker.youtube_B:"";
 
@@ -104,8 +104,8 @@ block content
                                   h6= speaker.agendaTitle_A
                                   if nameA !== ""
                                     p by #{nameA}
-                                  if sliderA !== ""
-                                    a(href="#{sliderA}" target='_blank').label.label-info Slider
+                                  if slideA !== ""
+                                    a(href="#{slideA}" target='_blank').label.label-info Slide
                                   if youtubeA !== ""
                                     a(href="#{youtubeA}" target='_blank').label.label-danger Youtube
 
@@ -120,8 +120,8 @@ block content
                                   h6= speaker.agendaTitle_B
                                   if nameB !== ""
                                     p by #{nameB}
-                                  if sliderB !== ""
-                                    a(href="#{sliderB}" target='_blank').label.label-info Slider
+                                  if slideB !== ""
+                                    a(href="#{slideB}" target='_blank').label.label-info Slide
                                   if youtubeB !== ""
                                     a(href="#{youtubeB}" target='_blank').label.label-danger Youtube
 
@@ -149,7 +149,7 @@ block content
                         when "single"
                           - var name = speaker.name?speaker.name:"";
                           - var image = speaker.image?speaker.image:"/dist/images/jsdc-mascot-150.jpg";
-                          - var slider = speaker.slider?speaker.slider:"";
+                          - var slide = speaker.slide?speaker.slide:"";
                           - var youtube = speaker.youtube?speaker.youtube:"";
                           - var description = speaker.description_E?speaker.description_E: speaker.description;
 
@@ -166,8 +166,8 @@ block content
                                 h6= speaker.agendaTitle
                                 if name !== ""
                                   p by #{name}
-                                if slider !== ""
-                                  a(href="#{slider}" target='_blank').label.label-info Slider
+                                if slide !== ""
+                                  a(href="#{slide}" target='_blank').label.label-info Slide
                                 if youtube !== ""
                                   a(href="#{youtube}" target='_blank').label.label-danger Youtube
 
@@ -176,8 +176,8 @@ block content
                           - var nameB = speaker.name_B?speaker.name_B:"";
                           - var imageA = speaker.image_A?speaker.image_A:"/dist/images/jsdc-mascot-150.jpg";
                           - var imageB = speaker.image_B?speaker.image_B:"/dist/images/jsdc-mascot-150.jpg";
-                          - var sliderA = speaker.slider_A?speaker.slider_A:"";
-                          - var sliderB = speaker.slider_B?speaker.slider_B:"";
+                          - var slideA = speaker.slide_A?speaker.slide_A:"";
+                          - var slideB = speaker.slide_B?speaker.slide_B:"";
                           - var youtubeA = speaker.youtube_A?speaker.youtube_A:"";
                           - var youtubeB = speaker.youtube_B?speaker.youtube_B:"";
                           - var descriptionA = speaker.description_A?speaker.description_A:"";
@@ -197,8 +197,8 @@ block content
                                 h6= speaker.agendaTitle_A
                                 if nameA !== ""
                                   p by #{nameA}
-                                if sliderA !== ""
-                                  a(href="#{sliderA}" target='_blank').label.label-info Slider
+                                if slideA !== ""
+                                  a(href="#{slideA}" target='_blank').label.label-info Slide
                                 if youtubeA !== ""
                                   a(href="#{youtubeA}" target='_blank').label.label-danger Youtube
 
@@ -208,8 +208,8 @@ block content
                                 h6= speaker.agendaTitle_B
                                 if nameB !== ""
                                   p by #{nameB}
-                                if sliderB !== ""
-                                  a(href="#{sliderB}" target='_blank').label.label-info Slider
+                                if slideB !== ""
+                                  a(href="#{slideB}" target='_blank').label.label-info Slide
                                 if youtubeB !== ""
                                   a(href="#{youtubeB}" target='_blank').label.label-danger Youtube
 
